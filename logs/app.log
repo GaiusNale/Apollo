@@ -429,3 +429,38 @@ KeyError: 'channel_id'
 [32m2024-11-14 19:57:56,151 - __main__ - INFO - Loaded cog: sayhi.py[0m
 [32m2024-11-14 19:57:56,162 - __main__ - INFO - Loaded cog: timestamp.py[0m
 [32m2024-11-14 19:58:06,386 - cogs.ping - INFO - Ping command executed. Latency: 314ms[0m
+[34m2024-11-14 20:06:48,410 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-14 20:06:48,411 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-14 20:06:51,016 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 8e446975fb3d0427f893368cec4afea8).[0m
+[32m2024-11-14 20:06:53,020 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-14 20:06:53,025 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-14 20:06:53,029 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-14 20:06:53,532 - __main__ - INFO - Loaded cog: music.py[0m
+[32m2024-11-14 20:07:02,937 - __main__ - INFO - Commands synced globally.[0m
+[31m2024-11-14 20:08:21,632 - __main__ - ERROR - An error occurred: query is a required argument that is missing.[0m
+[34m2024-11-14 20:29:19,126 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-14 20:29:19,127 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-14 20:29:21,952 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: f25ca5b519ed453ed089fef7561675b7).[0m
+[32m2024-11-14 20:29:23,956 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-14 20:29:23,963 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-14 20:29:23,970 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-14 20:29:24,586 - __main__ - INFO - Loaded cog: music.py[0m
+[32m2024-11-14 20:29:33,848 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-14 20:29:49,101 - cogs.ping - INFO - Ping command executed. Latency: 253ms[0m
+[32m2024-11-14 20:31:43,019 - __main__ - INFO - Commands synced globally.[0m
+[34m2024-11-14 20:31:54,891 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-14 20:31:54,891 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-14 20:31:58,949 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: d4f64892d120d2384039c3442a4d71a6).[0m
+[32m2024-11-14 20:32:00,954 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-14 20:32:00,957 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-14 20:32:00,959 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-14 20:32:01,277 - __main__ - INFO - Loaded cog: music.py[0m
+[32m2024-11-14 20:36:24,772 - __main__ - INFO - Commands synced globally.[0m
+[34m2024-11-14 20:38:27,992 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-14 20:38:27,992 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-14 20:38:34,573 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 062f64aeda5afb41766389404af874f9).[0m
+[32m2024-11-14 20:38:35,930 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-14 20:38:36,585 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-14 20:38:36,588 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-14 20:38:36,590 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-14 20:38:36,990 - __main__ - INFO - Loaded cog: music.py[0m
