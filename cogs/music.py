@@ -1,10 +1,10 @@
 import discord
 from discord import app_commands
 from discord.ext import commands
-import youtube_dl
+import yt_dlp as youtube_dl  # Use yt-dlp for better compatibility
 import logging
 
-# Get a logger instance for this module
+# Logger setup
 logger = logging.getLogger(__name__)
 
 # Configure YouTube downloader options
@@ -25,7 +25,7 @@ ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
 
 class MusicCog(commands.Cog):
     def __init__(self, bot):
-        self.bot = bot  # Initialize the cog with the bot instance
+        self.bot = bot
 
     async def search_youtube(self, query):
         """Search YouTube for a video and return the URL."""
@@ -55,6 +55,9 @@ class MusicCog(commands.Cog):
     async def play(self, interaction: discord.Interaction, query: str):
         """Play music from a YouTube search query."""
         try:
+            # Defer response to avoid timeout
+            await interaction.response.defer()
+
             voice_client = interaction.guild.voice_client
             if not voice_client:
                 await self.join(interaction)  # Join voice channel if not connected
@@ -63,18 +66,18 @@ class MusicCog(commands.Cog):
             # Search and play the music
             url = await self.search_youtube(query)
             if url is None:
-                await interaction.response.send_message("Could not find the song.")
+                await interaction.followup.send("Could not find the song.")
                 return
 
             if voice_client.is_playing():
                 voice_client.stop()
 
             voice_client.play(discord.FFmpegPCMAudio(url, **ffmpeg_options))
-            await interaction.response.send_message(f"Now playing: {url}")
+            await interaction.followup.send(f"Now playing: {url}")
             logger.info(f"Playing song from URL: {url}")
 
         except Exception as e:
-            await interaction.response.send_message("An error occurred while trying to play the song.")
+            await interaction.followup.send("An error occurred while trying to play the song.")
             logger.error(f"Failed to play song: {e}")
 
     @app_commands.command(name="leave", description="Leave the voice channel.")
@@ -93,5 +96,4 @@ class MusicCog(commands.Cog):
             logger.error(f"Failed to disconnect: {e}")
 
 async def setup(bot):
-    # Function to add the cog to the bot during setup
     await bot.add_cog(MusicCog(bot))
