@@ -1205,3 +1205,124 @@ discord.app_commands.errors.CommandInvokeError: Command 'join' raised an excepti
 [32m2024-11-15 22:19:38,120 - discord.voice_client - INFO - Disconnecting from voice normally, close code 1000.[0m
 [32m2024-11-15 22:19:38,130 - discord.player - INFO - ffmpeg process 9099 should have terminated with a return code of -9.[0m
 [32m2024-11-15 22:19:40,490 - cogs.music - INFO - Disconnected from voice channel.[0m
+[34m2024-11-15 22:34:09,430 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-15 22:34:09,431 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-15 22:34:12,179 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: f74c4482bc37fc33118321ca29eb0536).[0m
+[32m2024-11-15 22:34:14,185 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-15 22:34:14,190 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-15 22:34:14,194 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-15 22:34:14,783 - __main__ - INFO - Loaded cog: music.py[0m
+[32m2024-11-15 22:34:33,534 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-15 22:39:46,724 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-15 22:39:46,725 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-15 22:39:47,147 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid4296.discord.media[0m
+[31m2024-11-15 22:39:50,290 - discord.app_commands.tree - ERROR - Ignoring exception in command 'join'[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/cogs/music.py", line 50, in join
+    await interaction.response.send_message("Joined the voice channel!")
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music.py", line 57, in join
+    await interaction.response.send_message("An error occurred while trying to join the voice channel.")
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 860, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'join' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+[33m2024-11-15 22:40:33,061 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 66, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music.py", line 73, in play
+    audio_url = await self.search_youtube_audio(query)
+  File "/home/pyguy/Documents/Apollo/cogs/music.py", line 35, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)['entries'][0]
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1781, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1910, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2057, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2089, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1860, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1760, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 5098, in _real_extract
+    self._has_badge(badges, BadgeType.AVAILABILITY_SUBSCRIPTION)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 1130, in _has_badge
+    return bool(traverse_obj(badges, lambda _, v: v['type'] == badge_type))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/traversal.py", line 305, in traverse_obj
+    result = _traverse_obj(obj, path, is_last, True)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/traversal.py", line 291, in _traverse_obj
+    results, has_branched, is_dict = apply_path(obj, path, test_type)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/traversal.py", line 256, in apply_path
+    for last, key in lazy_last(variadic(path, (str, bytes, dict, set))):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 2675, in variadic
+    def variadic(x, allowed_types=NO_DEFAULT):
+[0m
+[32m2024-11-15 22:40:33,542 - cogs.music - INFO - Playing audio stream from URL: https://rr2---sn-5pguxaob-5c8e.googlevideo.com/videoplayback?expire=1731728426&ei=yr83Z6a2FJiep-oPwKKVcA&ip=105.112.224.180&id=o-AEuQFzKwpcdxMyZrTiRLEdmxQfjXt3su92-2gAg-cMVx&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1731706826%2C&mh=b2&mm=31%2C29&mn=sn-5pguxaob-5c8e%2Csn-aigl6ned&ms=au%2Crdu&mv=m&mvi=2&pl=24&rms=au%2Cau&gcr=ng&initcwndbps=77500&spc=qtApAbefoxsW4j2Z7mlKjbEdFdMo94V7Jn8lH2uxSBMmtDI&vprv=1&svpuc=1&mime=audio%2Fwebm&rqh=1&gir=yes&clen=1512982&dur=100.041&lmt=1728882445907144&mt=1731706612&fvip=2&keepalive=yes&fexp=51299154%2C51312688%2C51326932&c=IOS&txp=4532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cgcr%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIhAJzmGG0FQHp0Eh6NYLRoF_9lJiEHhWNYmbsasT3rrt8GAiArQDo1fQPU1iiz3Mh3cn6popvqqtx6uEfQmfCA17kSCg%3D%3D&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=AGluJ3MwRgIhAPhW8CczgNGMrau-Cxyfh4eXH0DBU8i9mrjI4sVSMObgAiEAwt1TTXxFbbosB5jLINgJ4xB88mohaLkcCZK94YqWBkM%3D[0m
+[32m2024-11-15 22:41:02,751 - cogs.music - INFO - Music paused.[0m
+[32m2024-11-15 22:41:11,645 - cogs.music - INFO - Music resumed.[0m
+[32m2024-11-15 22:41:42,585 - discord.player - INFO - ffmpeg process 10421 successfully terminated with return code of 0.[0m
+[32m2024-11-15 22:42:23,066 - cogs.music - INFO - Playing audio stream from URL: https://rr1---sn-5pguxaob-5c8l.googlevideo.com/videoplayback?expire=1731728539&ei=O8A3Z4r9JbWip-oPvfyukAU&ip=105.112.224.180&id=o-AO8v-Dv3cvOD2j5OYWFPXceKnWoBZEcOVZUWU7BEUKIi&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1731706939%2C&mh=js&mm=31%2C29&mn=sn-5pguxaob-5c8l%2Csn-aigl6nze&ms=au%2Crdu&mv=m&mvi=1&pl=24&rms=au%2Cau&gcr=ng&initcwndbps=78750&spc=qtApATTgofhHZ50x7KqEetiNgdC2pztq4DrIiTWQkVttKK4&vprv=1&svpuc=1&mime=audio%2Fwebm&rqh=1&gir=yes&clen=1467797&dur=90.021&lmt=1597835198009881&mt=1731706409&fvip=3&keepalive=yes&fexp=51299154%2C51312688%2C51326932&c=IOS&txp=5531432&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cgcr%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRAIgZdPuxtT7EZ2JFNtkkBYnt929GAgf--2fm2A1P8gaLT4CIALhuu0rmp-KD2z7pAhYLP9CcthpFgY3UuyWQts_pyT3&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=AGluJ3MwRgIhAOeFNJW5yAhAYuflbyIHEZ8w3e8jixnNcmDpo70bksUkAiEA8gIV1GZCxRbUj5Z_wq74pR5dc6-JV80Cu_UbJs__yeE%3D[0m
+[32m2024-11-15 22:43:08,484 - cogs.music - INFO - Music paused.[0m
+[32m2024-11-15 22:43:15,253 - cogs.music - INFO - Music resumed.[0m
+[32m2024-11-15 22:44:00,357 - discord.player - INFO - ffmpeg process 10578 successfully terminated with return code of 0.[0m
+[32m2024-11-15 22:44:35,343 - cogs.music - INFO - Playing audio stream from URL: https://rr1---sn-5pguxaob-5c8l.googlevideo.com/videoplayback?expire=1731728670&ei=vsA3Z-HdKKrap-oPpeP6sA0&ip=105.112.224.180&id=o-AAuiBEcL-IWnkYCJfFvyROMbkyzWSWXij4nZI3cL_MOO&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1731707070%2C&mh=u6&mm=31%2C29&mn=sn-5pguxaob-5c8l%2Csn-aigl6nsd&ms=au%2Crdu&mv=m&mvi=1&pl=24&rms=au%2Cau&initcwndbps=78750&spc=qtApAZAUnJs_d6qLQ4NRa9FzDQfeRgVgFn9ZAMUynMKvGbo&vprv=1&svpuc=1&mime=audio%2Fwebm&rqh=1&gir=yes&clen=5097068&dur=298.701&lmt=1719649663587615&mt=1731706635&fvip=3&keepalive=yes&fexp=51299154%2C51312688%2C51326932&c=IOS&txp=4432434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIhAPyA74hvCeMUiY_xz9CVk6xA1m0o_NhVjBqngsW3o2bBAiBWjLEhoBfMmWWHimPKXxMucAsGalSdHVUc7aYTjCx3sw%3D%3D&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=AGluJ3MwRQIhAP02lauDGlOy073og5hFr1eZyGrgRjDvTYDJH7iKKXLdAiAGg0WsKPuocNPYlQcH-aEUDMVkbpJRJ0lRN8UHSUD42g%3D%3D[0m
+[32m2024-11-15 22:49:33,576 - discord.player - INFO - ffmpeg process 10761 successfully terminated with return code of 0.[0m
+[32m2024-11-15 22:53:21,746 - discord.gateway - INFO - Shard ID None has successfully RESUMED session f74c4482bc37fc33118321ca29eb0536.[0m
+[32m2024-11-15 22:56:00,737 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
