@@ -85,6 +85,36 @@ class MusicCog(commands.Cog):
         except Exception as e:
             await interaction.followup.send("An error occurred while trying to play the song.")
             logger.error(f"Failed to play audio stream: {e}")
+    @app_commands.command(name="pause", description="Pause the currently playing music.")
+    async def pause(self, interaction: discord.Interaction):
+        """Pause the currently playing audio."""
+        try:
+            voice_client = interaction.guild.voice_client
+            if voice_client and voice_client.is_playing():
+                voice_client.pause()
+                await interaction.response.send_message("Music paused. ⏸️")
+                logger.info("Music paused.")
+            else:
+                await interaction.response.send_message("No music is currently playing.")
+        except Exception as e:
+            await interaction.response.send_message("An error occurred while trying to pause the music.")
+            logger.error(f"Failed to pause music: {e}")
+
+    @app_commands.command(name="resume", description="Resume the paused music.")
+    async def resume(self, interaction: discord.Interaction):
+        """Resume paused audio."""
+        try:
+            voice_client = interaction.guild.voice_client
+            if voice_client and voice_client.is_paused():
+                voice_client.resume()
+                await interaction.response.send_message("Music resumed. ▶️")
+                logger.info("Music resumed.")
+            else:
+                await interaction.response.send_message("No music is currently paused.")
+        except Exception as e:
+            await interaction.response.send_message("An error occurred while trying to resume the music.")
+            logger.error(f"Failed to resume music: {e}")
+
 
     @app_commands.command(name="leave", description="Leave the voice channel.")
     async def leave(self, interaction: discord.Interaction):
@@ -104,3 +134,38 @@ class MusicCog(commands.Cog):
 
 async def setup(bot):
     await bot.add_cog(MusicCog(bot))
+
+
+# 
+
+# 
+    # @app_commands.command(name="pause", description="Pause the currently playing music.")
+    # async def pause(self, interaction: discord.Interaction):
+        # """Pause the currently playing audio."""
+        # try:
+            # voice_client = interaction.guild.voice_client
+            # if voice_client and voice_client.is_playing():
+                # voice_client.pause()
+                # await interaction.response.send_message("Music paused. ⏸️")
+                # logger.info("Music paused.")
+            # else:
+                # await interaction.response.send_message("No music is currently playing.")
+        # except Exception as e:
+            # await interaction.response.send_message("An error occurred while trying to pause the music.")
+            # logger.error(f"Failed to pause music: {e}")
+# 
+    # @app_commands.command(name="resume", description="Resume the paused music.")
+    # async def resume(self, interaction: discord.Interaction):
+        # """Resume paused audio."""
+        # try:
+            # voice_client = interaction.guild.voice_client
+            # if voice_client and voice_client.is_paused():
+                # voice_client.resume()
+                # await interaction.response.send_message("Music resumed. ▶️")
+                # logger.info("Music resumed.")
+            # else:
+                # await interaction.response.send_message("No music is currently paused.")
+        # except Exception as e:
+            # await interaction.response.send_message("An error occurred while trying to resume the music.")
+            # logger.error(f"Failed to resume music: {e}")
+# 
