@@ -1141,3 +1141,67 @@ Loop thread traceback (most recent call last):
 [32m2024-11-15 22:04:59,867 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
 [32m2024-11-15 22:04:59,869 - discord.voice_client - INFO - Disconnecting from voice normally, close code 1000.[0m
 [32m2024-11-15 22:05:01,271 - cogs.music - INFO - Disconnected from voice channel.[0m
+[34m2024-11-15 22:12:06,218 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-15 22:12:06,218 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-15 22:12:09,236 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: e523f52d43d1daae47c6092b638e4b29).[0m
+[32m2024-11-15 22:12:11,286 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-15 22:12:11,291 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-15 22:12:11,293 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-15 22:12:11,637 - __main__ - INFO - Loaded cog: music.py[0m
+[32m2024-11-15 22:12:28,365 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-15 22:13:02,808 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-15 22:13:02,810 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-15 22:13:03,291 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid4296.discord.media[0m
+[31m2024-11-15 22:13:06,786 - discord.app_commands.tree - ERROR - Ignoring exception in command 'join'[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/cogs/music.py", line 48, in join
+    await interaction.response.send_message("Joined the voice channel!")
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music.py", line 53, in join
+    await interaction.response.send_message("An error occurred while trying to join the voice channel.")
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 860, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'join' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+[31m2024-11-15 22:13:19,814 - cogs.music - ERROR - Failed to play audio stream: 'MusicCog' object has no attribute 'search_youtube_audio'[0m
+[32m2024-11-15 22:14:56,475 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[34m2024-11-15 22:14:59,886 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-15 22:14:59,887 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-15 22:15:03,833 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: dc93ac9eae530e2a987f8705bca68181).[0m
+[32m2024-11-15 22:15:06,656 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-15 22:15:06,658 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-15 22:15:06,659 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-15 22:15:07,034 - __main__ - INFO - Loaded cog: music.py[0m
+[32m2024-11-15 22:15:07,933 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-15 22:15:49,698 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-15 22:15:49,699 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-15 22:15:50,089 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid4296.discord.media[0m
+[32m2024-11-15 22:15:52,694 - cogs.music - INFO - Joined voice channel: General[0m
+[32m2024-11-15 22:16:12,881 - cogs.music - INFO - Playing audio stream from URL: https://rr2---sn-5pguxaob-5c8l.googlevideo.com/videoplayback?expire=1731726966&ei=Fro3Z-byH5GLp-oP7bSvkAM&ip=105.112.224.180&id=o-AIUvj_37IpTOjNAi-z88gbeCmqx7B_alfEQwzz5aXnf4&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1731705366%2C&mh=8d&mm=31%2C29&mn=sn-5pguxaob-5c8l%2Csn-aigl6nsd&ms=au%2Crdu&mv=m&mvi=2&pl=24&rms=au%2Cau&initcwndbps=92500&spc=qtApAb3GFu2I_djXqY9ezsBhFKgc08XBgkwvwFMXr1S7dN8&vprv=1&svpuc=1&mime=audio%2Fwebm&rqh=1&gir=yes&clen=5956710&dur=359.461&lmt=1714760295513640&mt=1731704968&fvip=3&keepalive=yes&fexp=51299154%2C51312688%2C51326932&c=IOS&txp=4502434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIhAMuSTbAa4RXrMRT3k2DIOl_yvSKY21NPALLRjXceB14bAiAFErR9DyzSr7Olsp_mj6nOfBfCsiMaR9eosCxWfSBfUA%3D%3D&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=AGluJ3MwRQIhANxc03rKpUG4rlpPLLutoNiE9dBALe_Eg0Lczlp8h_B9AiAyZPZ-E9CVVRIA-nda8fxL--hUYmyW6rZJzH_DPLUQlQ%3D%3D[0m
+[32m2024-11-15 22:19:38,111 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[32m2024-11-15 22:19:38,114 - discord.player - INFO - ffmpeg process 9099 has not terminated. Waiting to terminate...[0m
+[32m2024-11-15 22:19:38,120 - discord.voice_client - INFO - Disconnecting from voice normally, close code 1000.[0m
+[32m2024-11-15 22:19:38,130 - discord.player - INFO - ffmpeg process 9099 should have terminated with a return code of -9.[0m
+[32m2024-11-15 22:19:40,490 - cogs.music - INFO - Disconnected from voice channel.[0m
