@@ -55,3 +55,1713 @@ In data.content: Must be 2000 or fewer in length.[0m
 In data.content: Must be 2000 or fewer in length.[0m
 [32m2024-11-15 23:24:38,634 - discord.player - INFO - ffmpeg process 12823 successfully terminated with return code of 0.[0m
 [32m2024-11-15 23:34:05,559 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[34m2024-11-16 21:18:02,389 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-16 21:18:02,389 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-16 21:18:05,513 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 5f623b44bd89d616b3a71a59dd1fafd4).[0m
+[32m2024-11-16 21:18:07,519 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-16 21:18:07,524 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-16 21:18:07,533 - __main__ - INFO - Loaded cog: playback.py[0m
+[32m2024-11-16 21:18:07,537 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-16 21:18:08,996 - __main__ - INFO - Loaded cog: music.py[0m
+[32m2024-11-16 21:18:27,313 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-16 21:20:37,026 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-16 21:20:37,029 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-16 21:20:37,370 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid8807.discord.media[0m
+[31m2024-11-16 21:20:38,998 - discord.ext.tasks - ERROR - Unhandled exception in internal background task 'playback_task'.[0m
+Traceback (most recent call last):
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/cogs/playback.py", line 24, in playback_task
+    if music_cog and guild.id in music_cog.song_queues:
+AttributeError: 'MusicCog' object has no attribute 'song_queues'
+[31m2024-11-16 21:20:40,534 - discord.app_commands.tree - ERROR - Ignoring exception in command 'join'[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/cogs/music.py", line 53, in join
+    await interaction.response.send_message("Joined the voice channel!")
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music.py", line 60, in join
+    await interaction.response.send_message("An error occurred while trying to join the voice channel.")
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 860, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'join' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+[31m2024-11-16 21:21:10,635 - cogs.music - ERROR - Error extracting audio stream from YouTube: [0;31mERROR:[0m [youtube] Py9S2bD0RZQ: Signature extraction failed: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/yt_dlp/extractor/youtube.py", line 2500, in _decrypt_signature
+    return func(s)
+  File "/usr/lib/python3/dist-packages/yt_dlp/extractor/youtube.py", line 2406, in <lambda>
+    return lambda s: ''.join(s[i] for i in cache_spec)
+  File "/usr/lib/python3/dist-packages/yt_dlp/extractor/youtube.py", line 2406, in <genexpr>
+    return lambda s: ''.join(s[i] for i in cache_spec)
+TypeError: string indices must be integers
+ (caused by TypeError('string indices must be integers')); please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U[0m
+[31m2024-11-16 21:21:46,143 - cogs.music - ERROR - Error extracting audio stream from YouTube: [0;31mERROR:[0m [youtube] zP6eqCOM7tk: Signature extraction failed: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/yt_dlp/extractor/youtube.py", line 2500, in _decrypt_signature
+    return func(s)
+  File "/usr/lib/python3/dist-packages/yt_dlp/extractor/youtube.py", line 2406, in <lambda>
+    return lambda s: ''.join(s[i] for i in cache_spec)
+  File "/usr/lib/python3/dist-packages/yt_dlp/extractor/youtube.py", line 2406, in <genexpr>
+    return lambda s: ''.join(s[i] for i in cache_spec)
+TypeError: string indices must be integers
+ (caused by TypeError('string indices must be integers')); please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U[0m
+[32m2024-11-16 21:22:19,624 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[31m2024-11-16 21:22:19,935 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-11' coro=<Loop._loop() done, defined at /home/pyguy/.local/lib/python3.10/site-packages/discord/ext/tasks/__init__.py:200> exception=AttributeError("'MusicCog' object has no attribute 'song_queues'")>[0m
+Traceback (most recent call last):
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 264, in _loop
+    raise exc
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/cogs/playback.py", line 24, in playback_task
+    if music_cog and guild.id in music_cog.song_queues:
+AttributeError: 'MusicCog' object has no attribute 'song_queues'
+[34m2024-11-16 21:24:31,888 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-16 21:24:31,889 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-16 21:24:35,044 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 0793cc4f4fd15fb09758e98cbf35debe).[0m
+[32m2024-11-16 21:24:37,057 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-16 21:24:37,061 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-16 21:24:37,067 - __main__ - INFO - Loaded cog: playback.py[0m
+[32m2024-11-16 21:24:37,070 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-16 21:24:37,571 - __main__ - INFO - Loaded cog: music.py[0m
+[32m2024-11-16 21:24:49,530 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-16 21:24:49,530 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-16 21:24:49,926 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid8807.discord.media[0m
+[32m2024-11-16 21:24:52,467 - cogs.music - INFO - Joined voice channel: General[0m
+[31m2024-11-16 21:24:52,573 - discord.ext.tasks - ERROR - Unhandled exception in internal background task 'playback_task'.[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/cogs/playback.py", line 24, in playback_task
+    if music_cog and guild.id in music_cog.song_queues:
+AttributeError: 'MusicCog' object has no attribute 'song_queues'
+[32m2024-11-16 21:25:11,230 - cogs.music - INFO - Playing audio stream from URL: https://rr2---sn-5pguxaob-5c8l.googlevideo.com/videoplayback?expire=1731810305&ei=of84Z_TeINf8sfIPmo6AmQQ&ip=105.112.228.21&id=o-AJcGKg7Q30MLuvi48EyKbjuuhFptpVHpwqvlxGag3XAI&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1731788705%2C&mh=f5&mm=31%2C29&mn=sn-5pguxaob-5c8l%2Csn-aigl6ner&ms=au%2Crdu&mv=m&mvi=2&pl=24&rms=au%2Cau&initcwndbps=105000&spc=qtApAZzfOf3jUg1ychyPScXuWg8pqBMzCMWZclazRMgZa9w&vprv=1&svpuc=1&mime=audio%2Fwebm&rqh=1&gir=yes&clen=5846920&dur=366.861&lmt=1729729709273468&mt=1731788472&fvip=4&keepalive=yes&fexp=51299154%2C51312688%2C51326932&c=IOS&txp=4532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIhAOKYi59jBeURLDbDXw5nrlPuoRuiY8Sx4JZVYyWWUukwAiAzwIJIbYKmuIB9KdOWeJUyOP4-xMbk4F_vpnnZt5Iksg%3D%3D&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=AGluJ3MwRQIgGDfR5m_0COfUaiJ_6846vXuIcUErD-dven6Ha80CnjECIQDXuReLZbXxMq8is_ecbZ3HDCANFZGkNydm1dqz31_kLA%3D%3D[0m
+[31m2024-11-16 21:26:38,095 - discord.app_commands.tree - ERROR - Ignoring exception in command 'add'[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/cogs/music.py", line 154, in add
+    await interaction.response.defer()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 638, in defer
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music.py", line 170, in add
+    await interaction.followup.send("An error occurred while adding the song to the queue.")
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 1800, in send
+    data = await adapter.execute_webhook(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10015): Unknown Webhook
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 860, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'add' raised an exception: NotFound: 404 Not Found (error code: 10015): Unknown Webhook
+[32m2024-11-16 21:26:49,410 - cogs.music - INFO - Added to queue: https://rr1---sn-5pguxaob-5c8l.googlevideo.com/videoplayback?expire=1731810405&ei=BQA5Z9SuEYmXsfIPiMOdiAk&ip=105.112.228.21&id=o-AH8V-8l-pfni3zfAyABP0u3cgFk-bsg10WpnIaiRaWQU&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1731788805%2C&mh=r7&mm=31%2C29&mn=sn-5pguxaob-5c8l%2Csn-aigl6nsr&ms=au%2Crdu&mv=m&mvi=1&pl=24&rms=au%2Cau&gcr=ng&initcwndbps=105000&spc=qtApAcPmfwU3gO67BEqkJVb0dDOECL4os5gVPf3SfDbkYgU&vprv=1&svpuc=1&mime=audio%2Fwebm&rqh=1&gir=yes&clen=3220060&dur=206.341&lmt=1714913232841998&mt=1731788472&fvip=1&keepalive=yes&fexp=51299154%2C51312688%2C51326932&c=IOS&txp=2318224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cgcr%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIhAPKpEHpj43z492iC7JsIiK9yNvgukd3u-Pg5lXZ7WhDZAiA-GqO0fjUjPkfDJqPVYHzowEgrSHlBjQsKVsH0ZCftpw%3D%3D&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=AGluJ3MwRgIhAJkjeZRt2d6Hc_fVj7rjXq_8Y3pzM9iBEUR7rmyNtAOkAiEAnAI-TDW8MfE11aTnSh8sNBp-5vENTMbrOlc2nQTotQo%3D[0m
+[32m2024-11-16 21:31:11,656 - discord.player - INFO - ffmpeg process 5151 successfully terminated with return code of 0.[0m
+[32m2024-11-16 21:32:06,326 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[31m2024-11-16 21:32:06,879 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-11' coro=<Loop._loop() done, defined at /home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py:200> exception=AttributeError("'MusicCog' object has no attribute 'song_queues'")>[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 264, in _loop
+    raise exc
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/cogs/playback.py", line 24, in playback_task
+    if music_cog and guild.id in music_cog.song_queues:
+AttributeError: 'MusicCog' object has no attribute 'song_queues'
+[34m2024-11-16 21:38:50,434 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-16 21:38:50,436 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-16 21:38:54,398 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 7b57b7f2ba4e9217c02ee2b1ccf3721b).[0m
+[32m2024-11-16 21:38:56,413 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-16 21:38:56,417 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-16 21:38:56,423 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-16 21:38:56,428 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-16 21:38:57,336 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-16 21:38:57,339 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-16 21:38:57,341 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-16 21:39:24,270 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-16 21:40:40,368 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-16 21:40:40,370 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-16 21:40:41,886 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid8807.discord.media[0m
+[31m2024-11-16 21:40:45,983 - discord.app_commands.tree - ERROR - Ignoring exception in command 'join'[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/cogs/music_join.py", line 19, in join
+    await interaction.response.send_message("Joined the voice channel!")
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_join.py", line 26, in join
+    await interaction.response.send_message("An error occurred while trying to join the voice channel.")
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 860, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'join' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+[33m2024-11-16 21:41:08,604 - discord.gateway - WARNING - Shard ID None voice heartbeat blocked for more than 10 seconds
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 66, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 48, in play
+    audio_data = await self.search_youtube_audio(query)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 30, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)['entries'][0]
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1781, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1910, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2057, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2089, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1860, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1760, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4651, in _real_extract
+    self._list_formats(video_id, microformats, video_details, player_responses, player_url, duration)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4554, in _list_formats
+    *formats, subtitles = self._extract_formats_and_subtitles(streaming_data, video_id, player_url, live_status, duration)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4288, in _extract_formats_and_subtitles
+    'n': decrypt_nsig(query['n'][0], video_id, player_url),
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3355, in inner
+    self._player_cache[cache_id] = func(*args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3390, in _decrypt_nsig
+    ret = extract_nsig(jsi, func_code)(s)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3472, in extract_nsig
+    ret = func([s])
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 440, in interpret_statement
+    ret, should_abort = self.interpret_statement(try_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 440, in interpret_statement
+    ret, should_abort = self.interpret_statement(try_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 532, in interpret_statement
+    ret, should_abort = self.interpret_statement(sub_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 621, in interpret_statement
+    return self._operator(op, left_val, right_expr, expr, local_vars, allow_recursion), should_return
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 302, in _operator
+    right_val = self.interpret_expression(right_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 402, in interpret_statement
+    inner, should_abort = self.interpret_statement(inner, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 621, in interpret_statement
+    return self._operator(op, left_val, right_expr, expr, local_vars, allow_recursion), should_return
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 302, in _operator
+    right_val = self.interpret_expression(right_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 778, in interpret_statement
+    argvals = [self.interpret_expression(v, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 778, in <listcomp>
+    argvals = [self.interpret_expression(v, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 778, in interpret_statement
+    argvals = [self.interpret_expression(v, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 778, in <listcomp>
+    argvals = [self.interpret_expression(v, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 781, in interpret_statement
+    return local_vars[fname](argvals, allow_recursion=allow_recursion), should_return
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 5065, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 781, in interpret_statement
+    return local_vars[fname](argvals, allow_recursion=allow_recursion), should_return
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 5065, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 769, in interpret_statement
+    ret, should_abort = self.interpret_statement(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 769, in interpret_statement
+    ret, should_abort = self.interpret_statement(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 774, in interpret_statement
+    return eval_method(), should_return
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 748, in eval_method
+    return [f((item, idx, obj), {'this': this}, allow_recursion) for idx, item in enumerate(obj)]
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 748, in <listcomp>
+    return [f((item, idx, obj), {'this': this}, allow_recursion) for idx, item in enumerate(obj)]
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 5065, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 342, in interpret_statement
+    m = re.match(r'(?P<var>(?:var|const|let)\s)|return(?:\s+|(?=["\'])|$)|(?P<throw>throw\s+)', stmt)
+  File "/usr/lib/python3.10/re.py", line 190, in match
+    return _compile(pattern, flags).match(string)
+[0m
+[32m2024-11-16 21:41:10,372 - cogs.music_play - INFO - Now playing: Evergreen[0m
+[32m2024-11-16 21:42:05,119 - cogs.music_play - INFO - Finished playing: evergreen[0m
+[32m2024-11-16 21:42:05,122 - discord.player - INFO - ffmpeg process 6269 successfully terminated with return code of 0.[0m
+[33m2024-11-16 21:43:49,969 - discord.gateway - WARNING - Shard ID None voice heartbeat blocked for more than 10 seconds
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 66, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 48, in play
+    audio_data = await self.search_youtube_audio(query)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 30, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)['entries'][0]
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1781, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1910, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2057, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2089, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1860, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1760, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4569, in _real_extract
+    webpage, master_ytcfg, player_responses, player_url = self._download_player_responses(url, smuggled_data, video_id, webpage_url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4533, in _download_player_responses
+    player_responses, player_url = self._extract_player_responses(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4143, in _extract_player_responses
+    pr = pr or self._extract_player_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4027, in _extract_player_response
+    return self._extract_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 1243, in _extract_response
+    response = self._call_api(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 861, in _call_api
+    return self._download_json(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1152, in download_content
+    res = getattr(self, download_handle.__name__)(url_or_request, video_id, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1112, in download_handle
+    res = self._download_webpage_handle(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 968, in _download_webpage_handle
+    content = self._webpage_read_content(urlh, url_or_request, video_id, note, errnote, fatal,
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1048, in _webpage_read_content
+    webpage_bytes = urlh.read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/_requests.py", line 143, in read
+    return self.fp.read(amt, decode_content=True)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 949, in read
+    data = self._raw_read(amt)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 873, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 856, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/usr/lib/python3.10/http/client.py", line 460, in read
+    return self._read_chunked(amt)
+  File "/usr/lib/python3.10/http/client.py", line 592, in _read_chunked
+    value.append(self._safe_read(chunk_left))
+  File "/usr/lib/python3.10/http/client.py", line 631, in _safe_read
+    data = self.fp.read(amt)
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.10/ssl.py", line 1303, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.10/ssl.py", line 1159, in read
+    return self._sslobj.read(len, buffer)
+[0m
+[33m2024-11-16 21:43:52,798 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 66, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 48, in play
+    audio_data = await self.search_youtube_audio(query)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 30, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)['entries'][0]
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1781, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1910, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2057, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2089, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1860, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1760, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4651, in _real_extract
+    self._list_formats(video_id, microformats, video_details, player_responses, player_url, duration)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4554, in _list_formats
+    *formats, subtitles = self._extract_formats_and_subtitles(streaming_data, video_id, player_url, live_status, duration)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4288, in _extract_formats_and_subtitles
+    'n': decrypt_nsig(query['n'][0], video_id, player_url),
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3355, in inner
+    self._player_cache[cache_id] = func(*args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3390, in _decrypt_nsig
+    ret = extract_nsig(jsi, func_code)(s)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3472, in extract_nsig
+    ret = func([s])
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 440, in interpret_statement
+    ret, should_abort = self.interpret_statement(try_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 440, in interpret_statement
+    ret, should_abort = self.interpret_statement(try_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 532, in interpret_statement
+    ret, should_abort = self.interpret_statement(sub_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 621, in interpret_statement
+    return self._operator(op, left_val, right_expr, expr, local_vars, allow_recursion), should_return
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 302, in _operator
+    right_val = self.interpret_expression(right_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 402, in interpret_statement
+    inner, should_abort = self.interpret_statement(inner, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 621, in interpret_statement
+    return self._operator(op, left_val, right_expr, expr, local_vars, allow_recursion), should_return
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 302, in _operator
+    right_val = self.interpret_expression(right_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 778, in interpret_statement
+    argvals = [self.interpret_expression(v, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 778, in <listcomp>
+    argvals = [self.interpret_expression(v, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 402, in interpret_statement
+    inner, should_abort = self.interpret_statement(inner, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 532, in interpret_statement
+    ret, should_abort = self.interpret_statement(sub_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 778, in interpret_statement
+    argvals = [self.interpret_expression(v, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 778, in <listcomp>
+    argvals = [self.interpret_expression(v, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 781, in interpret_statement
+    return local_vars[fname](argvals, allow_recursion=allow_recursion), should_return
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 5065, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 490, in interpret_statement
+    ret, should_abort = self.interpret_statement(body, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 608, in interpret_statement
+    separated = list(self._separate(expr, op))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 281, in _separate
+    yield expr[start:]
+[0m
+[32m2024-11-16 21:43:58,491 - cogs.music_play - INFO - Now playing: BOY IN BLUE[0m
+[32m2024-11-16 21:47:19,901 - cogs.music_play - INFO - Finished playing: boy in blue by yxngxr1[0m
+[32m2024-11-16 21:47:19,904 - discord.player - INFO - ffmpeg process 6467 successfully terminated with return code of 0.[0m
+[32m2024-11-16 21:51:13,346 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[34m2024-11-16 21:54:42,263 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-16 21:54:42,264 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-16 21:54:47,257 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 4f1770a236fe52e760f1851d7d121626).[0m
+[32m2024-11-16 21:54:49,265 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-16 21:54:49,270 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-16 21:54:49,275 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-16 21:54:49,778 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-16 21:54:49,887 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-16 21:54:49,890 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-16 21:54:49,891 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-16 21:55:13,973 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-16 21:57:14,906 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-16 21:57:14,908 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-16 21:57:15,834 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid8807.discord.media[0m
+[31m2024-11-16 21:57:20,134 - discord.app_commands.tree - ERROR - Ignoring exception in command 'join'[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/cogs/music_join.py", line 19, in join
+    await interaction.response.send_message("Joined the voice channel!")
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_join.py", line 26, in join
+    await interaction.response.send_message("An error occurred while trying to join the voice channel.")
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 860, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'join' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+[31m2024-11-16 21:58:22,615 - discord.voice_client - ERROR - Disconnected from voice... Reconnecting in 0.91s.[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client_ws.py", line 229, in receive
+    msg = await self._reader.read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/streams.py", line 657, in read
+    return await super().read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/streams.py", line 616, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 456, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/voice_client.py", line 456, in poll_voice_ws
+    await self.ws.poll_event()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 1003, in poll_event
+    msg = await asyncio.wait_for(self.ws.receive(), timeout=30.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 458, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+[32m2024-11-16 21:58:23,543 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[32m2024-11-16 21:58:23,546 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-16 21:58:23,547 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 2)[0m
+[31m2024-11-16 21:58:32,324 - discord.client - ERROR - Attempting a reconnect in 1.35s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-16 21:58:33,693 - discord.client - ERROR - Attempting a reconnect in 1.18s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-16 21:58:34,881 - discord.client - ERROR - Attempting a reconnect in 0.32s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-16 21:58:35,219 - discord.client - ERROR - Attempting a reconnect in 4.73s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-16 21:58:39,959 - discord.client - ERROR - Attempting a reconnect in 28.09s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[33m2024-11-16 21:58:57,173 - discord.gateway - WARNING - Shard ID None has stopped responding to the gateway. Closing and restarting.[0m
+[31m2024-11-16 21:59:08,069 - discord.client - ERROR - Attempting a reconnect in 11.69s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-16 21:59:19,778 - discord.client - ERROR - Attempting a reconnect in 117.44s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[32m2024-11-16 21:59:21,292 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[31m2024-11-16 21:59:21,296 - discord.gateway - ERROR - An error occurred while stopping the gateway. Ignoring.[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 159, in run
+    f.result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 456, in result
+    raise CancelledError()
+concurrent.futures._base.CancelledError
+[31m2024-11-16 21:59:23,904 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7efdf6ab2ec0>[0m
+[34m2024-11-16 22:22:33,527 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-16 22:22:33,527 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-16 22:22:36,595 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: a8456bced9c58ff81eca8f140ac4075c).[0m
+[32m2024-11-16 22:22:38,600 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-16 22:22:38,607 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-16 22:22:38,613 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-16 22:22:39,213 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-16 22:22:39,323 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-16 22:22:39,324 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-16 22:22:39,325 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-16 22:22:47,290 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-16 22:22:47,291 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-16 22:22:47,642 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid3344.discord.media[0m
+[32m2024-11-16 22:22:50,046 - cogs.music_join - INFO - Joined voice channel: General[0m
+[32m2024-11-16 22:24:53,995 - cogs.music_play - INFO - Now playing: FIDO - Awolowo[0m
+[33m2024-11-16 22:25:43,730 - discord.gateway - WARNING - Shard ID None voice heartbeat blocked for more than 10 seconds
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 66, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_queue.py", line 41, in add
+    audio_data = await self.search_youtube_audio(query)
+  File "/home/pyguy/Documents/Apollo/cogs/music_queue.py", line 29, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)['entries'][0]
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1781, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1910, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2057, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2089, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1860, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1781, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1840, in process_ie_result
+    ie_result = self.process_video_result(ie_result, download=download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2866, in process_video_result
+    fmt['http_headers'] = self._calc_headers(collections.ChainMap(fmt, info_dict), load_cookies=True)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2575, in _calc_headers
+    res.pop('Cookie', None)
+  File "/usr/lib/python3.10/_collections_abc.py", line 962, in pop
+    value = self[key]
+[0m
+[32m2024-11-16 22:25:44,261 - cogs.music_queue - INFO - Added to queue: Asake - Skating (Official Visualizer) for guild 1303088062049419356[0m
+[32m2024-11-16 22:25:55,574 - cogs.music_queue - INFO - Displayed the current queue for guild 1303088062049419356[0m
+[32m2024-11-16 22:26:20,743 - cogs.music_play - INFO - Finished playing: awolowo by fido[0m
+[32m2024-11-16 22:26:20,744 - discord.player - INFO - ffmpeg process 8472 has not terminated. Waiting to terminate...[0m
+[32m2024-11-16 22:26:20,756 - discord.player - INFO - ffmpeg process 8472 should have terminated with a return code of -9.[0m
+[32m2024-11-16 22:26:20,995 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[34m2024-11-16 22:26:26,044 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-16 22:26:26,045 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-16 22:26:28,770 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 20bd0a731316b740907f52fa98a04843).[0m
+[32m2024-11-16 22:26:30,777 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-16 22:26:30,780 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-16 22:26:30,782 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-16 22:26:31,164 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-16 22:26:31,246 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-16 22:26:31,248 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-16 22:26:31,248 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-16 22:34:05,158 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-16 22:34:05,161 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-16 22:34:06,179 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid3344.discord.media[0m
+[31m2024-11-16 22:34:10,068 - discord.app_commands.tree - ERROR - Ignoring exception in command 'join'[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/cogs/music_join.py", line 19, in join
+    await interaction.response.send_message("Joined the voice channel!")
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_join.py", line 26, in join
+    await interaction.response.send_message("An error occurred while trying to join the voice channel.")
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 860, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'join' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+[32m2024-11-16 22:34:30,650 - cogs.music_play - INFO - Now playing: Asake - Skating (Official Visualizer)[0m
+[32m2024-11-16 22:37:26,637 - cogs.music_play - INFO - Finished playing: skating by asake[0m
+[32m2024-11-16 22:37:26,641 - discord.player - INFO - ffmpeg process 9218 successfully terminated with return code of 0.[0m
+[31m2024-11-16 22:39:00,557 - discord.voice_client - ERROR - Disconnected from voice... Reconnecting in 1.27s.[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client_ws.py", line 229, in receive
+    msg = await self._reader.read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/streams.py", line 657, in read
+    return await super().read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/streams.py", line 616, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 456, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/voice_client.py", line 456, in poll_voice_ws
+    await self.ws.poll_event()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 1003, in poll_event
+    msg = await asyncio.wait_for(self.ws.receive(), timeout=30.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 458, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+[32m2024-11-16 22:39:01,839 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[32m2024-11-16 22:39:01,840 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-16 22:39:01,840 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 2)[0m
+[31m2024-11-16 22:39:10,012 - discord.client - ERROR - Attempting a reconnect in 0.67s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-16 22:39:10,739 - discord.client - ERROR - Attempting a reconnect in 1.23s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-16 22:39:11,987 - discord.client - ERROR - Attempting a reconnect in 1.47s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-16 22:39:13,476 - discord.client - ERROR - Attempting a reconnect in 4.90s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-16 22:39:18,394 - discord.client - ERROR - Attempting a reconnect in 0.74s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-16 22:39:19,151 - discord.client - ERROR - Attempting a reconnect in 59.24s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-16 22:39:26,843 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f68e2baee60>[0m
+[34m2024-11-16 22:44:43,547 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-16 22:44:43,548 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-16 22:44:46,346 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 895e90786af6b33cee228d5859db4949).[0m
+[32m2024-11-16 22:44:48,354 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-16 22:44:48,364 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-16 22:44:48,373 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-16 22:44:49,237 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-16 22:44:49,449 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-16 22:44:49,452 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-16 22:44:49,454 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-16 22:45:06,504 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-16 22:45:06,504 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-16 22:45:06,879 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid10016.discord.media[0m
+[32m2024-11-16 22:45:09,618 - cogs.music_join - INFO - Joined voice channel: General[0m
+[32m2024-11-16 22:45:39,583 - cogs.music_play - INFO - Now playing: In the Western[0m
+[32m2024-11-16 22:46:32,241 - cogs.music_queue - INFO - Added to queue: Daði Freyr (Daði & Gagnamagnið) – Think About Things (Official Video) for guild 1303088062049419356[0m
+[32m2024-11-16 22:46:41,933 - cogs.music_queue - INFO - Displayed the current queue for guild 1303088062049419356[0m
+[32m2024-11-16 22:47:48,455 - cogs.music_play - INFO - Finished playing: in the western yxngxr1[0m
+[32m2024-11-16 22:47:48,463 - discord.player - INFO - ffmpeg process 10412 successfully terminated with return code of 0.[0m
+[31m2024-11-16 22:50:22,080 - discord.voice_client - ERROR - Disconnected from voice... Reconnecting in 1.51s.[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client_ws.py", line 229, in receive
+    msg = await self._reader.read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/streams.py", line 657, in read
+    return await super().read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/streams.py", line 616, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 456, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/voice_client.py", line 456, in poll_voice_ws
+    await self.ws.poll_event()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 1003, in poll_event
+    msg = await asyncio.wait_for(self.ws.receive(), timeout=30.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 458, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+[32m2024-11-16 22:50:23,608 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[32m2024-11-16 22:50:23,610 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-16 22:50:23,611 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 2)[0m
+[31m2024-11-16 22:50:34,803 - discord.client - ERROR - Attempting a reconnect in 1.91s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-16 22:50:36,739 - discord.client - ERROR - Attempting a reconnect in 1.16s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-16 22:50:37,909 - discord.client - ERROR - Attempting a reconnect in 7.72s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[32m2024-11-16 22:50:51,734 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 895e90786af6b33cee228d5859db4949.[0m
+[33m2024-11-16 22:50:56,975 - discord.gateway - WARNING - Shard ID None has stopped responding to the gateway. Closing and restarting.[0m
+[32m2024-11-16 22:51:23,638 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[33m2024-11-16 22:51:23,640 - discord.voice_client - WARNING - Could not connect to voice... Retrying...[0m
+[32m2024-11-16 22:51:23,642 - discord.voice_client - INFO - Disconnecting from voice normally, close code 1000.[0m
+[34m2024-11-16 22:57:09,004 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-16 22:57:09,005 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-16 22:57:11,359 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: b379d644bf2c250e5682f22265a6dd97).[0m
+[32m2024-11-16 22:57:13,362 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-16 22:57:13,368 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-16 22:57:13,372 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-16 22:57:13,970 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-16 22:57:13,978 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-16 22:57:14,168 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-16 22:57:14,174 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-16 22:57:14,175 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-16 22:57:23,053 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-16 22:58:17,971 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-16 22:58:17,972 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-16 22:58:18,408 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid10016.discord.media[0m
+[32m2024-11-16 22:58:21,063 - cogs.music_join - INFO - Joined voice channel: General[0m
+[32m2024-11-16 22:58:43,032 - cogs.music_play - INFO - Now playing: In the Western[0m
+[32m2024-11-16 22:58:55,559 - cogs.music_queue - INFO - Added to queue: Asake - Skating (Official Visualizer) for guild 1303088062049419356[0m
+[32m2024-11-16 23:00:44,364 - cogs.music_play - INFO - Finished playing: in the western by yxngxr1[0m
+[32m2024-11-16 23:00:44,371 - discord.player - INFO - ffmpeg process 11539 successfully terminated with return code of 0.[0m
+[31m2024-11-16 23:05:03,890 - discord.client - ERROR - Attempting a reconnect in 1.00s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-16 23:05:04,924 - discord.client - ERROR - Attempting a reconnect in 2.66s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-16 23:05:05,443 - discord.voice_client - ERROR - Disconnected from voice... Reconnecting in 0.37s.[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client_ws.py", line 229, in receive
+    msg = await self._reader.read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/streams.py", line 657, in read
+    return await super().read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/streams.py", line 616, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 456, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/voice_client.py", line 456, in poll_voice_ws
+    await self.ws.poll_event()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 1003, in poll_event
+    msg = await asyncio.wait_for(self.ws.receive(), timeout=30.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 458, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+[32m2024-11-16 23:05:05,821 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[32m2024-11-16 23:05:05,823 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-16 23:05:05,823 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 2)[0m
+[31m2024-11-16 23:05:07,596 - discord.client - ERROR - Attempting a reconnect in 1.13s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-16 23:05:08,741 - discord.client - ERROR - Attempting a reconnect in 13.10s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[32m2024-11-16 23:05:23,107 - discord.gateway - INFO - Shard ID None has successfully RESUMED session b379d644bf2c250e5682f22265a6dd97.[0m
+[33m2024-11-16 23:05:40,280 - discord.gateway - WARNING - Shard ID None has stopped responding to the gateway. Closing and restarting.[0m
+[32m2024-11-16 23:06:05,829 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[33m2024-11-16 23:06:05,831 - discord.voice_client - WARNING - Could not connect to voice... Retrying...[0m
+[32m2024-11-16 23:06:05,832 - discord.voice_client - INFO - Disconnecting from voice normally, close code 1000.[0m
