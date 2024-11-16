@@ -1,7 +1,6 @@
 import discord
 from discord import app_commands
 from discord.ext import commands
-from collections import deque
 import logging
 
 logger = logging.getLogger(__name__)
@@ -9,17 +8,16 @@ logger = logging.getLogger(__name__)
 class NextCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.queues = {}  # Dictionary to store queues for each guild
         self.is_playing = {}  # Track whether playback is active per guild
 
     async def play_next(self, guild_id, voice_client):
         """Play the next song in the queue, if available."""
-        if guild_id not in self.queues or not self.queues[guild_id]:
+        if guild_id not in self.bot.queues or not self.bot.queues[guild_id]:
             self.is_playing[guild_id] = False
             logger.info(f"Queue is empty for guild {guild_id}.")
             return
 
-        next_song = self.queues[guild_id].popleft()
+        next_song = self.bot.queues[guild_id].popleft()
         self.is_playing[guild_id] = True
         try:
             voice_client.play(
@@ -47,7 +45,7 @@ class NextCog(commands.Cog):
                 await interaction.response.send_message("I'm not connected to a voice channel.")
                 return
 
-            if guild_id not in self.queues or not self.queues[guild_id]:
+            if guild_id not in self.bot.queues or not self.bot.queues[guild_id]:
                 await interaction.response.send_message("The queue is empty. There's nothing to play next.")
                 return
 

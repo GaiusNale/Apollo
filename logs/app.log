@@ -1765,3 +1765,29 @@ aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-u
 [32m2024-11-16 23:06:05,829 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
 [33m2024-11-16 23:06:05,831 - discord.voice_client - WARNING - Could not connect to voice... Retrying...[0m
 [32m2024-11-16 23:06:05,832 - discord.voice_client - INFO - Disconnecting from voice normally, close code 1000.[0m
+[34m2024-11-16 23:20:45,130 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-16 23:20:45,131 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-16 23:20:47,495 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 16bdac85041cc22d9007816b358d5f16).[0m
+[32m2024-11-16 23:20:49,501 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-16 23:20:49,506 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-16 23:20:49,510 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-16 23:20:49,911 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-16 23:20:49,915 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-16 23:20:50,015 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-16 23:20:50,018 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-16 23:20:50,019 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-16 23:21:10,544 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-16 23:22:25,070 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 16bdac85041cc22d9007816b358d5f16.[0m
+[32m2024-11-16 23:23:03,135 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-16 23:23:03,139 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-16 23:23:03,458 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid10016.discord.media[0m
+[32m2024-11-16 23:23:05,782 - cogs.music_join - INFO - Joined voice channel: General[0m
+[32m2024-11-16 23:23:52,396 - cogs.music_play - INFO - Now playing: In the Western[0m
+[32m2024-11-16 23:24:12,553 - cogs.music_queue - INFO - Added to queue: Asake - Skating (Official Visualizer) for guild 1303088062049419356[0m
+[32m2024-11-16 23:24:16,816 - cogs.music_play - INFO - Finished playing: in the western by yxngxr1[0m
+[32m2024-11-16 23:24:16,816 - discord.player - INFO - ffmpeg process 13481 has not terminated. Waiting to terminate...[0m
+[32m2024-11-16 23:24:16,831 - discord.player - INFO - ffmpeg process 13481 should have terminated with a return code of -9.[0m
+[32m2024-11-16 23:24:17,235 - cogs.music_next - INFO - Skipping to the next song for guild 1303088062049419356.[0m
+[32m2024-11-16 23:24:50,593 - cogs.music_queue - INFO - Displayed the current queue for guild 1303088062049419356[0m
+[32m2024-11-16 23:24:57,435 - cogs.music_next - INFO - Skipping to the next song for guild 1303088062049419356.[0m
+[32m2024-11-16 23:25:15,798 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m

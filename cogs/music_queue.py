@@ -20,8 +20,7 @@ ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
 
 class QueueCog(commands.Cog):
     def __init__(self, bot):
-        self.bot = bot
-        self.queues = {}  # Dictionary to store queues for each guild
+        self.bot = bot  # Access the bot instance
 
     async def search_youtube_audio(self, query):
         """Search YouTube for a video and return its audio URL and title."""
@@ -44,10 +43,11 @@ class QueueCog(commands.Cog):
                 return
 
             guild_id = interaction.guild.id
-            if guild_id not in self.queues:
-                self.queues[guild_id] = deque()  # Initialize the queue for the guild
+            # Access the shared queues dictionary from the bot
+            if guild_id not in self.bot.queues:
+                self.bot.queues[guild_id] = deque()  # Initialize the queue for the guild
 
-            self.queues[guild_id].append(audio_data)  # Add audio data (title and URL) to the queue
+            self.bot.queues[guild_id].append(audio_data)  # Add audio data (title and URL) to the queue
             await interaction.followup.send(f"Added to queue: **{audio_data['title']}**")
             logger.info(f"Added to queue: {audio_data['title']} for guild {guild_id}")
         except Exception as e:
@@ -59,11 +59,12 @@ class QueueCog(commands.Cog):
         """Display the current song queue."""
         try:
             guild_id = interaction.guild.id
-            if guild_id not in self.queues or not self.queues[guild_id]:
+            # Access the shared queues dictionary from the bot
+            if guild_id not in self.bot.queues or not self.bot.queues[guild_id]:
                 await interaction.response.send_message("The queue is empty.")
                 return
 
-            queue = self.queues[guild_id]
+            queue = self.bot.queues[guild_id]
             queue_display = "\n".join([f"{i + 1}. {song['title']}" for i, song in enumerate(queue)])
             await interaction.response.send_message(f"Current Queue:\n{queue_display}")
             logger.info(f"Displayed the current queue for guild {guild_id}")
