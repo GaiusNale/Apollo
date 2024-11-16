@@ -1,4 +1,3 @@
-# norahbot.py
 import os
 import discord
 import logging  # Import logging
