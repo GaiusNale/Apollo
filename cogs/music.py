@@ -3,6 +3,7 @@ from discord import app_commands
 from discord.ext import commands
 import yt_dlp as youtube_dl  # Use yt-dlp for better compatibility
 import logging
+from collections import deque
 
 # Logger setup
 logger = logging.getLogger(__name__)
@@ -27,6 +28,8 @@ ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
 class MusicCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+        self.queue = deque()
+        self.is_playing = False
 
     async def search_youtube_audio(self, query):
         """Search YouTube for a video and return the audio stream URL."""
@@ -131,41 +134,58 @@ class MusicCog(commands.Cog):
             await interaction.response.send_message("An error occurred while trying to disconnect.")
             logger.error(f"Failed to disconnect: {e}")
 
+    async def play_next(self, voice_client):
+        """Play the next song in the queue."""
+        if self.queue:
+            self.is_playing = True
+            next_song = self.queue.popleft()  # Get the next song from the queue
+            voice_client.play(
+                discord.FFmpegPCMAudio(next_song, **ffmpeg_options),
+                after=lambda e: self.bot.loop.create_task(self.play_next(voice_client))
+            )
+            logger.info(f"Now playing: {next_song}")
+        else:
+            self.is_playing = False
+
+    @app_commands.command(name="add", description="Add a song to the queue.")
+    async def add(self, interaction: discord.Interaction, query: str):
+        """Add a song to the queue."""
+        try:
+            await interaction.response.defer()
+
+            audio_url = await self.search_youtube_audio(query)
+            if audio_url is None:
+                await interaction.followup.send("Could not find the song.")
+                return
+
+            self.queue.append(audio_url)
+            await interaction.followup.send(f"Added to queue: {query}")
+            logger.info(f"Added to queue: {audio_url}")
+
+            voice_client = interaction.guild.voice_client
+            if not self.is_playing and voice_client and not voice_client.is_playing():
+                await self.play_next(voice_client)
+
+        except Exception as e:
+            await interaction.followup.send("An error occurred while adding the song to the queue.")
+            logger.error(f"Failed to add song to queue: {e}")
+
+    @app_commands.command(name="queue", description="View the current song queue.")
+    async def view_queue(self, interaction: discord.Interaction):
+        """Display the current song queue."""
+        try:
+            if not self.queue:
+                await interaction.response.send_message("The queue is empty.")
+                return
+
+            queue_list = "\n".join([f"{i + 1}. {url}" for i, url in enumerate(self.queue)])
+            await interaction.response.send_message(f"Current Queue:\n{queue_list}")
+            logger.info("Displayed the current queue.")
+        except Exception as e:
+            await interaction.response.send_message("An error occurred while displaying the queue.")
+            logger.error(f"Failed to display queue: {e}")
+
 
 async def setup(bot):
     await bot.add_cog(MusicCog(bot))
 
-
-# 
-
-# 
-    # @app_commands.command(name="pause", description="Pause the currently playing music.")
-    # async def pause(self, interaction: discord.Interaction):
-        # """Pause the currently playing audio."""
-        # try:
-            # voice_client = interaction.guild.voice_client
-            # if voice_client and voice_client.is_playing():
-                # voice_client.pause()
-                # await interaction.response.send_message("Music paused. ⏸️")
-                # logger.info("Music paused.")
-            # else:
-                # await interaction.response.send_message("No music is currently playing.")
-        # except Exception as e:
-            # await interaction.response.send_message("An error occurred while trying to pause the music.")
-            # logger.error(f"Failed to pause music: {e}")
-# 
-    # @app_commands.command(name="resume", description="Resume the paused music.")
-    # async def resume(self, interaction: discord.Interaction):
-        # """Resume paused audio."""
-        # try:
-            # voice_client = interaction.guild.voice_client
-            # if voice_client and voice_client.is_paused():
-                # voice_client.resume()
-                # await interaction.response.send_message("Music resumed. ▶️")
-                # logger.info("Music resumed.")
-            # else:
-                # await interaction.response.send_message("No music is currently paused.")
-        # except Exception as e:
-            # await interaction.response.send_message("An error occurred while trying to resume the music.")
-            # logger.error(f"Failed to resume music: {e}")
-# 
