@@ -3366,3 +3366,29 @@ discord.app_commands.errors.CommandInvokeError: Command 'join' raised an excepti
 [32m2024-11-17 23:21:59,336 - discord.player - INFO - ffmpeg process 7547 successfully terminated with return code of 0.[0m
 [32m2024-11-17 23:21:59,336 - cogs.music_next - INFO - Queue is empty for guild 1303088062049419356. Stopping playback.[0m
 [32m2024-11-17 23:24:53,039 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[34m2024-11-17 23:34:09,372 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-17 23:34:09,372 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-17 23:34:12,248 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: b051aa5cb74b6e767ede5b4ef76901b0).[0m
+[32m2024-11-17 23:34:14,253 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-17 23:34:14,259 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-17 23:34:14,262 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-17 23:34:14,691 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-17 23:34:14,696 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-17 23:34:14,700 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-17 23:34:14,808 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-17 23:34:14,809 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-17 23:34:14,810 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-17 23:36:47,369 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-17 23:37:40,006 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-17 23:37:40,009 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-17 23:37:40,347 - discord.voice_client - INFO - Voice handshake complete. Endpoint found milan10039.discord.media[0m
+[32m2024-11-17 23:37:42,479 - cogs.music_join - INFO - Joined voice channel: General[0m
+[32m2024-11-17 23:37:58,638 - cogs.music_play - INFO - Now playing: Mozart - Lacrimosa[0m
+[32m2024-11-17 23:38:19,561 - cogs.music_pause - INFO - Playback paused for guild 1303088062049419356.[0m
+[32m2024-11-17 23:38:27,102 - cogs.music_pause - INFO - Playback resumed for guild 1303088062049419356.[0m
+[32m2024-11-17 23:39:08,487 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[32m2024-11-17 23:39:08,489 - discord.voice_client - INFO - Disconnecting from voice normally, close code 1000.[0m
+[32m2024-11-17 23:39:08,494 - cogs.music_play - INFO - Finished playing: lacrimosa[0m
+[32m2024-11-17 23:39:08,494 - discord.player - INFO - ffmpeg process 8674 has not terminated. Waiting to terminate...[0m
+[32m2024-11-17 23:39:08,506 - discord.player - INFO - ffmpeg process 8674 should have terminated with a return code of -9.[0m
+[32m2024-11-17 23:39:09,277 - cogs.muisc_leave - INFO - Disconnected from voice channel.[0m
