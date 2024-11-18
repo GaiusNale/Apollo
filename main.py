@@ -1,4 +1,3 @@
-# norahbot.py
 import os
 import discord
 import logging  # Import logging
@@ -16,6 +15,9 @@ intents.message_content = True  # Enable privileged intent for reading message c
 
 # Initialize the bot with command prefix and intents
 bot = commands.Bot(command_prefix='!', intents=intents)
+
+# Add the queues dictionary as a bot attribute
+bot.queues = {}  # Shared queue dictionary across cogs
 
 # Settings
 DISCORD_TOKEN = config("DISCORD_TOKEN", default=None)
