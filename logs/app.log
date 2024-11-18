@@ -3392,3 +3392,839 @@ discord.app_commands.errors.CommandInvokeError: Command 'join' raised an excepti
 [32m2024-11-17 23:39:08,494 - discord.player - INFO - ffmpeg process 8674 has not terminated. Waiting to terminate...[0m
 [32m2024-11-17 23:39:08,506 - discord.player - INFO - ffmpeg process 8674 should have terminated with a return code of -9.[0m
 [32m2024-11-17 23:39:09,277 - cogs.muisc_leave - INFO - Disconnected from voice channel.[0m
+[34m2024-11-18 19:53:41,607 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-18 19:53:41,607 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-18 19:53:44,564 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 3b680ca2c24ccea42b97bde38043a8e9).[0m
+[32m2024-11-18 19:53:46,579 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-18 19:53:46,587 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-18 19:53:46,594 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-18 19:53:47,882 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-18 19:53:47,885 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-18 19:53:47,889 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-18 19:53:48,010 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-18 19:53:48,014 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-18 19:53:48,016 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-18 19:55:06,988 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-18 19:55:06,988 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-18 19:55:07,399 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid10006.discord.media[0m
+[31m2024-11-18 19:55:10,572 - discord.app_commands.tree - ERROR - Ignoring exception in command 'join'[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/cogs/music_join.py", line 19, in join
+    await interaction.response.send_message("Joined the voice channel!")
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_join.py", line 26, in join
+    await interaction.response.send_message("An error occurred while trying to join the voice channel.")
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 860, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'join' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+[33m2024-11-18 19:55:54,698 - discord.gateway - WARNING - Shard ID None voice heartbeat blocked for more than 10 seconds
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 68, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 48, in play
+    audio_data = await self.search_youtube_audio(query)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 30, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)['entries'][0]
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1781, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1910, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2057, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2089, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1860, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1760, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4651, in _real_extract
+    self._list_formats(video_id, microformats, video_details, player_responses, player_url, duration)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4554, in _list_formats
+    *formats, subtitles = self._extract_formats_and_subtitles(streaming_data, video_id, player_url, live_status, duration)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4288, in _extract_formats_and_subtitles
+    'n': decrypt_nsig(query['n'][0], video_id, player_url),
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3355, in inner
+    self._player_cache[cache_id] = func(*args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3390, in _decrypt_nsig
+    ret = extract_nsig(jsi, func_code)(s)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3472, in extract_nsig
+    ret = func([s])
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 440, in interpret_statement
+    ret, should_abort = self.interpret_statement(try_expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 440, in interpret_statement
+    ret, should_abort = self.interpret_statement(try_expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 532, in interpret_statement
+    ret, should_abort = self.interpret_statement(sub_expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 621, in interpret_statement
+    return self._operator(op, left_val, right_expr, expr, local_vars, allow_recursion), should_return
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 302, in _operator
+    right_val = self.interpret_expression(right_expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 402, in interpret_statement
+    inner, should_abort = self.interpret_statement(inner, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 532, in interpret_statement
+    ret, should_abort = self.interpret_statement(sub_expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 778, in interpret_statement
+    argvals = [self.interpret_expression(v, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 778, in <listcomp>
+    argvals = [self.interpret_expression(v, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 778, in interpret_statement
+    argvals = [self.interpret_expression(v, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 778, in <listcomp>
+    argvals = [self.interpret_expression(v, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 781, in interpret_statement
+    return local_vars[fname](argvals, allow_recursion=allow_recursion), should_return
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 5065, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 490, in interpret_statement
+    ret, should_abort = self.interpret_statement(body, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 502, in interpret_statement
+    body, expr = self._separate_at_paren(remaining, '}')
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 287, in _separate_at_paren
+    separated = list(cls._separate(expr, delim, 1))
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 255, in _separate
+    elif not in_quote and char in counters:
+[0m
+[32m2024-11-18 19:55:57,392 - cogs.music_play - INFO - Now playing: Rema - OZEBA (Lyric Visualizer)[0m
+[32m2024-11-18 19:56:35,278 - cogs.music_queue - INFO - Added to queue: Rema - Reason You (Lyric Video) for guild 1303088062049419356[0m
+[32m2024-11-18 19:57:22,449 - cogs.music_queue - INFO - Added to queue: The Cavemen - Adaugo (Official Music Video) for guild 1303088062049419356[0m
+[32m2024-11-18 19:57:32,857 - cogs.music_queue - INFO - Displayed the current queue for guild 1303088062049419356[0m
+[32m2024-11-18 19:58:16,724 - cogs.music_play - INFO - Finished playing: ozeba[0m
+[32m2024-11-18 19:58:16,725 - discord.player - INFO - ffmpeg process 4940 successfully terminated with return code of 0.[0m
+[32m2024-11-18 19:58:34,779 - cogs.music_next - INFO - No song currently playing in guild 1303088062049419356. Playing next manually.[0m
+[32m2024-11-18 19:58:34,779 - cogs.music_next - INFO - Attempting to play: Rema - Reason You (Lyric Video) for guild 1303088062049419356.[0m
+[32m2024-11-18 19:58:40,260 - cogs.music_queue - INFO - Displayed the current queue for guild 1303088062049419356[0m
+[32m2024-11-18 20:01:57,444 - cogs.music_next - INFO - Song ended for guild 1303088062049419356. Attempting to play next.[0m
+[32m2024-11-18 20:01:57,446 - discord.player - INFO - ffmpeg process 5267 successfully terminated with return code of 0.[0m
+[32m2024-11-18 20:01:57,447 - cogs.music_next - INFO - Attempting to play: The Cavemen - Adaugo (Official Music Video) for guild 1303088062049419356.[0m
+[32m2024-11-18 20:05:27,575 - discord.player - INFO - ffmpeg process 6019 successfully terminated with return code of 0.[0m
+[32m2024-11-18 20:05:27,972 - cogs.music_next - INFO - Song ended for guild 1303088062049419356. Attempting to play next.[0m
+[32m2024-11-18 20:05:27,973 - cogs.music_next - INFO - Queue is empty for guild 1303088062049419356. Stopping playback.[0m
+[32m2024-11-18 20:06:45,556 - cogs.music_queue - INFO - Added to queue: Naruto Shippuden Opening 3 | Blue Bird for guild 1303088062049419356[0m
+[32m2024-11-18 20:06:57,028 - cogs.music_next - INFO - No song currently playing in guild 1303088062049419356. Playing next manually.[0m
+[32m2024-11-18 20:06:57,029 - cogs.music_next - INFO - Attempting to play: Naruto Shippuden Opening 3 | Blue Bird for guild 1303088062049419356.[0m
+[33m2024-11-18 20:08:35,173 - discord.gateway - WARNING - Shard ID None voice heartbeat blocked for more than 10 seconds
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 68, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 48, in play
+    audio_data = await self.search_youtube_audio(query)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 30, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)['entries'][0]
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1781, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1910, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2057, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2089, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1860, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1760, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4794, in _real_extract
+    translation_languages = {
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4795, in <dictcomp>
+    lang.get('languageCode'): self._get_text(lang.get('languageName'), max_runs=1)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 1142, in _get_text
+    text = try_get(item, lambda x: x['simpleText'], str)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 2694, in try_get
+    return try_call(*variadic(getter), args=(src,), expected_type=expected_type)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 2682, in try_call
+    def try_call(*funcs, expected_type=None, args=[], kwargs={}):
+[0m
+[32m2024-11-18 20:08:35,679 - discord.player - INFO - ffmpeg process 6387 has not terminated. Waiting to terminate...[0m
+[32m2024-11-18 20:08:35,687 - discord.player - INFO - ffmpeg process 6387 should have terminated with a return code of -9.[0m
+[32m2024-11-18 20:08:35,874 - cogs.music_next - INFO - Song ended for guild 1303088062049419356. Attempting to play next.[0m
+[32m2024-11-18 20:08:35,874 - cogs.music_next - INFO - Queue is empty for guild 1303088062049419356. Stopping playback.[0m
+[32m2024-11-18 20:08:36,043 - cogs.music_play - INFO - Now playing: *NSYNC - Bye Bye Bye (Official Video from Deadpool and Wolverine)[0m
+[32m2024-11-18 20:12:15,932 - cogs.music_play - INFO - Finished playing: bye bye nsync[0m
+[32m2024-11-18 20:12:15,936 - discord.player - INFO - ffmpeg process 6533 successfully terminated with return code of -9.[0m
+[32m2024-11-18 20:12:16,122 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[34m2024-11-18 20:29:23,601 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-18 20:29:23,601 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-18 20:29:30,842 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 5ee35dffc8acc8f256b1c024f1332dbb).[0m
+[32m2024-11-18 20:29:32,848 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-18 20:29:32,852 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-18 20:29:32,853 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-18 20:29:33,898 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-18 20:29:33,901 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-18 20:29:33,903 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-18 20:29:34,071 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-18 20:29:34,076 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-18 20:29:34,079 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-18 20:29:48,341 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-18 20:35:48,506 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-18 20:35:48,507 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-18 20:35:48,965 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid10051.discord.media[0m
+[32m2024-11-18 20:35:50,756 - cogs.music_play - INFO - Joined voice channel: General in guild 1303088062049419356.[0m
+[32m2024-11-18 20:36:05,863 - cogs.music_play - INFO - Now playing: Lil Wayne - Mrs. Officer/Comfortable ft. Bobby V.[0m
+[32m2024-11-18 20:37:39,571 - cogs.music_play - INFO - Finished playing: Lil Wayne - Mrs. Officer/Comfortable ft. Bobby V.[0m
+[32m2024-11-18 20:37:39,571 - discord.player - INFO - ffmpeg process 12529 has not terminated. Waiting to terminate...[0m
+[32m2024-11-18 20:37:39,581 - discord.player - INFO - ffmpeg process 12529 should have terminated with a return code of -9.[0m
+[32m2024-11-18 20:37:39,864 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[34m2024-11-18 20:47:34,258 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-18 20:47:34,259 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-18 20:47:40,102 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 6c505aa9cbe9eb75d73c7cffeedc3368).[0m
+[32m2024-11-18 20:47:42,109 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-18 20:47:42,115 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-18 20:47:42,119 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-18 20:47:42,749 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-18 20:47:42,752 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-18 20:47:42,762 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-18 20:47:42,873 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-18 20:47:42,874 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-18 20:47:42,875 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-18 20:48:12,375 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-18 20:48:12,376 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-18 20:48:12,968 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid10034.discord.media[0m
+[32m2024-11-18 20:48:16,388 - cogs.music_play - INFO - Joined voice channel: General in guild 1303088062049419356.[0m
+[33m2024-11-18 20:48:30,342 - discord.gateway - WARNING - Shard ID None voice heartbeat blocked for more than 10 seconds
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 68, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 76, in play
+    audio_data = await self.search_youtube_audio(query)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 31, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)['entries'][0]
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1781, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1910, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2057, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2089, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1860, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1760, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4651, in _real_extract
+    self._list_formats(video_id, microformats, video_details, player_responses, player_url, duration)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4554, in _list_formats
+    *formats, subtitles = self._extract_formats_and_subtitles(streaming_data, video_id, player_url, live_status, duration)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4288, in _extract_formats_and_subtitles
+    'n': decrypt_nsig(query['n'][0], video_id, player_url),
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3355, in inner
+    self._player_cache[cache_id] = func(*args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3390, in _decrypt_nsig
+    ret = extract_nsig(jsi, func_code)(s)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3472, in extract_nsig
+    ret = func([s])
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 440, in interpret_statement
+    ret, should_abort = self.interpret_statement(try_expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 440, in interpret_statement
+    ret, should_abort = self.interpret_statement(try_expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 532, in interpret_statement
+    ret, should_abort = self.interpret_statement(sub_expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 621, in interpret_statement
+    return self._operator(op, left_val, right_expr, expr, local_vars, allow_recursion), should_return
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 302, in _operator
+    right_val = self.interpret_expression(right_expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 402, in interpret_statement
+    inner, should_abort = self.interpret_statement(inner, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 532, in interpret_statement
+    ret, should_abort = self.interpret_statement(sub_expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 781, in interpret_statement
+    return local_vars[fname](argvals, allow_recursion=allow_recursion), should_return
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 5065, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 781, in interpret_statement
+    return local_vars[fname](argvals, allow_recursion=allow_recursion), should_return
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 5065, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 490, in interpret_statement
+    ret, should_abort = self.interpret_statement(body, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 774, in interpret_statement
+    return eval_method(), should_return
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 669, in eval_method
+    argvals = [
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 670, in <listcomp>
+    self.interpret_expression(v, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 342, in interpret_statement
+    m = re.match(r'(?P<var>(?:var|const|let)\s)|return(?:\s+|(?=["\'])|$)|(?P<throw>throw\s+)', stmt)
+  File "/usr/lib/python3.10/re.py", line 190, in match
+    return _compile(pattern, flags).match(string)
+[0m
+[33m2024-11-18 20:48:30,476 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 68, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 76, in play
+    audio_data = await self.search_youtube_audio(query)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 31, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)['entries'][0]
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1781, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1910, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2057, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2089, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1860, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1760, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4651, in _real_extract
+    self._list_formats(video_id, microformats, video_details, player_responses, player_url, duration)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4554, in _list_formats
+    *formats, subtitles = self._extract_formats_and_subtitles(streaming_data, video_id, player_url, live_status, duration)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4288, in _extract_formats_and_subtitles
+    'n': decrypt_nsig(query['n'][0], video_id, player_url),
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3355, in inner
+    self._player_cache[cache_id] = func(*args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3390, in _decrypt_nsig
+    ret = extract_nsig(jsi, func_code)(s)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3472, in extract_nsig
+    ret = func([s])
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 440, in interpret_statement
+    ret, should_abort = self.interpret_statement(try_expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 440, in interpret_statement
+    ret, should_abort = self.interpret_statement(try_expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 532, in interpret_statement
+    ret, should_abort = self.interpret_statement(sub_expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 621, in interpret_statement
+    return self._operator(op, left_val, right_expr, expr, local_vars, allow_recursion), should_return
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 302, in _operator
+    right_val = self.interpret_expression(right_expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 781, in interpret_statement
+    return local_vars[fname](argvals, allow_recursion=allow_recursion), should_return
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 5065, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 781, in interpret_statement
+    return local_vars[fname](argvals, allow_recursion=allow_recursion), should_return
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 5065, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 490, in interpret_statement
+    ret, should_abort = self.interpret_statement(body, local_vars, allow_recursion)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 608, in interpret_statement
+    separated = list(self._separate(expr, op))
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 268, in _separate
+    after_op = char if (not in_quote and char in OP_CHARS) else (char.isspace() and after_op)
+[0m
+[32m2024-11-18 20:48:36,514 - cogs.music_play - INFO - Now playing: The Cavemen. - Osondu [Official Audio][0m
+[33m2024-11-18 20:50:07,823 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 68, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 76, in play
+    audio_data = await self.search_youtube_audio(query)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 31, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)['entries'][0]
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1781, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1910, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2057, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2089, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1860, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1760, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4569, in _real_extract
+    webpage, master_ytcfg, player_responses, player_url = self._download_player_responses(url, smuggled_data, video_id, webpage_url)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4533, in _download_player_responses
+    player_responses, player_url = self._extract_player_responses(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4143, in _extract_player_responses
+    pr = pr or self._extract_player_response(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4027, in _extract_player_response
+    return self._extract_response(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 1243, in _extract_response
+    response = self._call_api(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 861, in _call_api
+    return self._download_json(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1152, in download_content
+    res = getattr(self, download_handle.__name__)(url_or_request, video_id, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1112, in download_handle
+    res = self._download_webpage_handle(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 962, in _download_webpage_handle
+    urlh = self._request_webpage(url_or_request, video_id, note, errnote, fatal, data=data,
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 898, in _request_webpage
+    return self._downloader.urlopen(self._create_request(url_or_request, data, headers, query, extensions))
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 4162, in urlopen
+    return self._request_director.send(req)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/networking/common.py", line 117, in send
+    response = handler.send(request)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/networking/_helper.py", line 208, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/networking/common.py", line 340, in send
+    return self._send(request)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/networking/_urllib.py", line 398, in _send
+    res = opener.open(urllib_req, timeout=self._calculate_timeout(request))
+  File "/usr/lib/python3.10/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.10/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/networking/_urllib.py", line 101, in https_open
+    return self.do_open(
+  File "/usr/lib/python3.10/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib/python3.10/http/client.py", line 1283, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1329, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/lib/python3.10/http/client.py", line 1448, in connect
+    super().connect()
+  File "/usr/lib/python3.10/http/client.py", line 942, in connect
+    self.sock = self._create_connection(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/networking/_helper.py", line 274, in create_connection
+    sock = _create_socket_func(ip_addr, timeout, source_address)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/networking/_helper.py", line 224, in _socket_connect
+    sock.connect(sa)
+[0m
+[33m2024-11-18 20:50:10,331 - discord.gateway - WARNING - Shard ID None voice heartbeat blocked for more than 10 seconds
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 68, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 76, in play
+    audio_data = await self.search_youtube_audio(query)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 31, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)['entries'][0]
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1781, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1910, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2057, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2089, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1860, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1760, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4569, in _real_extract
+    webpage, master_ytcfg, player_responses, player_url = self._download_player_responses(url, smuggled_data, video_id, webpage_url)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4533, in _download_player_responses
+    player_responses, player_url = self._extract_player_responses(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4143, in _extract_player_responses
+    pr = pr or self._extract_player_response(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4027, in _extract_player_response
+    return self._extract_response(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 1243, in _extract_response
+    response = self._call_api(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 861, in _call_api
+    return self._download_json(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1152, in download_content
+    res = getattr(self, download_handle.__name__)(url_or_request, video_id, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1112, in download_handle
+    res = self._download_webpage_handle(
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 962, in _download_webpage_handle
+    urlh = self._request_webpage(url_or_request, video_id, note, errnote, fatal, data=data,
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 898, in _request_webpage
+    return self._downloader.urlopen(self._create_request(url_or_request, data, headers, query, extensions))
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 4162, in urlopen
+    return self._request_director.send(req)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/networking/common.py", line 117, in send
+    response = handler.send(request)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/networking/_helper.py", line 208, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/networking/common.py", line 340, in send
+    return self._send(request)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/networking/_urllib.py", line 398, in _send
+    res = opener.open(urllib_req, timeout=self._calculate_timeout(request))
+  File "/usr/lib/python3.10/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.10/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/home/pyguy/.local/lib/python3.10/site-packages/yt_dlp/networking/_urllib.py", line 101, in https_open
+    return self.do_open(
+  File "/usr/lib/python3.10/urllib/request.py", line 1352, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.10/http/client.py", line 1375, in getresponse
+    response.begin()
+  File "/usr/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.10/http/client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.10/ssl.py", line 1303, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.10/ssl.py", line 1159, in read
+    return self._sslobj.read(len, buffer)
+[0m
+[31m2024-11-18 20:50:15,855 - discord.client - ERROR - Attempting a reconnect in 1.14s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/client.py", line 659, in connect
+    await self.ws.poll_event()
+  File "/home/pyguy/.local/lib/python3.10/site-packages/discord/gateway.py", line 646, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+[32m2024-11-18 20:50:15,856 - cogs.music_play - INFO - Finished playing: The Cavemen. - Osondu [Official Audio][0m
+[32m2024-11-18 20:50:15,864 - discord.player - INFO - ffmpeg process 13517 successfully terminated with return code of -9.[0m
+[32m2024-11-18 20:50:17,188 - cogs.music_play - INFO - Now playing: Asake - Skating (Official Visualizer)[0m
+[32m2024-11-18 20:50:19,194 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 6c505aa9cbe9eb75d73c7cffeedc3368.[0m
+[32m2024-11-18 20:50:58,271 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-18 20:51:36,255 - cogs.music_play - INFO - Finished playing: Asake - Skating (Official Visualizer)[0m
+[32m2024-11-18 20:51:36,257 - discord.player - INFO - ffmpeg process 13650 has not terminated. Waiting to terminate...[0m
+[32m2024-11-18 20:51:36,275 - discord.player - INFO - ffmpeg process 13650 should have terminated with a return code of -9.[0m
+[32m2024-11-18 20:51:36,595 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[34m2024-11-18 20:51:40,861 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-18 20:51:40,862 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-18 20:51:43,505 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 2d0dadfff22cc4118d6d773082e6a8cb).[0m
+[32m2024-11-18 20:51:45,542 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-18 20:51:45,545 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-18 20:51:45,549 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-18 20:51:46,050 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-18 20:51:46,051 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-18 20:51:46,053 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-18 20:51:46,131 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-18 20:51:46,132 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-18 20:51:46,133 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-18 20:51:49,114 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-18 20:53:22,024 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-18 20:53:22,025 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-18 20:53:22,452 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid10034.discord.media[0m
+[32m2024-11-18 20:53:24,244 - cogs.music_play - INFO - Joined voice channel: General in guild 1303088062049419356.[0m
+[32m2024-11-18 20:53:37,671 - cogs.music_play - INFO - Now playing: Show Dem Camp x The Cavemen. x Nsikak David - No Love In Lagos (Official Visualiser)[0m
+[32m2024-11-18 20:55:11,002 - cogs.music_queue - INFO - Added to queue: yxngxr1! - mr. sunshine for guild 1303088062049419356[0m
+[32m2024-11-18 20:55:51,109 - cogs.music_queue - INFO - Added to queue: why wait so long? - yxngxr1 for guild 1303088062049419356[0m
+[32m2024-11-18 20:56:33,770 - cogs.music_play - INFO - Finished playing: Show Dem Camp x The Cavemen. x Nsikak David - No Love In Lagos (Official Visualiser)[0m
+[32m2024-11-18 20:56:33,772 - discord.player - INFO - ffmpeg process 13911 successfully terminated with return code of 0.[0m
+[32m2024-11-18 20:56:36,134 - cogs.music_next - INFO - Background task: No song playing in guild 1303088062049419356, starting next song.[0m
+[32m2024-11-18 20:56:36,135 - cogs.music_next - INFO - Attempting to play: yxngxr1! - mr. sunshine for guild 1303088062049419356.[0m
+[32m2024-11-18 20:58:18,118 - cogs.music_next - INFO - Song ended for guild 1303088062049419356. Attempting to play next.[0m
+[32m2024-11-18 20:58:18,119 - discord.player - INFO - ffmpeg process 14162 successfully terminated with return code of 0.[0m
+[32m2024-11-18 20:58:18,119 - cogs.music_next - INFO - Attempting to play: why wait so long? - yxngxr1 for guild 1303088062049419356.[0m
+[32m2024-11-18 21:00:43,923 - cogs.music_next - INFO - Song ended for guild 1303088062049419356. Attempting to play next.[0m
+[32m2024-11-18 21:00:43,924 - cogs.music_next - INFO - Queue is empty for guild 1303088062049419356. Stopping playback.[0m
+[32m2024-11-18 21:00:43,925 - discord.player - INFO - ffmpeg process 14224 successfully terminated with return code of 0.[0m
+[32m2024-11-18 21:03:10,822 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[34m2024-11-18 21:03:12,879 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-18 21:03:12,880 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-18 21:03:15,580 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 4beca1fdb3e53d54a82e390e13b1e2da).[0m
+[32m2024-11-18 21:03:17,587 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-18 21:03:17,592 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-18 21:03:17,596 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-18 21:03:18,656 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-18 21:03:18,660 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-18 21:03:18,668 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-18 21:03:18,874 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-18 21:03:18,879 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-18 21:03:18,883 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-18 21:03:20,401 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-18 21:04:43,186 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-18 21:04:43,188 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-18 21:04:43,786 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid10034.discord.media[0m
+[32m2024-11-18 21:04:46,110 - cogs.music_play - INFO - Joined voice channel: General in guild 1303088062049419356.[0m
+[32m2024-11-18 21:04:56,473 - cogs.music_play - INFO - Now playing: why wait so long? - yxngxr1[0m
+[32m2024-11-18 21:05:57,906 - cogs.music_play - INFO - Finished playing: why wait so long? - yxngxr1[0m
+[32m2024-11-18 21:05:57,908 - discord.player - INFO - ffmpeg process 14654 has not terminated. Waiting to terminate...[0m
+[32m2024-11-18 21:05:57,924 - discord.player - INFO - ffmpeg process 14654 should have terminated with a return code of -9.[0m
+[32m2024-11-18 21:05:58,180 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
