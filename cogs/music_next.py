@@ -1,7 +1,7 @@
 import discord
-from discord import app_commands
-from discord.ext import commands
+from discord.ext import commands, tasks
 import logging
+from discord import app_commands
 
 logger = logging.getLogger(__name__)
 
@@ -9,6 +9,7 @@ class NextCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.is_playing = {}  # Track whether playback is active per guild
+        self.background_task.start()  # Start the background task on cog load
 
     async def play_next(self, guild_id, voice_client):
         """Play the next song in the queue, if available."""
@@ -44,13 +45,11 @@ class NextCog(commands.Cog):
 
             # Check if the bot is connected to a voice channel
             if not voice_client or not voice_client.is_connected():
-                await interaction.response.send_message("I'm not connected to a voice channel.")
                 logger.warning(f"Bot is not connected to a voice channel in guild {guild_id}.")
                 return
 
             # Check if the queue is empty
             if guild_id not in self.bot.queues or not self.bot.queues[guild_id]:
-                await interaction.response.send_message("The queue is empty. There's nothing to play next.")
                 logger.info(f"No songs in queue for guild {guild_id}.")
                 return
 
@@ -63,10 +62,33 @@ class NextCog(commands.Cog):
                 logger.info(f"No song currently playing in guild {guild_id}. Playing next manually.")
                 await self.play_next(guild_id, voice_client)
 
-            await interaction.response.send_message("Skipping to the next song.")
+            logger.info(f"/next command executed successfully for guild {guild_id}.")
         except Exception as e:
-            await interaction.response.send_message("An error occurred while trying to skip the song.")
             logger.error(f"Failed to skip song in guild {guild_id}: {e}")
+
+    @tasks.loop(seconds=5)  # Periodically checks every 5 seconds
+    async def background_task(self):
+        """Background task to automatically play the next song."""
+        for guild in self.bot.guilds:
+            guild_id = guild.id
+            voice_client = guild.voice_client
+
+            if not voice_client or not voice_client.is_connected():
+                continue  # Skip if the bot is not connected to a voice channel
+
+            # Check if something is playing or if the queue is empty
+            if not voice_client.is_playing() and guild_id in self.bot.queues and self.bot.queues[guild_id]:
+                logger.info(f"Background task: No song playing in guild {guild_id}, starting next song.")
+                await self.play_next(guild_id, voice_client)
+
+    @background_task.before_loop
+    async def before_background_task(self):
+        """Ensure the bot is ready before starting the background task."""
+        await self.bot.wait_until_ready()
+
+    def cog_unload(self):
+        """Cancel the background task when the cog is unloaded."""
+        self.background_task.cancel()
 
 async def setup(bot):
     await bot.add_cog(NextCog(bot))
