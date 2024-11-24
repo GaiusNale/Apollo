@@ -94,12 +94,6 @@ async def setup(bot):
     await bot.add_cog(NextCog(bot))
 
 
-# class MusicControlView(discord.ui.View):
-#     def __init__(self, cog, voice_client):
-#         super().__init__(timeout=None)
-#         self.cog = cog
-#         self.voice_client = voice_client
-#         self.is_paused = False  # Start with playback not paused
 
 
 
