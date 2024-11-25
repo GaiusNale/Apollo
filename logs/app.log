@@ -6821,3 +6821,401 @@ AttributeError: 'MusicControlView' object has no attribute 'is_paused'
 [32m2024-11-21 23:16:07,526 - discord.player - INFO - ffmpeg process 14817 has not terminated. Waiting to terminate...[0m
 [32m2024-11-21 23:16:07,537 - discord.player - INFO - ffmpeg process 14817 should have terminated with a return code of -9.[0m
 [32m2024-11-21 23:16:20,179 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[34m2024-11-24 16:42:12,579 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-24 16:42:12,579 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-24 16:42:16,004 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 00dc27127584e9c126a40a1e38d8befc).[0m
+[32m2024-11-24 16:42:18,011 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-24 16:42:18,018 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-24 16:42:18,020 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-24 16:42:18,396 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-24 16:42:18,398 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-24 16:42:18,400 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-24 16:42:18,514 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-24 16:42:18,515 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-24 16:42:18,516 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-24 16:42:30,089 - __main__ - INFO - Commands synced globally.[0m
+[33m2024-11-24 16:44:10,597 - cogs.music_play - WARNING - User the_real_gaius#0 is not in a voice channel.[0m
+[32m2024-11-24 16:44:19,415 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-24 16:44:19,416 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-24 16:44:19,758 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid10027.discord.media[0m
+[32m2024-11-24 16:44:21,212 - cogs.music_play - INFO - Joined voice channel: General in guild 1303088062049419356.[0m
+[34m2024-11-24 16:44:21,213 - spotipy.cache_handler - DEBUG - cache does not exist at: .cache[0m
+[34m2024-11-24 16:44:21,213 - spotipy.oauth2 - DEBUG - sending POST request to https://accounts.spotify.com/api/token with Headers: {'Authorization': 'Basic eW91cl9zcG90aWZ5X2NsaWVudF9pZDp5b3VyX3Nwb3RpZnlfY2xpZW50X3NlY3JldA=='} and Body: {'grant_type': 'client_credentials'}[0m
+[34m2024-11-24 16:44:21,216 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): accounts.spotify.com:443[0m
+[34m2024-11-24 16:44:21,956 - urllib3.connectionpool - DEBUG - https://accounts.spotify.com:443 "POST /api/token HTTP/11" 400 None[0m
+[31m2024-11-24 16:44:21,959 - cogs.music_play - ERROR - Error searching Spotify: error: invalid_client, error_description: Invalid client[0m
+[32m2024-11-24 16:44:34,213 - cogs.music_play - INFO - Now playing: squabble up kendrick lamar by Unknown Artist[0m
+[32m2024-11-24 16:44:53,536 - cogs.music_play - INFO - Finished playing: Drakeo The Ruler - Impatient Freestyle (Shot by @LewisYouNasty)[0m
+[32m2024-11-24 16:44:53,537 - discord.player - INFO - ffmpeg process 6857 has not terminated. Waiting to terminate...[0m
+[32m2024-11-24 16:44:53,544 - discord.player - INFO - ffmpeg process 6857 should have terminated with a return code of -9.[0m
+[32m2024-11-24 16:50:08,110 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[34m2024-11-24 17:05:04,655 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-24 17:05:04,656 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-24 17:05:07,159 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 797cb5093c825263fde836b8ab00faa5).[0m
+[32m2024-11-24 17:05:09,164 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-24 17:05:09,167 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-24 17:05:09,169 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-24 17:05:09,509 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-24 17:05:09,510 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-24 17:05:09,511 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-24 17:05:09,637 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-24 17:05:09,637 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-24 17:05:09,638 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-24 17:05:43,089 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-24 17:06:48,636 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-24 17:06:48,636 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-24 17:06:49,035 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid10008.discord.media[0m
+[32m2024-11-24 17:06:50,714 - cogs.music_play - INFO - Joined voice channel: General in guild 1303088062049419356.[0m
+[34m2024-11-24 17:06:50,715 - spotipy.cache_handler - DEBUG - cache does not exist at: .cache[0m
+[34m2024-11-24 17:06:50,715 - spotipy.oauth2 - DEBUG - sending POST request to https://accounts.spotify.com/api/token with Headers: {'Authorization': 'Basic MTc4ZmY0NjE0NThiNDFhMzk4Y2IzODVjOWEwZDE0YWY6ZjViMmY1ZDljODczNDFjYWFiZjdkM2ZiMmJkODJkYTQ='} and Body: {'grant_type': 'client_credentials'}[0m
+[34m2024-11-24 17:06:50,718 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): accounts.spotify.com:443[0m
+[34m2024-11-24 17:06:51,320 - urllib3.connectionpool - DEBUG - https://accounts.spotify.com:443 "POST /api/token HTTP/11" 200 None[0m
+[34m2024-11-24 17:06:51,322 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'wacced out murals kendrick lamar', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQCyv3jPChoM-x2rUYZGkuCamliceK1OFcRibXKMNNPU4EEx6ICgaO4cOJBMJMsEeh6YTvOhGD1jtxNdMMkESYCkL41FuRmWlQT8DjioR2kAjhbNK2Y', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-24 17:06:51,325 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2024-11-24 17:06:52,362 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/search?q=wacced+out+murals+kendrick+lamar&limit=1&offset=0&type=track HTTP/11" 200 None[0m
+[34m2024-11-24 17:06:52,363 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=wacced%20out%20murals%20kendrick%20lamar&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=wacced%20out%20murals%20kendrick%20lamar&type=track', 'offset': 0, 'previous': None, 'total': 801, 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/0hvT3yIEysuuvkK73vgdcW'}, 'href': 'https://api.spotify.com/v1/albums/0hvT3yIEysuuvkK73vgdcW', 'id': '0hvT3yIEysuuvkK73vgdcW', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02d9985092cd88bffd97653b58'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851d9985092cd88bffd97653b58'}], 'is_playable': True, 'name': 'GNX', 'release_date': '2024-11-22', 'release_date_precision': 'day', 'total_tracks': 12, 'type': 'album', 'uri': 'spotify:album:0hvT3yIEysuuvkK73vgdcW'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 317092, 'explicit': True, 'external_ids': {'isrc': 'USUG12408495'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/5gOfC9UzZQzTyShqPMrpjT'}, 'href': 'https://api.spotify.com/v1/tracks/5gOfC9UzZQzTyShqPMrpjT', 'id': '5gOfC9UzZQzTyShqPMrpjT', 'is_local': False, 'is_playable': True, 'name': 'wacced out murals', 'popularity': 75, 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:5gOfC9UzZQzTyShqPMrpjT'}]}}[0m
+[33m2024-11-24 17:07:05,092 - discord.gateway - WARNING - Shard ID None voice heartbeat blocked for more than 10 seconds
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 68, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 156, in play
+    audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 100, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)['entries'][0]
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1781, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1910, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2057, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2089, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1860, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1760, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4569, in _real_extract
+    webpage, master_ytcfg, player_responses, player_url = self._download_player_responses(url, smuggled_data, video_id, webpage_url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4528, in _download_player_responses
+    webpage = self._download_webpage(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1201, in _download_webpage
+    return self.__download_webpage(url_or_request, video_id, note, errnote, None, fatal, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1152, in download_content
+    res = getattr(self, download_handle.__name__)(url_or_request, video_id, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 968, in _download_webpage_handle
+    content = self._webpage_read_content(urlh, url_or_request, video_id, note, errnote, fatal,
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1048, in _webpage_read_content
+    webpage_bytes = urlh.read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/_requests.py", line 143, in read
+    return self.fp.read(amt, decode_content=True)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 949, in read
+    data = self._raw_read(amt)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 873, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 856, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/usr/lib/python3.10/http/client.py", line 460, in read
+    return self._read_chunked(amt)
+  File "/usr/lib/python3.10/http/client.py", line 592, in _read_chunked
+    value.append(self._safe_read(chunk_left))
+  File "/usr/lib/python3.10/http/client.py", line 631, in _safe_read
+    data = self.fp.read(amt)
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.10/ssl.py", line 1303, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.10/ssl.py", line 1159, in read
+    return self._sslobj.read(len, buffer)
+[0m
+[33m2024-11-24 17:07:15,099 - discord.gateway - WARNING - Shard ID None voice heartbeat blocked for more than 20 seconds
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 68, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 156, in play
+    audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 100, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)['entries'][0]
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1781, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1910, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2057, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2089, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1860, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1760, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4651, in _real_extract
+    self._list_formats(video_id, microformats, video_details, player_responses, player_url, duration)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4554, in _list_formats
+    *formats, subtitles = self._extract_formats_and_subtitles(streaming_data, video_id, player_url, live_status, duration)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4459, in _extract_formats_and_subtitles
+    fmts, subs = self._extract_m3u8_formats_and_subtitles(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 2063, in _extract_m3u8_formats_and_subtitles
+    res = self._download_webpage_handle(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 962, in _download_webpage_handle
+    urlh = self._request_webpage(url_or_request, video_id, note, errnote, fatal, data=data,
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 898, in _request_webpage
+    return self._downloader.urlopen(self._create_request(url_or_request, data, headers, query, extensions))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 4162, in urlopen
+    return self._request_director.send(req)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/common.py", line 117, in send
+    response = handler.send(request)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/_helper.py", line 208, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/common.py", line 340, in send
+    return self._send(request)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/_requests.py", line 328, in _send
+    requests_res = session.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 730, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 909, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/lib/python3.10/ssl.py", line 1100, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.10/ssl.py", line 1371, in do_handshake
+    self._sslobj.do_handshake()
+[0m
+[32m2024-11-24 17:07:24,443 - cogs.music_play - INFO - Now playing: wacced out murals by Kendrick Lamar[0m
+[32m2024-11-24 17:12:38,338 - cogs.music_play - INFO - Finished playing: wacced out murals[0m
+[32m2024-11-24 17:12:38,338 - discord.player - INFO - ffmpeg process 7966 successfully terminated with return code of 0.[0m
+[32m2024-11-24 17:14:21,411 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[34m2024-11-24 17:14:23,923 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-24 17:14:23,924 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-24 17:14:26,601 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 3d504a4bff47f1767137ebe762dedce9).[0m
+[32m2024-11-24 17:14:28,623 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-24 17:14:28,625 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-24 17:14:28,626 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-24 17:14:29,010 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-24 17:14:29,011 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-24 17:14:29,012 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-24 17:14:29,096 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-24 17:14:29,097 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-24 17:14:29,097 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-24 17:14:34,649 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-24 17:17:33,218 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-24 17:17:33,219 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-24 17:17:33,742 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid10008.discord.media[0m
+[32m2024-11-24 17:17:35,908 - cogs.music_play - INFO - Joined voice channel: General in guild 1303088062049419356.[0m
+[34m2024-11-24 17:17:35,909 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'pekaboo kendrick lamar', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQCyv3jPChoM-x2rUYZGkuCamliceK1OFcRibXKMNNPU4EEx6ICgaO4cOJBMJMsEeh6YTvOhGD1jtxNdMMkESYCkL41FuRmWlQT8DjioR2kAjhbNK2Y', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-24 17:17:35,915 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2024-11-24 17:17:37,368 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/search?q=pekaboo+kendrick+lamar&limit=1&offset=0&type=track HTTP/11" 200 None[0m
+[34m2024-11-24 17:17:37,369 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=pekaboo%20kendrick%20lamar&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=pekaboo%20kendrick%20lamar&type=track', 'offset': 0, 'previous': None, 'total': 800, 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/3LOm0AZjpwVQebvkyanjDy'}, 'href': 'https://api.spotify.com/v1/artists/3LOm0AZjpwVQebvkyanjDy', 'id': '3LOm0AZjpwVQebvkyanjDy', 'name': 'ODUMODUBLVCK', 'type': 'artist', 'uri': 'spotify:artist:3LOm0AZjpwVQebvkyanjDy'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/6e1McsPwHgiySHVlpZRhFx'}, 'href': 'https://api.spotify.com/v1/albums/6e1McsPwHgiySHVlpZRhFx', 'id': '6e1McsPwHgiySHVlpZRhFx', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273b6213080ecfeca18ff84fd9c'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02b6213080ecfeca18ff84fd9c'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851b6213080ecfeca18ff84fd9c'}], 'is_playable': True, 'name': 'EZIOKWU', 'release_date': '2023-10-06', 'release_date_precision': 'day', 'total_tracks': 14, 'type': 'album', 'uri': 'spotify:album:6e1McsPwHgiySHVlpZRhFx'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/3LOm0AZjpwVQebvkyanjDy'}, 'href': 'https://api.spotify.com/v1/artists/3LOm0AZjpwVQebvkyanjDy', 'id': '3LOm0AZjpwVQebvkyanjDy', 'name': 'ODUMODUBLVCK', 'type': 'artist', 'uri': 'spotify:artist:3LOm0AZjpwVQebvkyanjDy'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/7F57A9yjaUOkPcsEjyv4MD'}, 'href': 'https://api.spotify.com/v1/artists/7F57A9yjaUOkPcsEjyv4MD', 'id': '7F57A9yjaUOkPcsEjyv4MD', 'name': 'ECko Miles', 'type': 'artist', 'uri': 'spotify:artist:7F57A9yjaUOkPcsEjyv4MD'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/4mSWNal2Ixxf1zrXSTLoep'}, 'href': 'https://api.spotify.com/v1/artists/4mSWNal2Ixxf1zrXSTLoep', 'id': '4mSWNal2Ixxf1zrXSTLoep', 'name': 'Zlatan', 'type': 'artist', 'uri': 'spotify:artist:4mSWNal2Ixxf1zrXSTLoep'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 184077, 'explicit': True, 'external_ids': {'isrc': 'USA2P2250036'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/08tSNwcNYM9yjuYF9jFvOu'}, 'href': 'https://api.spotify.com/v1/tracks/08tSNwcNYM9yjuYF9jFvOu', 'id': '08tSNwcNYM9yjuYF9jFvOu', 'is_local': False, 'is_playable': True, 'name': 'PICANTO (feat. Zlatan and ECko Miles)', 'popularity': 50, 'preview_url': None, 'track_number': 14, 'type': 'track', 'uri': 'spotify:track:08tSNwcNYM9yjuYF9jFvOu'}]}}[0m
+[32m2024-11-24 17:17:50,167 - cogs.music_play - INFO - Now playing: PICANTO (feat. Zlatan and ECko Miles) by ODUMODUBLVCK[0m
+[34m2024-11-24 17:18:19,460 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'gnx kendrick lamar', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQCyv3jPChoM-x2rUYZGkuCamliceK1OFcRibXKMNNPU4EEx6ICgaO4cOJBMJMsEeh6YTvOhGD1jtxNdMMkESYCkL41FuRmWlQT8DjioR2kAjhbNK2Y', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-24 17:18:20,258 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=gnx%20kendrick%20lamar&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=gnx%20kendrick%20lamar&type=track', 'offset': 0, 'previous': None, 'total': 824, 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/0hvT3yIEysuuvkK73vgdcW'}, 'href': 'https://api.spotify.com/v1/albums/0hvT3yIEysuuvkK73vgdcW', 'id': '0hvT3yIEysuuvkK73vgdcW', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02d9985092cd88bffd97653b58'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851d9985092cd88bffd97653b58'}], 'is_playable': True, 'name': 'GNX', 'release_date': '2024-11-22', 'release_date_precision': 'day', 'total_tracks': 12, 'type': 'album', 'uri': 'spotify:album:0hvT3yIEysuuvkK73vgdcW'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/50DchbKTiJU56SYmIRSJCI'}, 'href': 'https://api.spotify.com/v1/artists/50DchbKTiJU56SYmIRSJCI', 'id': '50DchbKTiJU56SYmIRSJCI', 'name': 'Hitta J3', 'type': 'artist', 'uri': 'spotify:artist:50DchbKTiJU56SYmIRSJCI'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/1q2nUylEqrRJkiDkXa39Mw'}, 'href': 'https://api.spotify.com/v1/artists/1q2nUylEqrRJkiDkXa39Mw', 'id': '1q2nUylEqrRJkiDkXa39Mw', 'name': 'YoungThreat', 'type': 'artist', 'uri': 'spotify:artist:1q2nUylEqrRJkiDkXa39Mw'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/27OdVby2oeFjM1C5XvC3hC'}, 'href': 'https://api.spotify.com/v1/artists/27OdVby2oeFjM1C5XvC3hC', 'id': '27OdVby2oeFjM1C5XvC3hC', 'name': 'Peysoh', 'type': 'artist', 'uri': 'spotify:artist:27OdVby2oeFjM1C5XvC3hC'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 193539, 'explicit': True, 'external_ids': {'isrc': 'USUG12408505'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/3aZptNYC6Z1YoumeqZcDcQ'}, 'href': 'https://api.spotify.com/v1/tracks/3aZptNYC6Z1YoumeqZcDcQ', 'id': '3aZptNYC6Z1YoumeqZcDcQ', 'is_local': False, 'is_playable': True, 'name': 'gnx (feat. hitta j3, youngthreat, peysoh)', 'popularity': 69, 'preview_url': None, 'track_number': 11, 'type': 'track', 'uri': 'spotify:track:3aZptNYC6Z1YoumeqZcDcQ'}]}}[0m
+[33m2024-11-24 17:18:33,779 - discord.gateway - WARNING - Shard ID None voice heartbeat blocked for more than 10 seconds
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 68, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_queue.py", line 85, in add
+    audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist)
+  File "/home/pyguy/Documents/Apollo/cogs/music_queue.py", line 61, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)['entries'][0]
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1781, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1910, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2057, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2089, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1860, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1760, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4569, in _real_extract
+    webpage, master_ytcfg, player_responses, player_url = self._download_player_responses(url, smuggled_data, video_id, webpage_url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4528, in _download_player_responses
+    webpage = self._download_webpage(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1201, in _download_webpage
+    return self.__download_webpage(url_or_request, video_id, note, errnote, None, fatal, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1152, in download_content
+    res = getattr(self, download_handle.__name__)(url_or_request, video_id, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 968, in _download_webpage_handle
+    content = self._webpage_read_content(urlh, url_or_request, video_id, note, errnote, fatal,
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1048, in _webpage_read_content
+    webpage_bytes = urlh.read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/_requests.py", line 143, in read
+    return self.fp.read(amt, decode_content=True)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 949, in read
+    data = self._raw_read(amt)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 873, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 856, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/usr/lib/python3.10/http/client.py", line 460, in read
+    return self._read_chunked(amt)
+  File "/usr/lib/python3.10/http/client.py", line 583, in _read_chunked
+    chunk_left = self._get_chunk_left()
+  File "/usr/lib/python3.10/http/client.py", line 566, in _get_chunk_left
+    chunk_left = self._read_next_chunk_size()
+  File "/usr/lib/python3.10/http/client.py", line 526, in _read_next_chunk_size
+    line = self.fp.readline(_MAXLINE + 1)
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.10/ssl.py", line 1303, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.10/ssl.py", line 1159, in read
+    return self._sslobj.read(len, buffer)
+[0m
+[32m2024-11-24 17:18:43,692 - cogs.music_queue - INFO - Added to queue: gnx (feat. hitta j3, youngthreat, peysoh) for guild 1303088062049419356[0m
+[32m2024-11-24 17:19:04,751 - cogs.music_queue - INFO - Displayed the current queue for guild 1303088062049419356[0m
+[32m2024-11-24 17:19:13,135 - cogs.music_next - INFO - No songs in queue for guild 1303088062049419356.[0m
+[32m2024-11-24 17:19:21,169 - cogs.music_next - INFO - No songs in queue for guild 1303088062049419356.[0m
+[32m2024-11-24 17:20:29,187 - cogs.music_play - INFO - Finished playing: ODUMODUBLVCK - Picanto ft. Zlatan, Ecko Miles (Official Video)[0m
+[32m2024-11-24 17:20:29,188 - discord.player - INFO - ffmpeg process 8604 successfully terminated with return code of 0.[0m
+[32m2024-11-24 17:34:07,050 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[34m2024-11-24 17:34:36,991 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-24 17:34:36,992 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-24 17:34:39,563 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: f507de3ea1e0c9100bf193c0a1d1b77e).[0m
+[32m2024-11-24 17:34:41,568 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-24 17:34:41,571 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-24 17:34:41,574 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-24 17:34:41,947 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-24 17:34:41,948 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-24 17:34:41,950 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-24 17:34:42,035 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-24 17:34:42,036 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-24 17:34:42,037 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-24 17:34:55,089 - __main__ - INFO - Commands synced globally.[0m
+[32m2024-11-24 17:39:11,155 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-24 17:39:11,156 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-24 17:39:11,558 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid10008.discord.media[0m
+[32m2024-11-24 17:39:13,466 - cogs.music_play - INFO - Joined voice channel: General in guild 1303088062049419356.[0m
+[34m2024-11-24 17:39:13,467 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'squabble up kendrick lamar', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQCyv3jPChoM-x2rUYZGkuCamliceK1OFcRibXKMNNPU4EEx6ICgaO4cOJBMJMsEeh6YTvOhGD1jtxNdMMkESYCkL41FuRmWlQT8DjioR2kAjhbNK2Y', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-24 17:39:13,469 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2024-11-24 17:39:14,634 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/search?q=squabble+up+kendrick+lamar&limit=1&offset=0&type=track HTTP/11" 200 None[0m
+[34m2024-11-24 17:39:14,636 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=squabble%20up%20kendrick%20lamar&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=squabble%20up%20kendrick%20lamar&type=track', 'offset': 0, 'previous': None, 'total': 801, 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/0hvT3yIEysuuvkK73vgdcW'}, 'href': 'https://api.spotify.com/v1/albums/0hvT3yIEysuuvkK73vgdcW', 'id': '0hvT3yIEysuuvkK73vgdcW', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02d9985092cd88bffd97653b58'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851d9985092cd88bffd97653b58'}], 'is_playable': True, 'name': 'GNX', 'release_date': '2024-11-22', 'release_date_precision': 'day', 'total_tracks': 12, 'type': 'album', 'uri': 'spotify:album:0hvT3yIEysuuvkK73vgdcW'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 157992, 'explicit': True, 'external_ids': {'isrc': 'USUG12408494'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/0nj9Bq5sHDiTxSHunhgkFb'}, 'href': 'https://api.spotify.com/v1/tracks/0nj9Bq5sHDiTxSHunhgkFb', 'id': '0nj9Bq5sHDiTxSHunhgkFb', 'is_local': False, 'is_playable': True, 'name': 'squabble up', 'popularity': 75, 'preview_url': None, 'track_number': 2, 'type': 'track', 'uri': 'spotify:track:0nj9Bq5sHDiTxSHunhgkFb'}]}}[0m
+[32m2024-11-24 17:39:27,787 - cogs.music_play - INFO - Now playing: squabble up by Kendrick Lamar[0m
+[34m2024-11-24 17:40:18,451 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'think about things', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQCyv3jPChoM-x2rUYZGkuCamliceK1OFcRibXKMNNPU4EEx6ICgaO4cOJBMJMsEeh6YTvOhGD1jtxNdMMkESYCkL41FuRmWlQT8DjioR2kAjhbNK2Y', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-24 17:40:19,401 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=think%20about%20things&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=think%20about%20things&type=track', 'offset': 0, 'previous': None, 'total': 900, 'items': [{'album': {'album_type': 'single', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/3Hb64DQZIhDCgyHKrzBXOL'}, 'href': 'https://api.spotify.com/v1/artists/3Hb64DQZIhDCgyHKrzBXOL', 'id': '3Hb64DQZIhDCgyHKrzBXOL', 'name': 'Daði Freyr', 'type': 'artist', 'uri': 'spotify:artist:3Hb64DQZIhDCgyHKrzBXOL'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/3wnnkEyvrINGbPfVbIzAXs'}, 'href': 'https://api.spotify.com/v1/albums/3wnnkEyvrINGbPfVbIzAXs', 'id': '3wnnkEyvrINGbPfVbIzAXs', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b27340d0f2a4d4c9b5b7ac978f4b'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e0240d0f2a4d4c9b5b7ac978f4b'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d0000485140d0f2a4d4c9b5b7ac978f4b'}], 'is_playable': True, 'name': 'Think About Things', 'release_date': '2020-04-09', 'release_date_precision': 'day', 'total_tracks': 1, 'type': 'album', 'uri': 'spotify:album:3wnnkEyvrINGbPfVbIzAXs'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/3Hb64DQZIhDCgyHKrzBXOL'}, 'href': 'https://api.spotify.com/v1/artists/3Hb64DQZIhDCgyHKrzBXOL', 'id': '3Hb64DQZIhDCgyHKrzBXOL', 'name': 'Daði Freyr', 'type': 'artist', 'uri': 'spotify:artist:3Hb64DQZIhDCgyHKrzBXOL'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 173385, 'explicit': False, 'external_ids': {'isrc': 'ISV442020901'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/77yGu0p7APK39lotu7CLk5'}, 'href': 'https://api.spotify.com/v1/tracks/77yGu0p7APK39lotu7CLk5', 'id': '77yGu0p7APK39lotu7CLk5', 'is_local': False, 'is_playable': True, 'name': 'Think About Things', 'popularity': 58, 'preview_url': 'https://p.scdn.co/mp3-preview/a505fabdf7d1559c09b033916bb32ad9e29f3c91?cid=178ff461458b41a398cb385c9a0d14af', 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:77yGu0p7APK39lotu7CLk5'}]}}[0m
+[32m2024-11-24 17:40:31,411 - cogs.music_queue - INFO - Added to queue: Think About Things for guild 1303088062049419356[0m
+[32m2024-11-24 17:40:41,460 - cogs.music_queue - INFO - Displayed the current queue for guild 1303088062049419356[0m
+[32m2024-11-24 17:40:47,248 - cogs.music_next - INFO - Stopped current song for guild 1303088062049419356, skipping to next.[0m
+[32m2024-11-24 17:40:47,248 - cogs.music_next - INFO - /next command executed successfully for guild 1303088062049419356.[0m
+[32m2024-11-24 17:40:47,254 - cogs.music_play - INFO - Finished playing: squabble up[0m
+[32m2024-11-24 17:40:47,259 - discord.player - INFO - ffmpeg process 9455 has not terminated. Waiting to terminate...[0m
+[32m2024-11-24 17:40:47,262 - discord.player - INFO - ffmpeg process 9455 should have terminated with a return code of -9.[0m
+[32m2024-11-24 17:40:52,039 - cogs.music_next - INFO - Background task: No song playing in guild 1303088062049419356, starting next song.[0m
+[32m2024-11-24 17:40:52,040 - cogs.music_next - INFO - Attempting to play: Think About Things for guild 1303088062049419356.[0m
+[32m2024-11-24 17:43:59,165 - cogs.music_next - INFO - Song ended for guild 1303088062049419356. Attempting to play next.[0m
+[32m2024-11-24 17:43:59,166 - cogs.music_next - INFO - Queue is empty for guild 1303088062049419356. Stopping playback.[0m
+[32m2024-11-24 17:43:59,167 - discord.player - INFO - ffmpeg process 9646 successfully terminated with return code of 0.[0m
+[32m2024-11-24 17:49:05,352 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
