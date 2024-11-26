@@ -95,10 +95,10 @@ class MusicControlView(discord.ui.View):
 
 
 class PlayCog(commands.Cog):
-    def __init__(self, bot, queue_manager):
+    def __init__(self, bot):
         self.bot = bot
         self.spotify = get_spotify_client()
-        self.queue_manager = queue_manager
+        self.queue_manager = bot.QueueManager
 
     async def join_voice_channel(self, interaction: discord.Interaction):
         if interaction.user.voice:
@@ -181,8 +181,8 @@ class PlayCog(commands.Cog):
                 return
 
             self.queue_manager.add_to_queue(
-                guild_id=interaction.guild.id,
-                song={
+                interaction.guild.id,
+                {
                     "title": spotify_title,
                     "artist": spotify_artist,
                     "audio_url": audio_data["audio_url"],
@@ -199,5 +199,5 @@ class PlayCog(commands.Cog):
             await interaction.followup.send("An error occurred while trying to play the song.")
             logger.error(f"Failed to play song: {e}")
 
-async def setup(bot, queue_manager):
-    await bot.add_cog(PlayCog(bot, queue_manager))
+async def setup(bot):
+    await bot.add_cog(PlayCog(bot))

@@ -49,10 +49,10 @@ async def search_song_on_spotify(spotify, query):
 
 
 class QueueCog(commands.Cog):
-    def __init__(self, bot, queue_manager):
+    def __init__(self, bot):
         self.bot = bot
         self.spotify = get_spotify_client()
-        self.queue_manager = queue_manager
+        self.queue_manager = bot.QueueManager
 
     async def search_youtube_audio(self, query):
         try:
@@ -131,5 +131,5 @@ class QueueCog(commands.Cog):
             logger.error(f"Failed to clear queue: {e}")
 
 
-async def setup(bot, queue_manager): #Corrected this line
-    await bot.add_cog(QueueCog(bot, queue_manager)) #Corrected this line
+async def setup(bot): #Corrected this line
+    await bot.add_cog(QueueCog(bot)) #Corrected this line

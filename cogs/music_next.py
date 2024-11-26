@@ -6,10 +6,10 @@ from discord import app_commands
 logger = logging.getLogger(__name__)
 
 class NextCog(commands.Cog):
-    def __init__(self, bot, queue_manager):
+    def __init__(self, bot):
         self.bot = bot
         self.is_playing = {}
-        self.queue_manager = queue_manager
+        self.queue_manager = bot.QueueManager
         self.background_task.before_loop(self.before_background_task) #Corrected this line
         self.background_task.start()
 
@@ -86,5 +86,5 @@ class NextCog(commands.Cog):
     def cog_unload(self):
         self.background_task.cancel()
 
-async def setup(bot, queue_manager): #Corrected this line
-    await bot.add_cog(NextCog(bot, queue_manager)) #Corrected this line
+async def setup(bot): #Corrected this line
+    await bot.add_cog(NextCog(bot)) #Corrected this line
