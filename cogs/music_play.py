@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 # YouTube downloader configuration
 ytdl_format_options = {
-    'format': 'bestaudio/best',
+    'format': 'bestaudio[ext=m4a]/bestaudio/best',
     'postprocessors': [{
         'key': 'FFmpegExtractAudio',
         'preferredcodec': 'mp3',
@@ -152,17 +152,23 @@ class PlayCog(commands.Cog):
 
     async def search_youtube_audio(self, query):
         try:
-            info = ytdl.extract_info(f"ytsearch:{query}", download=False)['entries'][0]
-            return {
-                "audio_url": info['formats'][0]['url'],
-                "title": info['title'],
-                "duration": info['duration'],
-                "thumbnail": info.get('thumbnails', [{}])[-1].get('url', None)
-            }
+            # Search and extract info
+            info = ytdl.extract_info(f"ytsearch:{query}", download=False)
+            if 'entries' in info and info['entries']:
+                video = info['entries'][0]
+                return {
+                    "audio_url": video['url'],
+                    "title": video['title'],
+                    "duration": video['duration'],
+                    "thumbnail": video.get('thumbnails', [{}])[-1].get('url', None)
+                }
+            else:
+                logger.error("No results found for the query.")
+                return None
         except Exception as e:
-            logger.error(f"Error searching YouTube: {e}")
+            logger.error(f"Error extracting YouTube audio: {e}")
             return None
-
+            
     @app_commands.command(name="play", description="Play music from a YouTube search query.")
     async def play(self, interaction: discord.Interaction, query: str):
         try:
