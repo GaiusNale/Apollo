@@ -4,6 +4,7 @@ import logging  # Import logging
 from discord.ext import commands
 from decouple import config
 from logs.log_config import setup_logging  # Import the logging setup function
+from queue_manager import QueueManager
 
 # Set up logging
 setup_logging()
@@ -16,8 +17,9 @@ intents.message_content = True  # Enable privileged intent for reading message c
 # Initialize the bot with command prefix and intents
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-# Add the queues dictionary as a bot attribute
-bot.queues = {}  # Shared queue dictionary across cogs
+queue_manager = QueueManager()
+bot.QueueManager = queue_manager
+
 
 # Settings
 DISCORD_TOKEN = config("DISCORD_TOKEN", default=None)
