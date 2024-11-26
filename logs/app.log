@@ -7219,3 +7219,670 @@ Loop thread traceback (most recent call last):
 [32m2024-11-24 17:43:59,166 - cogs.music_next - INFO - Queue is empty for guild 1303088062049419356. Stopping playback.[0m
 [32m2024-11-24 17:43:59,167 - discord.player - INFO - ffmpeg process 9646 successfully terminated with return code of 0.[0m
 [32m2024-11-24 17:49:05,352 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[34m2024-11-26 18:20:17,225 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-26 18:20:17,225 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-26 18:20:19,778 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: a55b115f1f099e01a00c9fc6b9d27368).[0m
+[32m2024-11-26 18:20:21,785 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[31m2024-11-26 18:20:21,791 - __main__ - ERROR - Failed to load cog queue_manager.py: Extension 'cogs.queue_manager' has no 'setup' function.[0m
+[32m2024-11-26 18:20:21,796 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-26 18:20:21,800 - __main__ - INFO - Loaded cog: music_join.py[0m
+[31m2024-11-26 18:20:22,231 - __main__ - ERROR - Failed to load cog music_queue.py: Extension 'cogs.music_queue' raised an error: ModuleNotFoundError: No module named 'queue_manager'[0m
+[32m2024-11-26 18:20:22,232 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[31m2024-11-26 18:20:22,236 - __main__ - ERROR - Failed to load cog music_next.py: Extension 'cogs.music_next' raised an error: AttributeError: 'Bot' object has no attribute 'queue_manager'[0m
+[31m2024-11-26 18:20:22,241 - __main__ - ERROR - Failed to load cog music_play.py: Extension 'cogs.music_play' raised an error: ModuleNotFoundError: No module named 'queue_manager'[0m
+[32m2024-11-26 18:20:22,242 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-26 18:20:22,243 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[34m2024-11-26 18:22:41,769 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-26 18:22:41,769 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-26 18:22:44,312 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: a476048fde54da0e9bbb743808597031).[0m
+[32m2024-11-26 18:22:46,318 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[31m2024-11-26 18:22:46,325 - __main__ - ERROR - Failed to load cog queue_manager.py: Extension 'cogs.queue_manager' raised an error: TypeError: QueueManager.__init__() takes 1 positional argument but 2 were given[0m
+[32m2024-11-26 18:22:46,329 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-26 18:22:46,334 - __main__ - INFO - Loaded cog: music_join.py[0m
+[31m2024-11-26 18:22:46,658 - __main__ - ERROR - Failed to load cog music_queue.py: Extension 'cogs.music_queue' raised an error: ModuleNotFoundError: No module named 'queue_manager'[0m
+[32m2024-11-26 18:22:46,659 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[31m2024-11-26 18:22:46,662 - __main__ - ERROR - Failed to load cog music_next.py: Extension 'cogs.music_next' raised an error: AttributeError: 'Bot' object has no attribute 'queue_manager'[0m
+[31m2024-11-26 18:22:46,663 - __main__ - ERROR - Failed to load cog music_play.py: Extension 'cogs.music_play' raised an error: ModuleNotFoundError: No module named 'queue_manager'[0m
+[32m2024-11-26 18:22:46,664 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-26 18:22:46,665 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[34m2024-11-26 18:24:38,306 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-26 18:24:38,307 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-26 18:24:41,112 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 5104e992e886c08bf8e43d688d5a74d8).[0m
+[32m2024-11-26 18:24:43,133 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[31m2024-11-26 18:24:43,136 - __main__ - ERROR - Failed to load cog queue_manager.py: Extension 'cogs.queue_manager' raised an error: TypeError: QueueManager.__init__() takes 1 positional argument but 2 were given[0m
+[32m2024-11-26 18:24:43,138 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-26 18:24:43,143 - __main__ - INFO - Loaded cog: music_join.py[0m
+[31m2024-11-26 18:24:43,514 - __main__ - ERROR - Failed to load cog music_queue.py: Extension 'cogs.music_queue' raised an error: ModuleNotFoundError: No module named 'queue_manager'[0m
+[32m2024-11-26 18:24:43,515 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[31m2024-11-26 18:24:43,518 - __main__ - ERROR - Failed to load cog music_next.py: Extension 'cogs.music_next' raised an error: ModuleNotFoundError: No module named 'queue_manager'[0m
+[31m2024-11-26 18:24:43,518 - __main__ - ERROR - Failed to load cog music_play.py: Extension 'cogs.music_play' raised an error: ModuleNotFoundError: No module named 'queue_manager'[0m
+[32m2024-11-26 18:24:43,520 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-26 18:24:43,521 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[34m2024-11-26 18:31:33,234 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-26 18:31:33,235 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-26 18:31:35,836 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 023c07078360930fb6082a2ae05c52cc).[0m
+[32m2024-11-26 18:31:37,846 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[31m2024-11-26 18:31:37,854 - __main__ - ERROR - Failed to load cog queue_manager.py: Extension 'cogs.queue_manager' raised an error: TypeError: QueueManager.__init__() takes 1 positional argument but 2 were given[0m
+[32m2024-11-26 18:31:37,858 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-26 18:31:37,868 - __main__ - INFO - Loaded cog: music_join.py[0m
+[31m2024-11-26 18:31:38,194 - __main__ - ERROR - Failed to load cog music_queue.py: Extension 'cogs.music_queue' raised an error: ModuleNotFoundError: No module named 'queue_manager'[0m
+[32m2024-11-26 18:31:38,195 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[31m2024-11-26 18:31:38,198 - __main__ - ERROR - Failed to load cog music_next.py: Extension 'cogs.music_next' raised an error: ModuleNotFoundError: No module named 'queue_manager'[0m
+[31m2024-11-26 18:31:38,199 - __main__ - ERROR - Failed to load cog music_play.py: Extension 'cogs.music_play' raised an error: ModuleNotFoundError: No module named 'queue_manager'[0m
+[32m2024-11-26 18:31:38,200 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-26 18:31:38,201 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[34m2024-11-26 19:05:01,986 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-26 19:05:01,986 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-26 19:05:05,235 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 002fa8b567b600166089e96d49859077).[0m
+[32m2024-11-26 19:05:07,245 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-26 19:05:07,249 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-26 19:05:07,251 - __main__ - INFO - Loaded cog: music_join.py[0m
+[31m2024-11-26 19:05:07,641 - __main__ - ERROR - Failed to load cog music_queue.py: Extension 'cogs.music_queue' raised an error: TypeError: QueueCog.__init__() missing 1 required positional argument: 'queue_manager'[0m
+[32m2024-11-26 19:05:07,642 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[31m2024-11-26 19:05:07,646 - __main__ - ERROR - Failed to load cog music_next.py: Extension 'cogs.music_next' raised an error: TypeError: NextCog.__init__() missing 1 required positional argument: 'queue_manager'[0m
+[31m2024-11-26 19:05:07,734 - __main__ - ERROR - Failed to load cog music_play.py: Extension 'cogs.music_play' raised an error: TypeError: PlayCog.__init__() missing 1 required positional argument: 'queue_manager'[0m
+[32m2024-11-26 19:05:07,735 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-26 19:05:07,735 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[31m2024-11-26 19:13:38,634 - discord.client - ERROR - Attempting a reconnect in 1.95s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-26 19:13:40,631 - discord.client - ERROR - Attempting a reconnect in 1.10s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-26 19:13:41,742 - discord.client - ERROR - Attempting a reconnect in 1.29s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-26 19:13:43,044 - discord.client - ERROR - Attempting a reconnect in 0.45s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-26 19:13:43,499 - discord.client - ERROR - Attempting a reconnect in 22.71s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-26 19:14:06,236 - discord.client - ERROR - Attempting a reconnect in 7.57s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-26 19:14:13,819 - discord.client - ERROR - Attempting a reconnect in 29.11s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-26 19:14:42,970 - discord.client - ERROR - Attempting a reconnect in 13.55s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-26 19:14:56,542 - discord.client - ERROR - Attempting a reconnect in 68.05s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-26 19:16:04,674 - discord.client - ERROR - Attempting a reconnect in 762.65s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-26 19:28:47,437 - discord.client - ERROR - Attempting a reconnect in 66.77s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-26 19:29:54,284 - discord.client - ERROR - Attempting a reconnect in 186.24s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-26 19:33:00,630 - discord.client - ERROR - Attempting a reconnect in 691.70s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-26 19:44:32,410 - discord.client - ERROR - Attempting a reconnect in 602.97s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+[32m2024-11-26 19:54:36,399 - discord.gateway - INFO - Shard ID None session has been invalidated.[0m
+[32m2024-11-26 19:54:42,713 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: c9753c3d82b20160740ff664c974b3e8).[0m
+[32m2024-11-26 19:54:44,720 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[31m2024-11-26 19:54:44,721 - __main__ - ERROR - Failed to load cog ping.py: Extension 'cogs.ping' is already loaded.[0m
+[31m2024-11-26 19:54:44,721 - __main__ - ERROR - Failed to load cog music_join.py: Extension 'cogs.music_join' is already loaded.[0m
+[31m2024-11-26 19:54:44,826 - __main__ - ERROR - Failed to load cog music_queue.py: Extension 'cogs.music_queue' raised an error: TypeError: QueueCog.__init__() missing 1 required positional argument: 'queue_manager'[0m
+[31m2024-11-26 19:54:44,826 - __main__ - ERROR - Failed to load cog music_pause.py: Extension 'cogs.music_pause' is already loaded.[0m
+[31m2024-11-26 19:54:44,830 - __main__ - ERROR - Failed to load cog music_next.py: Extension 'cogs.music_next' raised an error: TypeError: setup() missing 1 required positional argument: 'queue_manager'[0m
+[31m2024-11-26 19:54:44,907 - __main__ - ERROR - Failed to load cog music_play.py: Extension 'cogs.music_play' raised an error: TypeError: setup() missing 1 required positional argument: 'queue_manager'[0m
+[31m2024-11-26 19:54:44,907 - __main__ - ERROR - Failed to load cog sayhi.py: Extension 'cogs.sayhi' is already loaded.[0m
+[31m2024-11-26 19:54:44,907 - __main__ - ERROR - Failed to load cog muisc_leave.py: Extension 'cogs.muisc_leave' is already loaded.[0m
+[34m2024-11-26 19:57:16,041 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-26 19:57:16,042 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-26 19:57:18,493 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: cd2ff70efc890e829a18bc7486ad9a53).[0m
+[32m2024-11-26 19:57:20,497 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-26 19:57:20,501 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-26 19:57:20,503 - __main__ - INFO - Loaded cog: music_join.py[0m
+[31m2024-11-26 19:57:20,898 - __main__ - ERROR - Failed to load cog music_queue.py: Extension 'cogs.music_queue' raised an error: TypeError: setup() missing 1 required positional argument: 'queue_manager'[0m
+[32m2024-11-26 19:57:20,899 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[31m2024-11-26 19:57:20,901 - __main__ - ERROR - Failed to load cog music_next.py: Extension 'cogs.music_next' raised an error: TypeError: setup() missing 1 required positional argument: 'queue_manager'[0m
+[31m2024-11-26 19:57:20,976 - __main__ - ERROR - Failed to load cog music_play.py: Extension 'cogs.music_play' raised an error: TypeError: setup() missing 1 required positional argument: 'queue_manager'[0m
+[32m2024-11-26 19:57:20,977 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-26 19:57:20,978 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[34m2024-11-26 19:58:08,789 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-26 19:58:08,790 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-26 19:58:11,764 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 91fba32b3985bd59b69777803dc88319).[0m
+[32m2024-11-26 19:58:13,847 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-26 19:58:13,850 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-26 19:58:13,868 - __main__ - INFO - Loaded cog: music_join.py[0m
+[31m2024-11-26 19:58:14,223 - __main__ - ERROR - Failed to load cog music_queue.py: Extension 'cogs.music_queue' raised an error: TypeError: setup() missing 1 required positional argument: 'queue_manager'[0m
+[32m2024-11-26 19:58:14,224 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[31m2024-11-26 19:58:14,226 - __main__ - ERROR - Failed to load cog music_next.py: Extension 'cogs.music_next' raised an error: TypeError: setup() missing 1 required positional argument: 'queue_manager'[0m
+[31m2024-11-26 19:58:14,304 - __main__ - ERROR - Failed to load cog music_play.py: Extension 'cogs.music_play' raised an error: TypeError: setup() missing 1 required positional argument: 'queue_manager'[0m
+[32m2024-11-26 19:58:14,305 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-26 19:58:14,306 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[34m2024-11-26 20:01:18,238 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-26 20:01:18,239 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-26 20:01:21,663 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 8f0a7c0139e550aeda3e767640b738ad).[0m
+[32m2024-11-26 20:01:23,668 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[31m2024-11-26 20:01:23,669 - __main__ - ERROR - Failed to load cog ping.py: module 'cogs.ping' has no attribute 'ping'[0m
+[31m2024-11-26 20:01:23,670 - __main__ - ERROR - Failed to load cog music_join.py: module 'cogs.music_join' has no attribute 'music_join'[0m
+[31m2024-11-26 20:01:24,024 - __main__ - ERROR - Failed to load cog music_queue.py: module 'cogs.music_queue' has no attribute 'music_queue'[0m
+[31m2024-11-26 20:01:24,025 - __main__ - ERROR - Failed to load cog music_pause.py: module 'cogs.music_pause' has no attribute 'music_pause'[0m
+[31m2024-11-26 20:01:24,026 - __main__ - ERROR - Failed to load cog music_next.py: module 'cogs.music_next' has no attribute 'music_next'[0m
+[31m2024-11-26 20:01:24,099 - __main__ - ERROR - Failed to load cog music_play.py: module 'cogs.music_play' has no attribute 'music_play'[0m
+[31m2024-11-26 20:01:24,100 - __main__ - ERROR - Failed to load cog sayhi.py: module 'cogs.sayhi' has no attribute 'sayhi'[0m
+[31m2024-11-26 20:01:24,101 - __main__ - ERROR - Failed to load cog muisc_leave.py: module 'cogs.muisc_leave' has no attribute 'muisc_leave'[0m
+[34m2024-11-26 20:04:24,128 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-26 20:04:24,129 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-26 20:04:26,929 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 79a5b6bc1497dbfadb1d71017211b02d).[0m
+[32m2024-11-26 20:04:28,935 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-26 20:04:28,939 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-26 20:04:28,941 - __main__ - INFO - Loaded cog: music_join.py[0m
+[31m2024-11-26 20:04:29,306 - __main__ - ERROR - Failed to load cog music_queue.py: Extension 'cogs.music_queue' raised an error: TypeError: setup() missing 1 required positional argument: 'queue_manager'[0m
+[32m2024-11-26 20:04:29,307 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[31m2024-11-26 20:04:29,309 - __main__ - ERROR - Failed to load cog music_next.py: Extension 'cogs.music_next' raised an error: TypeError: setup() missing 1 required positional argument: 'queue_manager'[0m
+[31m2024-11-26 20:04:29,392 - __main__ - ERROR - Failed to load cog music_play.py: Extension 'cogs.music_play' raised an error: TypeError: setup() missing 1 required positional argument: 'queue_manager'[0m
+[32m2024-11-26 20:04:29,393 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-26 20:04:29,394 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[34m2024-11-26 20:07:57,241 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-26 20:07:57,242 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-26 20:07:59,788 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: b3b2fb813cffe694f3c87fcf2ea91919).[0m
+[32m2024-11-26 20:08:01,793 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-26 20:08:01,797 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-26 20:08:01,799 - __main__ - INFO - Loaded cog: music_join.py[0m
+[31m2024-11-26 20:08:02,143 - __main__ - ERROR - Failed to load cog music_queue.py: Extension 'cogs.music_queue' raised an error: TypeError: setup() missing 1 required positional argument: 'queue_manager'[0m
+[32m2024-11-26 20:08:02,144 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[31m2024-11-26 20:08:02,147 - __main__ - ERROR - Failed to load cog music_next.py: Extension 'cogs.music_next' raised an error: TypeError: setup() missing 1 required positional argument: 'queue_manager'[0m
+[31m2024-11-26 20:08:02,223 - __main__ - ERROR - Failed to load cog music_play.py: Extension 'cogs.music_play' raised an error: TypeError: setup() missing 1 required positional argument: 'queue_manager'[0m
+[32m2024-11-26 20:08:02,224 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-26 20:08:02,225 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
