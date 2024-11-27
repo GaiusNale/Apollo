@@ -8071,3 +8071,789 @@ aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-u
 [32m2024-11-26 14:26:49,549 - discord.player - INFO - ffmpeg process 14864 has not terminated. Waiting to terminate...[0m
 [32m2024-11-26 14:26:49,554 - discord.player - INFO - ffmpeg process 14864 should have terminated with a return code of 1.[0m
 [32m2024-11-26 14:26:49,848 - cogs.music_play - INFO - Skipped to: tv off (feat. lefty gunplay) by Kendrick Lamar[0m
+[34m2024-11-26 21:39:31,450 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-26 21:39:31,450 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-26 21:39:39,717 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: d51293ee28f98a8e48e999482e169e49).[0m
+[32m2024-11-26 21:39:41,723 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-26 21:39:41,727 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-26 21:39:41,729 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-26 21:39:42,116 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-26 21:39:42,118 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-26 21:39:42,120 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-26 21:39:42,200 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-26 21:39:42,201 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-26 21:39:42,202 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-26 21:40:09,670 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-26 21:40:09,671 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-26 21:40:10,106 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid10005.discord.media[0m
+[34m2024-11-26 21:40:16,281 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'departure', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQA4qXyRVkFXk53WbLtzmVQSM9XA0sO-7xeJ8G_t9sBWDNLVnk9xJGzEJcuqCczVrk-W8c-Wjvh_-5u_mTwO6LaEemsSuE5oDCWzBJBReHilcbZ3PWc', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-26 21:40:16,288 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2024-11-26 21:40:17,628 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/search?q=departure&limit=1&offset=0&type=track HTTP/11" 200 None[0m
+[34m2024-11-26 21:40:17,641 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=departure&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=departure&type=track', 'offset': 0, 'previous': None, 'total': 900, 'items': [{'album': {'album_type': 'single', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2R1ubdXY4sUiDqsCtoAVUE'}, 'href': 'https://api.spotify.com/v1/artists/2R1ubdXY4sUiDqsCtoAVUE', 'id': '2R1ubdXY4sUiDqsCtoAVUE', 'name': 'Masatoshi Ono', 'type': 'artist', 'uri': 'spotify:artist:2R1ubdXY4sUiDqsCtoAVUE'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/3BNDjSD67jJE4fhxX1b2OV'}, 'href': 'https://api.spotify.com/v1/artists/3BNDjSD67jJE4fhxX1b2OV', 'id': '3BNDjSD67jJE4fhxX1b2OV', 'name': 'GALNERYUS', 'type': 'artist', 'uri': 'spotify:artist:3BNDjSD67jJE4fhxX1b2OV'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/2VV60us39qmoRHmqxDiPG3'}, 'href': 'https://api.spotify.com/v1/albums/2VV60us39qmoRHmqxDiPG3', 'id': '2VV60us39qmoRHmqxDiPG3', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273f7aa0fd62a866dd3dfa54e50'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02f7aa0fd62a866dd3dfa54e50'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851f7aa0fd62a866dd3dfa54e50'}], 'is_playable': True, 'name': '“HUNTER×HUNTER”Single', 'release_date': '2012-08-22', 'release_date_precision': 'day', 'total_tracks': 2, 'type': 'album', 'uri': 'spotify:album:2VV60us39qmoRHmqxDiPG3'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2R1ubdXY4sUiDqsCtoAVUE'}, 'href': 'https://api.spotify.com/v1/artists/2R1ubdXY4sUiDqsCtoAVUE', 'id': '2R1ubdXY4sUiDqsCtoAVUE', 'name': 'Masatoshi Ono', 'type': 'artist', 'uri': 'spotify:artist:2R1ubdXY4sUiDqsCtoAVUE'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 257519, 'explicit': False, 'external_ids': {'isrc': 'JPVP01107401'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/68XJP1sxQ5aiwbDJ8McUSr'}, 'href': 'https://api.spotify.com/v1/tracks/68XJP1sxQ5aiwbDJ8McUSr', 'id': '68XJP1sxQ5aiwbDJ8McUSr', 'is_local': False, 'is_playable': True, 'name': 'departure!', 'popularity': 59, 'preview_url': 'https://p.scdn.co/mp3-preview/bf9165d28a9a275d60d7ae7f7e220b20ba16a55c?cid=178ff461458b41a398cb385c9a0d14af', 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:68XJP1sxQ5aiwbDJ8McUSr'}]}}[0m
+[32m2024-11-26 21:40:35,430 - cogs.music_play - INFO - Skipped to: departure! by Masatoshi Ono[0m
+[34m2024-11-26 21:41:02,666 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'peekaboo kendrick lamar', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQA4qXyRVkFXk53WbLtzmVQSM9XA0sO-7xeJ8G_t9sBWDNLVnk9xJGzEJcuqCczVrk-W8c-Wjvh_-5u_mTwO6LaEemsSuE5oDCWzBJBReHilcbZ3PWc', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-26 21:41:03,312 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=peekaboo%20kendrick%20lamar&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=peekaboo%20kendrick%20lamar&type=track', 'offset': 0, 'previous': None, 'total': 799, 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/0hvT3yIEysuuvkK73vgdcW'}, 'href': 'https://api.spotify.com/v1/albums/0hvT3yIEysuuvkK73vgdcW', 'id': '0hvT3yIEysuuvkK73vgdcW', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02d9985092cd88bffd97653b58'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851d9985092cd88bffd97653b58'}], 'is_playable': True, 'name': 'GNX', 'release_date': '2024-11-22', 'release_date_precision': 'day', 'total_tracks': 12, 'type': 'album', 'uri': 'spotify:album:0hvT3yIEysuuvkK73vgdcW'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/6fqjJNsLs7g6F3PXy01Xnw'}, 'href': 'https://api.spotify.com/v1/artists/6fqjJNsLs7g6F3PXy01Xnw', 'id': '6fqjJNsLs7g6F3PXy01Xnw', 'name': 'AzChike', 'type': 'artist', 'uri': 'spotify:artist:6fqjJNsLs7g6F3PXy01Xnw'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 155917, 'explicit': True, 'external_ids': {'isrc': 'USUG12408501'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/2Uts1QFB4u2YNIMiqcb4de'}, 'href': 'https://api.spotify.com/v1/tracks/2Uts1QFB4u2YNIMiqcb4de', 'id': '2Uts1QFB4u2YNIMiqcb4de', 'is_local': False, 'is_playable': True, 'name': 'peekaboo (feat. azchike)', 'popularity': 79, 'preview_url': None, 'track_number': 9, 'type': 'track', 'uri': 'spotify:track:2Uts1QFB4u2YNIMiqcb4de'}]}}[0m
+[32m2024-11-26 21:41:27,993 - cogs.music_queue - INFO - Displayed the current queue for guild 1303088062049419356[0m
+[32m2024-11-26 21:41:54,551 - cogs.music_play - INFO - Finished playing: departure![0m
+[32m2024-11-26 21:41:54,552 - discord.player - INFO - ffmpeg process 16915 has not terminated. Waiting to terminate...[0m
+[32m2024-11-26 21:41:54,566 - discord.player - INFO - ffmpeg process 16915 should have terminated with a return code of -9.[0m
+[32m2024-11-26 21:41:55,288 - cogs.music_play - INFO - Skipped to: peekaboo (feat. azchike) by Kendrick Lamar[0m
+[32m2024-11-26 21:43:10,326 - cogs.music_play - INFO - Finished playing: peekaboo (feat. azchike)[0m
+[32m2024-11-26 21:43:10,327 - discord.player - INFO - ffmpeg process 17075 successfully terminated with return code of 0.[0m
+[32m2024-11-26 21:43:34,411 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[31m2024-11-26 21:43:34,796 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-11' coro=<Loop._loop() done, defined at /home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py:200> exception=TypeError('NextCog.before_background_task() takes 1 positional argument but 2 were given')>[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 202, in _loop
+    await self._call_loop_function('before_loop')
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 186, in _call_loop_function
+    await coro(self._injected, *args, **kwargs)
+TypeError: NextCog.before_background_task() takes 1 positional argument but 2 were given
+[34m2024-11-27 21:20:08,044 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-27 21:20:08,045 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-27 21:20:14,311 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: a2322ba98a098daeed160c4a9943bece).[0m
+[32m2024-11-27 21:20:16,316 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-27 21:20:16,319 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-27 21:20:16,321 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-27 21:20:16,746 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-27 21:20:16,751 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-27 21:20:16,756 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-27 21:20:16,866 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-27 21:20:16,867 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-27 21:20:16,868 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-27 21:20:56,770 - discord.gateway - INFO - Shard ID None has successfully RESUMED session a2322ba98a098daeed160c4a9943bece.[0m
+[32m2024-11-27 21:21:42,907 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-27 21:21:42,908 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-27 21:21:43,425 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid53.discord.media[0m
+[34m2024-11-27 21:21:45,189 - spotipy.oauth2 - DEBUG - sending POST request to https://accounts.spotify.com/api/token with Headers: {'Authorization': 'Basic MTc4ZmY0NjE0NThiNDFhMzk4Y2IzODVjOWEwZDE0YWY6ZjViMmY1ZDljODczNDFjYWFiZjdkM2ZiMmJkODJkYTQ='} and Body: {'grant_type': 'client_credentials'}[0m
+[34m2024-11-27 21:21:45,196 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): accounts.spotify.com:443[0m
+[34m2024-11-27 21:21:46,004 - urllib3.connectionpool - DEBUG - https://accounts.spotify.com:443 "POST /api/token HTTP/11" 200 None[0m
+[34m2024-11-27 21:21:46,007 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'hey now kendrick lamar', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQDUN0ZZGJuO0rybsXE4FMw1c135FkhLq9ZYnr-ruVjJ2HGqpFIAtDASan4ekPz0BLd3nBcEFuLJ6Z1pJmBnJQrsExCtWiZZZ6knleIJC7u4Dvj7-EQ', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-27 21:21:46,010 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2024-11-27 21:21:46,773 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/search?q=hey+now+kendrick+lamar&limit=1&offset=0&type=track HTTP/11" 200 None[0m
+[34m2024-11-27 21:21:46,774 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=hey%20now%20kendrick%20lamar&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=hey%20now%20kendrick%20lamar&type=track', 'offset': 0, 'previous': None, 'total': 802, 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/0hvT3yIEysuuvkK73vgdcW'}, 'href': 'https://api.spotify.com/v1/albums/0hvT3yIEysuuvkK73vgdcW', 'id': '0hvT3yIEysuuvkK73vgdcW', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02d9985092cd88bffd97653b58'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851d9985092cd88bffd97653b58'}], 'is_playable': True, 'name': 'GNX', 'release_date': '2024-11-22', 'release_date_precision': 'day', 'total_tracks': 12, 'type': 'album', 'uri': 'spotify:album:0hvT3yIEysuuvkK73vgdcW'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/4VHa48wXlsDA2vWfgIi7cX'}, 'href': 'https://api.spotify.com/v1/artists/4VHa48wXlsDA2vWfgIi7cX', 'id': '4VHa48wXlsDA2vWfgIi7cX', 'name': 'Dody6', 'type': 'artist', 'uri': 'spotify:artist:4VHa48wXlsDA2vWfgIi7cX'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 217478, 'explicit': True, 'external_ids': {'isrc': 'USUG12408497'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/5S8VwnB4sLi6W0lYTWYylu'}, 'href': 'https://api.spotify.com/v1/tracks/5S8VwnB4sLi6W0lYTWYylu', 'id': '5S8VwnB4sLi6W0lYTWYylu', 'is_local': False, 'is_playable': True, 'name': 'hey now (feat. dody6)', 'popularity': 83, 'preview_url': None, 'track_number': 5, 'type': 'track', 'uri': 'spotify:track:5S8VwnB4sLi6W0lYTWYylu'}]}}[0m
+[33m2024-11-27 21:21:59,585 - discord.gateway - WARNING - Shard ID None voice heartbeat blocked for more than 10 seconds
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 70, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 184, in play
+    audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 156, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1781, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1910, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2057, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2089, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1860, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1614, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1625, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1760, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4651, in _real_extract
+    self._list_formats(video_id, microformats, video_details, player_responses, player_url, duration)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4554, in _list_formats
+    *formats, subtitles = self._extract_formats_and_subtitles(streaming_data, video_id, player_url, live_status, duration)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4459, in _extract_formats_and_subtitles
+    fmts, subs = self._extract_m3u8_formats_and_subtitles(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 2063, in _extract_m3u8_formats_and_subtitles
+    res = self._download_webpage_handle(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 962, in _download_webpage_handle
+    urlh = self._request_webpage(url_or_request, video_id, note, errnote, fatal, data=data,
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 898, in _request_webpage
+    return self._downloader.urlopen(self._create_request(url_or_request, data, headers, query, extensions))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 4162, in urlopen
+    return self._request_director.send(req)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/common.py", line 117, in send
+    response = handler.send(request)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/_helper.py", line 208, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/common.py", line 340, in send
+    return self._send(request)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/_requests.py", line 328, in _send
+    requests_res = session.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 507, in getresponse
+    httplib_response = super().getresponse()
+  File "/usr/lib/python3.10/http/client.py", line 1375, in getresponse
+    response.begin()
+  File "/usr/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.10/http/client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.10/ssl.py", line 1303, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.10/ssl.py", line 1159, in read
+    return self._sslobj.read(len, buffer)
+[0m
+[32m2024-11-27 21:22:02,759 - cogs.music_play - INFO - Skipped to: hey now (feat. dody6) by Kendrick Lamar[0m
+[32m2024-11-27 21:24:38,918 - cogs.music_play - INFO - Finished playing: hey now (feat. dody6)[0m
+[32m2024-11-27 21:24:38,919 - discord.player - INFO - ffmpeg process 10110 successfully terminated with return code of 0.[0m
+[34m2024-11-27 21:25:09,553 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'wacced out murals kendrick lamar', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQDUN0ZZGJuO0rybsXE4FMw1c135FkhLq9ZYnr-ruVjJ2HGqpFIAtDASan4ekPz0BLd3nBcEFuLJ6Z1pJmBnJQrsExCtWiZZZ6knleIJC7u4Dvj7-EQ', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-27 21:25:10,033 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=wacced%20out%20murals%20kendrick%20lamar&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=wacced%20out%20murals%20kendrick%20lamar&type=track', 'offset': 0, 'previous': None, 'total': 801, 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/0hvT3yIEysuuvkK73vgdcW'}, 'href': 'https://api.spotify.com/v1/albums/0hvT3yIEysuuvkK73vgdcW', 'id': '0hvT3yIEysuuvkK73vgdcW', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02d9985092cd88bffd97653b58'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851d9985092cd88bffd97653b58'}], 'is_playable': True, 'name': 'GNX', 'release_date': '2024-11-22', 'release_date_precision': 'day', 'total_tracks': 12, 'type': 'album', 'uri': 'spotify:album:0hvT3yIEysuuvkK73vgdcW'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 317092, 'explicit': True, 'external_ids': {'isrc': 'USUG12408495'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/5gOfC9UzZQzTyShqPMrpjT'}, 'href': 'https://api.spotify.com/v1/tracks/5gOfC9UzZQzTyShqPMrpjT', 'id': '5gOfC9UzZQzTyShqPMrpjT', 'is_local': False, 'is_playable': True, 'name': 'wacced out murals', 'popularity': 84, 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:5gOfC9UzZQzTyShqPMrpjT'}]}}[0m
+[32m2024-11-27 21:25:16,681 - cogs.music_play - INFO - Skipped to: wacced out murals by Kendrick Lamar[0m
+[32m2024-11-27 21:30:05,677 - cogs.music_play - INFO - Finished playing: wacced out murals[0m
+[32m2024-11-27 21:30:05,678 - discord.player - INFO - ffmpeg process 10276 successfully terminated with return code of 0.[0m
+[32m2024-11-27 21:30:31,539 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[31m2024-11-27 21:30:31,843 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-11' coro=<Loop._loop() done, defined at /home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py:200> exception=TypeError('NextCog.before_background_task() takes 1 positional argument but 2 were given')>[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 202, in _loop
+    await self._call_loop_function('before_loop')
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 186, in _call_loop_function
+    await coro(self._injected, *args, **kwargs)
+TypeError: NextCog.before_background_task() takes 1 positional argument but 2 were given
+[34m2024-11-27 21:30:42,911 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-27 21:30:42,912 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-27 21:30:45,370 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 503ca69603cd31caf791d059a0d70a03).[0m
+[32m2024-11-27 21:30:47,376 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-27 21:30:47,381 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-27 21:30:47,385 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-27 21:30:47,811 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-27 21:30:47,812 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-27 21:30:47,814 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-27 21:30:47,916 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-27 21:30:47,917 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-27 21:30:47,918 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-27 21:34:20,030 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-27 21:34:20,030 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-27 21:34:20,546 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid53.discord.media[0m
+[34m2024-11-27 21:34:22,796 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'squabble up kendrick', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQDUN0ZZGJuO0rybsXE4FMw1c135FkhLq9ZYnr-ruVjJ2HGqpFIAtDASan4ekPz0BLd3nBcEFuLJ6Z1pJmBnJQrsExCtWiZZZ6knleIJC7u4Dvj7-EQ', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-27 21:34:22,800 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2024-11-27 21:34:23,889 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/search?q=squabble+up+kendrick&limit=1&offset=0&type=track HTTP/11" 200 None[0m
+[34m2024-11-27 21:34:23,891 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=squabble%20up%20kendrick&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=squabble%20up%20kendrick&type=track', 'offset': 0, 'previous': None, 'total': 800, 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/0hvT3yIEysuuvkK73vgdcW'}, 'href': 'https://api.spotify.com/v1/albums/0hvT3yIEysuuvkK73vgdcW', 'id': '0hvT3yIEysuuvkK73vgdcW', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02d9985092cd88bffd97653b58'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851d9985092cd88bffd97653b58'}], 'is_playable': True, 'name': 'GNX', 'release_date': '2024-11-22', 'release_date_precision': 'day', 'total_tracks': 12, 'type': 'album', 'uri': 'spotify:album:0hvT3yIEysuuvkK73vgdcW'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 157992, 'explicit': True, 'external_ids': {'isrc': 'USUG12408494'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/0nj9Bq5sHDiTxSHunhgkFb'}, 'href': 'https://api.spotify.com/v1/tracks/0nj9Bq5sHDiTxSHunhgkFb', 'id': '0nj9Bq5sHDiTxSHunhgkFb', 'is_local': False, 'is_playable': True, 'name': 'squabble up', 'popularity': 86, 'preview_url': None, 'track_number': 2, 'type': 'track', 'uri': 'spotify:track:0nj9Bq5sHDiTxSHunhgkFb'}]}}[0m
+[31m2024-11-27 21:34:34,256 - cogs.music_play - ERROR - Failed to skip song: 'album_cover'[0m
+[32m2024-11-27 21:35:33,324 - cogs.music_play - INFO - Finished playing: squabble up[0m
+[32m2024-11-27 21:35:33,326 - discord.player - INFO - ffmpeg process 11792 successfully terminated with return code of 0.[0m
+[34m2024-11-27 21:36:42,966 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-27 21:36:42,966 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-27 21:36:47,523 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: b7904224f39a09751834655a83075d81).[0m
+[32m2024-11-27 21:36:49,530 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-27 21:36:49,535 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-27 21:36:49,539 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-27 21:36:50,069 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-27 21:36:50,071 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-27 21:36:50,075 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-27 21:36:50,194 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-27 21:36:50,195 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-27 21:36:50,196 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[31m2024-11-27 21:36:52,468 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-11' coro=<Loop._loop() done, defined at /home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py:200> exception=TypeError('NextCog.before_background_task() takes 1 positional argument but 2 were given')>[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 202, in _loop
+    await self._call_loop_function('before_loop')
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 186, in _call_loop_function
+    await coro(self._injected, *args, **kwargs)
+TypeError: NextCog.before_background_task() takes 1 positional argument but 2 were given
+[34m2024-11-27 21:37:18,643 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-27 21:37:18,643 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-27 21:37:22,574 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 5c2c1c300d1c4f75e0c97fe4d37186b9).[0m
+[32m2024-11-27 21:37:24,582 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-27 21:37:24,585 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-27 21:37:24,587 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-27 21:37:24,987 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-27 21:37:24,988 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-27 21:37:24,990 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-27 21:37:25,080 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-27 21:37:25,081 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-27 21:37:25,082 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-27 21:38:28,011 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-27 21:38:28,011 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-27 21:38:28,393 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid53.discord.media[0m
+[34m2024-11-27 21:38:29,913 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'squabble up kendrick', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQDUN0ZZGJuO0rybsXE4FMw1c135FkhLq9ZYnr-ruVjJ2HGqpFIAtDASan4ekPz0BLd3nBcEFuLJ6Z1pJmBnJQrsExCtWiZZZ6knleIJC7u4Dvj7-EQ', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-27 21:38:29,920 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2024-11-27 21:38:30,533 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/search?q=squabble+up+kendrick&limit=1&offset=0&type=track HTTP/11" 200 None[0m
+[34m2024-11-27 21:38:30,535 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=squabble%20up%20kendrick&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=squabble%20up%20kendrick&type=track', 'offset': 0, 'previous': None, 'total': 800, 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/0hvT3yIEysuuvkK73vgdcW'}, 'href': 'https://api.spotify.com/v1/albums/0hvT3yIEysuuvkK73vgdcW', 'id': '0hvT3yIEysuuvkK73vgdcW', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02d9985092cd88bffd97653b58'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851d9985092cd88bffd97653b58'}], 'is_playable': True, 'name': 'GNX', 'release_date': '2024-11-22', 'release_date_precision': 'day', 'total_tracks': 12, 'type': 'album', 'uri': 'spotify:album:0hvT3yIEysuuvkK73vgdcW'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 157992, 'explicit': True, 'external_ids': {'isrc': 'USUG12408494'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/0nj9Bq5sHDiTxSHunhgkFb'}, 'href': 'https://api.spotify.com/v1/tracks/0nj9Bq5sHDiTxSHunhgkFb', 'id': '0nj9Bq5sHDiTxSHunhgkFb', 'is_local': False, 'is_playable': True, 'name': 'squabble up', 'popularity': 86, 'preview_url': None, 'track_number': 2, 'type': 'track', 'uri': 'spotify:track:0nj9Bq5sHDiTxSHunhgkFb'}]}}[0m
+[31m2024-11-27 21:38:41,684 - cogs.music_play - ERROR - Failed to skip song: 'album_cover'[0m
+[32m2024-11-27 21:39:33,771 - cogs.music_play - INFO - Finished playing: squabble up[0m
+[32m2024-11-27 21:39:33,771 - discord.player - INFO - ffmpeg process 12285 successfully terminated with return code of 255.[0m
+[32m2024-11-27 21:39:33,975 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[31m2024-11-27 21:39:34,357 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-11' coro=<Loop._loop() done, defined at /home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py:200> exception=TypeError('NextCog.before_background_task() takes 1 positional argument but 2 were given')>[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 202, in _loop
+    await self._call_loop_function('before_loop')
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 186, in _call_loop_function
+    await coro(self._injected, *args, **kwargs)
+TypeError: NextCog.before_background_task() takes 1 positional argument but 2 were given
+[34m2024-11-27 21:39:36,424 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-27 21:39:36,425 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-27 21:39:39,662 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 3cb543f86b6ce781378ab9bad715b735).[0m
+[32m2024-11-27 21:39:41,667 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-27 21:39:41,669 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-27 21:39:41,670 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-27 21:39:42,021 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-27 21:39:42,022 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-27 21:39:42,023 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-27 21:39:42,113 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-27 21:39:42,114 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-27 21:39:42,115 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-27 21:41:03,898 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-27 21:41:03,899 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-27 21:41:04,310 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid53.discord.media[0m
+[34m2024-11-27 21:41:05,767 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'squabble up kendrick', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQDUN0ZZGJuO0rybsXE4FMw1c135FkhLq9ZYnr-ruVjJ2HGqpFIAtDASan4ekPz0BLd3nBcEFuLJ6Z1pJmBnJQrsExCtWiZZZ6knleIJC7u4Dvj7-EQ', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-27 21:41:05,770 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2024-11-27 21:41:06,431 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/search?q=squabble+up+kendrick&limit=1&offset=0&type=track HTTP/11" 200 None[0m
+[34m2024-11-27 21:41:06,434 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=squabble%20up%20kendrick&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=squabble%20up%20kendrick&type=track', 'offset': 0, 'previous': None, 'total': 800, 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/0hvT3yIEysuuvkK73vgdcW'}, 'href': 'https://api.spotify.com/v1/albums/0hvT3yIEysuuvkK73vgdcW', 'id': '0hvT3yIEysuuvkK73vgdcW', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02d9985092cd88bffd97653b58'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851d9985092cd88bffd97653b58'}], 'is_playable': True, 'name': 'GNX', 'release_date': '2024-11-22', 'release_date_precision': 'day', 'total_tracks': 12, 'type': 'album', 'uri': 'spotify:album:0hvT3yIEysuuvkK73vgdcW'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 157992, 'explicit': True, 'external_ids': {'isrc': 'USUG12408494'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/0nj9Bq5sHDiTxSHunhgkFb'}, 'href': 'https://api.spotify.com/v1/tracks/0nj9Bq5sHDiTxSHunhgkFb', 'id': '0nj9Bq5sHDiTxSHunhgkFb', 'is_local': False, 'is_playable': True, 'name': 'squabble up', 'popularity': 86, 'preview_url': None, 'track_number': 2, 'type': 'track', 'uri': 'spotify:track:0nj9Bq5sHDiTxSHunhgkFb'}]}}[0m
+[32m2024-11-27 21:41:16,714 - cogs.music_play - INFO - Skipped to: squabble up by Kendrick Lamar[0m
+[32m2024-11-27 21:42:51,153 - cogs.music_play - INFO - Finished playing: squabble up[0m
+[32m2024-11-27 21:42:51,155 - discord.player - INFO - ffmpeg process 12516 successfully terminated with return code of 0.[0m
+[32m2024-11-27 22:08:16,608 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[31m2024-11-27 22:08:16,964 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-11' coro=<Loop._loop() done, defined at /home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py:200> exception=TypeError('NextCog.before_background_task() takes 1 positional argument but 2 were given')>[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 202, in _loop
+    await self._call_loop_function('before_loop')
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 186, in _call_loop_function
+    await coro(self._injected, *args, **kwargs)
+TypeError: NextCog.before_background_task() takes 1 positional argument but 2 were given
+[34m2024-11-27 22:08:20,153 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-11-27 22:08:20,153 - discord.client - INFO - logging in using static token[0m
+[32m2024-11-27 22:08:24,187 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: b248d911bd7fe09430f83f13bc2a7af1).[0m
+[32m2024-11-27 22:08:26,191 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-11-27 22:08:26,211 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-11-27 22:08:26,214 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-11-27 22:08:26,763 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-11-27 22:08:26,765 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-11-27 22:08:26,769 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-11-27 22:08:26,912 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-11-27 22:08:26,915 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-11-27 22:08:26,917 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-11-27 22:13:10,086 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-27 22:13:10,086 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-11-27 22:13:10,522 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid53.discord.media[0m
+[34m2024-11-27 22:13:12,298 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'me gustas tu', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQDUN0ZZGJuO0rybsXE4FMw1c135FkhLq9ZYnr-ruVjJ2HGqpFIAtDASan4ekPz0BLd3nBcEFuLJ6Z1pJmBnJQrsExCtWiZZZ6knleIJC7u4Dvj7-EQ', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-27 22:13:12,308 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2024-11-27 22:13:13,235 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/search?q=me+gustas+tu&limit=1&offset=0&type=track HTTP/11" 200 None[0m
+[34m2024-11-27 22:13:13,236 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=me%20gustas%20tu&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=me%20gustas%20tu&type=track', 'offset': 0, 'previous': None, 'total': 900, 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/6wH6iStAh4KIaWfuhf0NYM'}, 'href': 'https://api.spotify.com/v1/artists/6wH6iStAh4KIaWfuhf0NYM', 'id': '6wH6iStAh4KIaWfuhf0NYM', 'name': 'Manu Chao', 'type': 'artist', 'uri': 'spotify:artist:6wH6iStAh4KIaWfuhf0NYM'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/4t1LLdXiWTfoywqricztFo'}, 'href': 'https://api.spotify.com/v1/albums/4t1LLdXiWTfoywqricztFo', 'id': '4t1LLdXiWTfoywqricztFo', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b2731dcba4a728ca0b17cbd204a5'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e021dcba4a728ca0b17cbd204a5'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d000048511dcba4a728ca0b17cbd204a5'}], 'is_playable': True, 'name': 'Próxima Estación: Esperanza', 'release_date': '2001-06-01', 'release_date_precision': 'day', 'total_tracks': 17, 'type': 'album', 'uri': 'spotify:album:4t1LLdXiWTfoywqricztFo'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/6wH6iStAh4KIaWfuhf0NYM'}, 'href': 'https://api.spotify.com/v1/artists/6wH6iStAh4KIaWfuhf0NYM', 'id': '6wH6iStAh4KIaWfuhf0NYM', 'name': 'Manu Chao', 'type': 'artist', 'uri': 'spotify:artist:6wH6iStAh4KIaWfuhf0NYM'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 239986, 'explicit': False, 'external_ids': {'isrc': 'FR84R0000004'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/6b37xrsNCWYIUphFBazqD6'}, 'href': 'https://api.spotify.com/v1/tracks/6b37xrsNCWYIUphFBazqD6', 'id': '6b37xrsNCWYIUphFBazqD6', 'is_local': False, 'is_playable': True, 'name': 'Me Gustas Tu', 'popularity': 78, 'preview_url': None, 'track_number': 6, 'type': 'track', 'uri': 'spotify:track:6b37xrsNCWYIUphFBazqD6'}]}}[0m
+[32m2024-11-27 22:13:22,326 - cogs.music_play - INFO - Skipped to: Me Gustas Tu by Manu Chao[0m
+[32m2024-11-27 22:17:06,758 - cogs.music_play - INFO - Finished playing: Me Gustas Tu[0m
+[32m2024-11-27 22:17:06,760 - discord.player - INFO - ffmpeg process 13685 successfully terminated with return code of 0.[0m
+[34m2024-11-27 22:19:48,516 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'hey now kendrick lamar', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQDUN0ZZGJuO0rybsXE4FMw1c135FkhLq9ZYnr-ruVjJ2HGqpFIAtDASan4ekPz0BLd3nBcEFuLJ6Z1pJmBnJQrsExCtWiZZZ6knleIJC7u4Dvj7-EQ', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-27 22:19:49,013 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=hey%20now%20kendrick%20lamar&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=hey%20now%20kendrick%20lamar&type=track', 'offset': 0, 'previous': None, 'total': 802, 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/0hvT3yIEysuuvkK73vgdcW'}, 'href': 'https://api.spotify.com/v1/albums/0hvT3yIEysuuvkK73vgdcW', 'id': '0hvT3yIEysuuvkK73vgdcW', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02d9985092cd88bffd97653b58'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851d9985092cd88bffd97653b58'}], 'is_playable': True, 'name': 'GNX', 'release_date': '2024-11-22', 'release_date_precision': 'day', 'total_tracks': 12, 'type': 'album', 'uri': 'spotify:album:0hvT3yIEysuuvkK73vgdcW'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/4VHa48wXlsDA2vWfgIi7cX'}, 'href': 'https://api.spotify.com/v1/artists/4VHa48wXlsDA2vWfgIi7cX', 'id': '4VHa48wXlsDA2vWfgIi7cX', 'name': 'Dody6', 'type': 'artist', 'uri': 'spotify:artist:4VHa48wXlsDA2vWfgIi7cX'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 217478, 'explicit': True, 'external_ids': {'isrc': 'USUG12408497'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/5S8VwnB4sLi6W0lYTWYylu'}, 'href': 'https://api.spotify.com/v1/tracks/5S8VwnB4sLi6W0lYTWYylu', 'id': '5S8VwnB4sLi6W0lYTWYylu', 'is_local': False, 'is_playable': True, 'name': 'hey now (feat. dody6)', 'popularity': 83, 'preview_url': None, 'track_number': 5, 'type': 'track', 'uri': 'spotify:track:5S8VwnB4sLi6W0lYTWYylu'}]}}[0m
+[32m2024-11-27 22:19:57,172 - cogs.music_play - INFO - Skipped to: hey now (feat. dody6) by Kendrick Lamar[0m
+[34m2024-11-27 22:20:37,335 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'mr sunshine yxngxr1', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQDUN0ZZGJuO0rybsXE4FMw1c135FkhLq9ZYnr-ruVjJ2HGqpFIAtDASan4ekPz0BLd3nBcEFuLJ6Z1pJmBnJQrsExCtWiZZZ6knleIJC7u4Dvj7-EQ', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-27 22:20:37,871 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=mr%20sunshine%20yxngxr1&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=mr%20sunshine%20yxngxr1&type=track', 'offset': 0, 'previous': None, 'total': 800, 'items': [{'album': {'album_type': 'single', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2jwRHcdgkRhelYEMqndDKe'}, 'href': 'https://api.spotify.com/v1/artists/2jwRHcdgkRhelYEMqndDKe', 'id': '2jwRHcdgkRhelYEMqndDKe', 'name': 'Yxngxr1', 'type': 'artist', 'uri': 'spotify:artist:2jwRHcdgkRhelYEMqndDKe'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/7rvW3uGdmXRYY14oldA2J9'}, 'href': 'https://api.spotify.com/v1/albums/7rvW3uGdmXRYY14oldA2J9', 'id': '7rvW3uGdmXRYY14oldA2J9', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b27306398891dc9d76e72a9e90e1'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e0206398891dc9d76e72a9e90e1'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d0000485106398891dc9d76e72a9e90e1'}], 'is_playable': True, 'name': 'mr. sunshine', 'release_date': '2022-10-28', 'release_date_precision': 'day', 'total_tracks': 1, 'type': 'album', 'uri': 'spotify:album:7rvW3uGdmXRYY14oldA2J9'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2jwRHcdgkRhelYEMqndDKe'}, 'href': 'https://api.spotify.com/v1/artists/2jwRHcdgkRhelYEMqndDKe', 'id': '2jwRHcdgkRhelYEMqndDKe', 'name': 'Yxngxr1', 'type': 'artist', 'uri': 'spotify:artist:2jwRHcdgkRhelYEMqndDKe'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 102000, 'explicit': True, 'external_ids': {'isrc': 'USUYG1448358'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/5vGUjhykZds2aqWFvfgnCh'}, 'href': 'https://api.spotify.com/v1/tracks/5vGUjhykZds2aqWFvfgnCh', 'id': '5vGUjhykZds2aqWFvfgnCh', 'is_local': False, 'is_playable': True, 'name': 'mr. sunshine', 'popularity': 43, 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:5vGUjhykZds2aqWFvfgnCh'}]}}[0m
+[34m2024-11-27 22:22:09,197 - spotipy.oauth2 - DEBUG - sending POST request to https://accounts.spotify.com/api/token with Headers: {'Authorization': 'Basic MTc4ZmY0NjE0NThiNDFhMzk4Y2IzODVjOWEwZDE0YWY6ZjViMmY1ZDljODczNDFjYWFiZjdkM2ZiMmJkODJkYTQ='} and Body: {'grant_type': 'client_credentials'}[0m
+[34m2024-11-27 22:22:09,965 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'why wait so long yxngxr1', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQA5MWDI_WOYYebOkS6yTzOc7SBsHEtpG_XUmP2Gfc7GXCbzaQvnClrbgF0_4QiaodF1xu0Lqt9-Vo0tJmS4YfncRpNdT5dp04j4Y4wYwGwLCEF0lVI', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-27 22:22:10,418 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=why%20wait%20so%20long%20yxngxr1&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=why%20wait%20so%20long%20yxngxr1&type=track', 'offset': 0, 'previous': None, 'total': 795, 'items': [{'album': {'album_type': 'single', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2jwRHcdgkRhelYEMqndDKe'}, 'href': 'https://api.spotify.com/v1/artists/2jwRHcdgkRhelYEMqndDKe', 'id': '2jwRHcdgkRhelYEMqndDKe', 'name': 'Yxngxr1', 'type': 'artist', 'uri': 'spotify:artist:2jwRHcdgkRhelYEMqndDKe'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/6KiTVhnK8fDVxyL8xLOCfK'}, 'href': 'https://api.spotify.com/v1/albums/6KiTVhnK8fDVxyL8xLOCfK', 'id': '6KiTVhnK8fDVxyL8xLOCfK', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273fba5074d176cf7fc9a337fba'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02fba5074d176cf7fc9a337fba'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851fba5074d176cf7fc9a337fba'}], 'is_playable': True, 'name': 'Why Wait So Long?', 'release_date': '2024-06-06', 'release_date_precision': 'day', 'total_tracks': 1, 'type': 'album', 'uri': 'spotify:album:6KiTVhnK8fDVxyL8xLOCfK'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2jwRHcdgkRhelYEMqndDKe'}, 'href': 'https://api.spotify.com/v1/artists/2jwRHcdgkRhelYEMqndDKe', 'id': '2jwRHcdgkRhelYEMqndDKe', 'name': 'Yxngxr1', 'type': 'artist', 'uri': 'spotify:artist:2jwRHcdgkRhelYEMqndDKe'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 196363, 'explicit': False, 'external_ids': {'isrc': 'SE6HN2402860'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/0SJ7OwWd51t0nQijZbOob2'}, 'href': 'https://api.spotify.com/v1/tracks/0SJ7OwWd51t0nQijZbOob2', 'id': '0SJ7OwWd51t0nQijZbOob2', 'is_local': False, 'is_playable': True, 'name': 'Why Wait So Long?', 'popularity': 26, 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:0SJ7OwWd51t0nQijZbOob2'}]}}[0m
+[32m2024-11-27 22:22:25,186 - cogs.music_queue - INFO - Displayed the current queue for guild 1303088062049419356[0m
+[34m2024-11-27 22:22:44,346 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'boy in blue yxngxr1', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQA5MWDI_WOYYebOkS6yTzOc7SBsHEtpG_XUmP2Gfc7GXCbzaQvnClrbgF0_4QiaodF1xu0Lqt9-Vo0tJmS4YfncRpNdT5dp04j4Y4wYwGwLCEF0lVI', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-27 22:22:44,740 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=boy%20in%20blue%20yxngxr1&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=boy%20in%20blue%20yxngxr1&type=track', 'offset': 0, 'previous': None, 'total': 798, 'items': [{'album': {'album_type': 'single', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2jwRHcdgkRhelYEMqndDKe'}, 'href': 'https://api.spotify.com/v1/artists/2jwRHcdgkRhelYEMqndDKe', 'id': '2jwRHcdgkRhelYEMqndDKe', 'name': 'Yxngxr1', 'type': 'artist', 'uri': 'spotify:artist:2jwRHcdgkRhelYEMqndDKe'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/3gZfMRe0LxR4lNvnZqJXne'}, 'href': 'https://api.spotify.com/v1/albums/3gZfMRe0LxR4lNvnZqJXne', 'id': '3gZfMRe0LxR4lNvnZqJXne', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273cb94bdc244a92fb92240b923'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02cb94bdc244a92fb92240b923'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851cb94bdc244a92fb92240b923'}], 'is_playable': True, 'name': 'BOY IN BLUE', 'release_date': '2020-08-23', 'release_date_precision': 'day', 'total_tracks': 1, 'type': 'album', 'uri': 'spotify:album:3gZfMRe0LxR4lNvnZqJXne'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2jwRHcdgkRhelYEMqndDKe'}, 'href': 'https://api.spotify.com/v1/artists/2jwRHcdgkRhelYEMqndDKe', 'id': '2jwRHcdgkRhelYEMqndDKe', 'name': 'Yxngxr1', 'type': 'artist', 'uri': 'spotify:artist:2jwRHcdgkRhelYEMqndDKe'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 206315, 'explicit': True, 'external_ids': {'isrc': 'USUYG1329566'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/4YryEvPbPX8FLHml5fRnsF'}, 'href': 'https://api.spotify.com/v1/tracks/4YryEvPbPX8FLHml5fRnsF', 'id': '4YryEvPbPX8FLHml5fRnsF', 'is_local': False, 'is_playable': True, 'name': 'BOY IN BLUE', 'popularity': 39, 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:4YryEvPbPX8FLHml5fRnsF'}]}}[0m
+[32m2024-11-27 22:23:02,250 - cogs.music_queue - INFO - Displayed the current queue for guild 1303088062049419356[0m
+[32m2024-11-27 22:23:34,192 - cogs.music_play - INFO - Finished playing: hey now (feat. dody6)[0m
+[32m2024-11-27 22:23:34,193 - discord.player - INFO - ffmpeg process 13979 successfully terminated with return code of 0.[0m
+[32m2024-11-27 22:24:10,515 - cogs.music_next - INFO - No song currently playing in guild 1303088062049419356. Playing next manually.[0m
+[32m2024-11-27 22:24:10,515 - cogs.music_next - INFO - Attempting to play: mr. sunshine for guild 1303088062049419356.[0m
+[31m2024-11-27 22:24:12,054 - discord.app_commands.tree - ERROR - Ignoring exception in command 'next'[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/cogs/music_next.py", line 62, in next_song
+    await interaction.response.send_message("Playing the next song in the queue.", ephemeral=True)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_next.py", line 66, in next_song
+    await interaction.response.send_message("An error occurred while skipping the song.", ephemeral=True)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 860, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'next' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+[34m2024-11-27 22:24:34,342 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'mr sunshine yxngxr1', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQA5MWDI_WOYYebOkS6yTzOc7SBsHEtpG_XUmP2Gfc7GXCbzaQvnClrbgF0_4QiaodF1xu0Lqt9-Vo0tJmS4YfncRpNdT5dp04j4Y4wYwGwLCEF0lVI', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-11-27 22:24:34,641 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=mr%20sunshine%20yxngxr1&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=mr%20sunshine%20yxngxr1&type=track', 'offset': 0, 'previous': None, 'total': 800, 'items': [{'album': {'album_type': 'single', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2jwRHcdgkRhelYEMqndDKe'}, 'href': 'https://api.spotify.com/v1/artists/2jwRHcdgkRhelYEMqndDKe', 'id': '2jwRHcdgkRhelYEMqndDKe', 'name': 'Yxngxr1', 'type': 'artist', 'uri': 'spotify:artist:2jwRHcdgkRhelYEMqndDKe'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/7rvW3uGdmXRYY14oldA2J9'}, 'href': 'https://api.spotify.com/v1/albums/7rvW3uGdmXRYY14oldA2J9', 'id': '7rvW3uGdmXRYY14oldA2J9', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b27306398891dc9d76e72a9e90e1'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e0206398891dc9d76e72a9e90e1'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d0000485106398891dc9d76e72a9e90e1'}], 'is_playable': True, 'name': 'mr. sunshine', 'release_date': '2022-10-28', 'release_date_precision': 'day', 'total_tracks': 1, 'type': 'album', 'uri': 'spotify:album:7rvW3uGdmXRYY14oldA2J9'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2jwRHcdgkRhelYEMqndDKe'}, 'href': 'https://api.spotify.com/v1/artists/2jwRHcdgkRhelYEMqndDKe', 'id': '2jwRHcdgkRhelYEMqndDKe', 'name': 'Yxngxr1', 'type': 'artist', 'uri': 'spotify:artist:2jwRHcdgkRhelYEMqndDKe'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 102000, 'explicit': True, 'external_ids': {'isrc': 'USUYG1448358'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/5vGUjhykZds2aqWFvfgnCh'}, 'href': 'https://api.spotify.com/v1/tracks/5vGUjhykZds2aqWFvfgnCh', 'id': '5vGUjhykZds2aqWFvfgnCh', 'is_local': False, 'is_playable': True, 'name': 'mr. sunshine', 'popularity': 43, 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:5vGUjhykZds2aqWFvfgnCh'}]}}[0m
+[32m2024-11-27 22:24:59,557 - cogs.music_queue - INFO - Displayed the current queue for guild 1303088062049419356[0m
+[32m2024-11-27 22:25:10,599 - discord.player - INFO - ffmpeg process 14335 has not terminated. Waiting to terminate...[0m
+[32m2024-11-27 22:25:10,604 - discord.player - INFO - ffmpeg process 14335 should have terminated with a return code of -9.[0m
+[32m2024-11-27 22:25:11,016 - cogs.music_next - INFO - Song ended for guild 1303088062049419356. Attempting to play next.[0m
+[32m2024-11-27 22:25:11,016 - cogs.music_next - INFO - Attempting to play: Why Wait So Long? for guild 1303088062049419356.[0m
+[32m2024-11-27 22:25:11,041 - cogs.music_next - INFO - Stopped current song for guild 1303088062049419356, skipping to next.[0m
+[32m2024-11-27 22:25:11,042 - cogs.music_next - INFO - /next command executed successfully for guild 1303088062049419356.[0m
+[32m2024-11-27 22:27:27,048 - discord.player - INFO - ffmpeg process 14490 has not terminated. Waiting to terminate...[0m
+[32m2024-11-27 22:27:27,050 - cogs.music_next - INFO - Song ended for guild 1303088062049419356. Attempting to play next.[0m
+[32m2024-11-27 22:27:27,050 - cogs.music_next - INFO - Attempting to play: BOY IN BLUE for guild 1303088062049419356.[0m
+[32m2024-11-27 22:27:27,089 - discord.player - INFO - ffmpeg process 14490 should have terminated with a return code of -9.[0m
+[32m2024-11-27 22:27:27,197 - discord.player - INFO - ffmpeg process 14587 has not terminated. Waiting to terminate...[0m
+[32m2024-11-27 22:27:27,200 - cogs.music_next - INFO - Song ended for guild 1303088062049419356. Attempting to play next.[0m
+[32m2024-11-27 22:27:27,200 - cogs.music_next - INFO - Attempting to play: mr. sunshine for guild 1303088062049419356.[0m
+[32m2024-11-27 22:27:27,202 - discord.player - INFO - ffmpeg process 14587 should have terminated with a return code of 1.[0m
+[32m2024-11-27 22:27:27,307 - cogs.music_next - INFO - Song ended for guild 1303088062049419356. Attempting to play next.[0m
+[32m2024-11-27 22:27:27,307 - cogs.music_next - INFO - Queue is empty for guild 1303088062049419356. Stopping playback.[0m
+[32m2024-11-27 22:27:27,308 - discord.player - INFO - ffmpeg process 14604 successfully terminated with return code of 1.[0m
+[31m2024-11-27 22:27:52,188 - discord.voice_client - ERROR - Disconnected from voice... Reconnecting in 0.66s.[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client_ws.py", line 229, in receive
+    msg = await self._reader.read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/streams.py", line 657, in read
+    return await super().read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/streams.py", line 616, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 456, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/voice_client.py", line 456, in poll_voice_ws
+    await self.ws.poll_event()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 1003, in poll_event
+    msg = await asyncio.wait_for(self.ws.receive(), timeout=30.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 458, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+[32m2024-11-27 22:27:52,862 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[32m2024-11-27 22:27:52,863 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-11-27 22:27:52,864 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 2)[0m
+[31m2024-11-27 22:28:07,181 - discord.client - ERROR - Attempting a reconnect in 0.49s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-27 22:28:07,693 - discord.client - ERROR - Attempting a reconnect in 3.19s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-27 22:28:10,896 - discord.client - ERROR - Attempting a reconnect in 0.12s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-27 22:28:11,020 - discord.client - ERROR - Attempting a reconnect in 3.37s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-27 22:28:14,396 - discord.client - ERROR - Attempting a reconnect in 25.27s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[33m2024-11-27 22:28:27,007 - discord.gateway - WARNING - Shard ID None has stopped responding to the gateway. Closing and restarting.[0m
+[31m2024-11-27 22:28:39,689 - discord.client - ERROR - Attempting a reconnect in 61.39s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[32m2024-11-27 22:28:52,877 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1303088062049419360 (Guild ID 1303088062049419356)[0m
+[33m2024-11-27 22:28:52,879 - discord.voice_client - WARNING - Could not connect to voice... Retrying...[0m
+[32m2024-11-27 22:28:52,880 - discord.voice_client - INFO - Disconnecting from voice normally, close code 1000.[0m
+[31m2024-11-27 22:29:41,124 - discord.client - ERROR - Attempting a reconnect in 125.21s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-27 22:31:46,429 - discord.client - ERROR - Attempting a reconnect in 108.43s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-27 22:33:34,964 - discord.client - ERROR - Attempting a reconnect in 73.96s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]
+[31m2024-11-27 22:34:49,008 - discord.client - ERROR - Attempting a reconnect in 174.21s[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Name or service not known]

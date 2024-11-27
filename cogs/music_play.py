@@ -180,6 +180,7 @@ class PlayCog(commands.Cog):
             spotify_data = await search_song_on_spotify(self.spotify, query)
             spotify_title = spotify_data["song_title"] if spotify_data else query
             spotify_artist = spotify_data["artist_name"] if spotify_data else "Unknown Artist"
+            spotify_thumnail = spotify_data["album_cover"] if spotify_data else None
 
             audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist)
             if not audio_data:
@@ -192,7 +193,7 @@ class PlayCog(commands.Cog):
                     "title": spotify_title,
                     "artist": spotify_artist,
                     "audio_url": audio_data["audio_url"],
-                    "thumbnail": audio_data["thumbnail"],
+                    "thumbnail": spotify_thumnail or audio_data["thumbnail"],
                     "duration": audio_data["duration"]
                 }
             )
