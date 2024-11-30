@@ -86,10 +86,6 @@ class MusicControlView(discord.ui.View):
 
     @discord.ui.button(style=discord.ButtonStyle.secondary, emoji="⏭️", custom_id="skip")
     async def skip_button(self, interaction: discord.Interaction, button: discord.ui.Button):
-        if not self.voice_client.is_playing():
-            await interaction.response.send_message("No music is currently playing to skip.", ephemeral=True)
-            return
-
         await interaction.response.defer()
         await self.cog.skip_song(interaction, self.voice_client)
 
@@ -149,6 +145,7 @@ class PlayCog(commands.Cog):
         except Exception as e:
             await interaction.followup.send("An error occurred while skipping the song.")
             logger.error(f"Failed to skip song: {e}")
+
 
     async def search_youtube_audio(self, query):
         try:
