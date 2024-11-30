@@ -1,6 +1,6 @@
 import discord
 from discord import app_commands
-from discord.ext import commands
+from discord.ext import commands, tasks
 import yt_dlp as youtube_dl
 import logging
 from spotipy import Spotify
@@ -89,12 +89,50 @@ class MusicControlView(discord.ui.View):
         await interaction.response.defer()
         await self.cog.skip_song(interaction, self.voice_client)
 
-
 class PlayCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.spotify = get_spotify_client()
         self.queue_manager = bot.QueueManager
+        self.song_check_loop.start()
+
+    def cog_unload(self):
+        self.song_check_loop.cancel()
+
+    @tasks.loop(seconds=5)
+    async def song_check_loop(self):
+        for guild in self.bot.guilds:
+            voice_client = guild.voice_client
+            if voice_client and not voice_client.is_playing() and not voice_client.is_paused():
+                logger.info("No song is currently playing. Checking queue.")
+                next_song = self.queue_manager.pop_from_queue(guild.id)
+                if next_song:
+                    try:
+                        voice_client.play(
+                            discord.FFmpegPCMAudio(next_song['audio_url'], **ffmpeg_options),
+                            after=lambda e: logger.info(f"Finished playing: {next_song['title']}") if not e else logger.error(f"Error during playback: {e}")
+                        )
+
+                        # Embed logic
+                        embed = discord.Embed(
+                            title="Now Playing",
+                            description=f"[{next_song['title']}]({next_song['audio_url']})",
+                            color=discord.Color.green()
+                        )
+                        if next_song['thumbnail']:
+                            embed.set_thumbnail(url=next_song['thumbnail'])
+                        embed.add_field(name="Artist", value=next_song['artist'], inline=True)
+                        embed.add_field(name="Duration", value=f"{next_song['duration'] // 60}:{next_song['duration'] % 60:02}", inline=True)
+
+                        # Send embed to the voice channel
+                        view = MusicControlView(self, voice_client)
+                        await voice_client.channel.send(embed=embed, view=view)
+
+                        logger.info(f"Playing next song: {next_song['title']} by {next_song['artist']}")
+                    except Exception as e:
+                        logger.error(f"Failed to play next song: {e}")
+
+
 
     async def join_voice_channel(self, interaction: discord.Interaction):
         if interaction.user.voice:
@@ -146,7 +184,6 @@ class PlayCog(commands.Cog):
             await interaction.followup.send("An error occurred while skipping the song.")
             logger.error(f"Failed to skip song: {e}")
 
-
     async def search_youtube_audio(self, query):
         try:
             # Search and extract info
@@ -165,7 +202,7 @@ class PlayCog(commands.Cog):
         except Exception as e:
             logger.error(f"Error extracting YouTube audio: {e}")
             return None
-            
+
     @app_commands.command(name="play", description="Play music from a YouTube search query.")
     async def play(self, interaction: discord.Interaction, query: str):
         try:
@@ -177,7 +214,7 @@ class PlayCog(commands.Cog):
             spotify_data = await search_song_on_spotify(self.spotify, query)
             spotify_title = spotify_data["song_title"] if spotify_data else query
             spotify_artist = spotify_data["artist_name"] if spotify_data else "Unknown Artist"
-            spotify_thumnail = spotify_data["album_cover"] if spotify_data else None
+            spotify_thumbnail = spotify_data["album_cover"] if spotify_data else None
 
             audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist)
             if not audio_data:
@@ -190,7 +227,7 @@ class PlayCog(commands.Cog):
                     "title": spotify_title,
                     "artist": spotify_artist,
                     "audio_url": audio_data["audio_url"],
-                    "thumbnail": spotify_thumnail or audio_data["thumbnail"],
+                    "thumbnail": spotify_thumbnail or audio_data["thumbnail"],
                     "duration": audio_data["duration"]
                 }
             )
@@ -202,6 +239,7 @@ class PlayCog(commands.Cog):
         except Exception as e:
             await interaction.followup.send("An error occurred while trying to play the song.")
             logger.error(f"Failed to play song: {e}")
+
 
 async def setup(bot):
     await bot.add_cog(PlayCog(bot))
