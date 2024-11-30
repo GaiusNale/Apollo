@@ -7,6 +7,7 @@ from spotipy import Spotify
 from spotipy.oauth2 import SpotifyClientCredentials
 from decouple import config
 
+# Set up logging
 logger = logging.getLogger(__name__)
 
 # YouTube downloader configuration
@@ -26,6 +27,7 @@ ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
 
 # Spotify API setup
 def get_spotify_client():
+    """Initialize and return the Spotify client using credentials."""
     SPOT_CLIENT_ID = config("SPOT_CLIENT_ID", default=None)
     SPOT_SECRET = config("SPOT_SECRET", default=None)
 
@@ -37,6 +39,7 @@ def get_spotify_client():
     return spotify
 
 async def search_song_on_spotify(spotify, query):
+    """Search for a song on Spotify using the provided query."""
     try:
         results = spotify.search(q=query, type="track", limit=1)
         if results["tracks"]["items"]:
@@ -53,6 +56,7 @@ async def search_song_on_spotify(spotify, query):
         return None
 
 class MusicControlView(discord.ui.View):
+    """UI view for controlling music playback with buttons."""
     def __init__(self, cog, voice_client):
         super().__init__(timeout=None)
         self.cog = cog
@@ -61,6 +65,7 @@ class MusicControlView(discord.ui.View):
 
     @discord.ui.button(style=discord.ButtonStyle.secondary, emoji="⏸️", custom_id="pause_resume")
     async def pause_resume_button(self, interaction: discord.Interaction, button: discord.ui.Button):
+        """Toggle pause/resume of the current song."""
         if not self.voice_client.is_playing() and not self.is_paused:
             await interaction.response.send_message("No music is currently playing.", ephemeral=True)
             return
@@ -78,6 +83,7 @@ class MusicControlView(discord.ui.View):
 
     @discord.ui.button(style=discord.ButtonStyle.secondary, emoji="⏹️", custom_id="stop")
     async def stop_button(self, interaction: discord.Interaction, button: discord.ui.Button):
+        """Stop the currently playing or paused song."""
         if self.voice_client.is_playing() or self.voice_client.is_paused():
             self.voice_client.stop()
             await interaction.response.send_message("Music stopped.", ephemeral=True)
@@ -86,10 +92,12 @@ class MusicControlView(discord.ui.View):
 
     @discord.ui.button(style=discord.ButtonStyle.secondary, emoji="⏭️", custom_id="skip")
     async def skip_button(self, interaction: discord.Interaction, button: discord.ui.Button):
+        """Skip to the next song in the queue."""
         await interaction.response.defer()
         await self.cog.skip_song(interaction, self.voice_client)
 
 class PlayCog(commands.Cog):
+    """Cog for handling music playback commands."""
     def __init__(self, bot):
         self.bot = bot
         self.spotify = get_spotify_client()
@@ -97,10 +105,12 @@ class PlayCog(commands.Cog):
         self.song_check_loop.start()
 
     def cog_unload(self):
+        """Cleanup when the cog is unloaded."""
         self.song_check_loop.cancel()
 
     @tasks.loop(seconds=5)
     async def song_check_loop(self):
+        """Periodic task to check and play the next song in the queue."""
         for guild in self.bot.guilds:
             voice_client = guild.voice_client
             if voice_client and not voice_client.is_playing() and not voice_client.is_paused():
@@ -113,7 +123,7 @@ class PlayCog(commands.Cog):
                             after=lambda e: logger.info(f"Finished playing: {next_song['title']}") if not e else logger.error(f"Error during playback: {e}")
                         )
 
-                        # Embed logic
+                        # Prepare and send embed message
                         embed = discord.Embed(
                             title="Now Playing",
                             description=f"[{next_song['title']}]({next_song['audio_url']})",
@@ -132,9 +142,8 @@ class PlayCog(commands.Cog):
                     except Exception as e:
                         logger.error(f"Failed to play next song: {e}")
 
-
-
     async def join_voice_channel(self, interaction: discord.Interaction):
+        """Join the voice channel that the user is currently in."""
         if interaction.user.voice:
             channel = interaction.user.voice.channel
             if interaction.guild.voice_client is None:
@@ -152,6 +161,7 @@ class PlayCog(commands.Cog):
             return None
 
     async def skip_song(self, interaction: discord.Interaction, voice_client: discord.VoiceClient):
+        """Skip the current song and play the next one in the queue."""
         try:
             guild_id = interaction.guild.id
             next_song = self.queue_manager.pop_from_queue(guild_id)
@@ -167,6 +177,7 @@ class PlayCog(commands.Cog):
                 after=lambda e: logger.info(f"Finished playing: {next_song['title']}") if not e else logger.error(f"Error during playback: {e}")
             )
 
+            # Prepare and send embed message
             embed = discord.Embed(
                 title="Now Playing",
                 description=f"[{next_song['title']}]({next_song['audio_url']})",
@@ -185,8 +196,8 @@ class PlayCog(commands.Cog):
             logger.error(f"Failed to skip song: {e}")
 
     async def search_youtube_audio(self, query):
+        """Search for audio on YouTube using the provided query."""
         try:
-            # Search and extract info
             info = ytdl.extract_info(f"ytsearch:{query}", download=False)
             if 'entries' in info and info['entries']:
                 video = info['entries'][0]
@@ -205,6 +216,7 @@ class PlayCog(commands.Cog):
 
     @app_commands.command(name="play", description="Play music from a YouTube search query.")
     async def play(self, interaction: discord.Interaction, query: str):
+        """Play a song based on a query from YouTube or Spotify."""
         try:
             await interaction.response.defer()
             voice_client = await self.join_voice_channel(interaction)
@@ -240,6 +252,7 @@ class PlayCog(commands.Cog):
             await interaction.followup.send("An error occurred while trying to play the song.")
             logger.error(f"Failed to play song: {e}")
 
-
 async def setup(bot):
+    """Set up the PlayCog for the bot."""
     await bot.add_cog(PlayCog(bot))
+

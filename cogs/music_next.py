@@ -86,5 +86,5 @@ class NextCog(commands.Cog):
     def cog_unload(self):
         self.background_task.cancel()
 
-async def setup(bot): #Corrected this line
-    await bot.add_cog(NextCog(bot)) #Corrected this line
+async def setup(bot): 
+    await bot.add_cog(NextCog(bot)) 
