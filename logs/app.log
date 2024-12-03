@@ -1157,3 +1157,945 @@ Traceback (most recent call last):
   File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 186, in _call_loop_function
     await coro(self._injected, *args, **kwargs)
 TypeError: NextCog.before_background_task() takes 1 positional argument but 2 were given
+[34m2024-12-03 21:48:04,038 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-12-03 21:48:04,039 - discord.client - INFO - logging in using static token[0m
+[32m2024-12-03 21:48:07,455 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 86f5761d9448b649bd65ecb8ae8931df).[0m
+[32m2024-12-03 21:48:11,478 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-12-03 21:48:11,483 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-12-03 21:48:11,486 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-12-03 21:48:12,136 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-12-03 21:48:12,138 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-12-03 21:48:12,146 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-12-03 21:48:12,288 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-12-03 21:48:12,289 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-12-03 21:48:12,290 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[31m2024-12-03 21:49:24,353 - discord.app_commands.tree - ERROR - Ignoring exception in command 'play'[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 182, in play
+    await interaction.response.defer()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 638, in defer
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 213, in play
+    await interaction.followup.send("An error occurred while trying to play the song.")
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 1800, in send
+    data = await adapter.execute_webhook(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10015): Unknown Webhook
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 860, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: NotFound: 404 Not Found (error code: 10015): Unknown Webhook
+[32m2024-12-03 21:49:35,773 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-12-03 21:49:35,774 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-12-03 21:49:36,243 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid4790.discord.media[0m
+[32m2024-12-03 21:49:37,292 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[34m2024-12-03 21:49:39,012 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'super mario bros (tron ftd) koji kondo', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQDAtQkIChjGjdl4HSLmhu-MlQ7l1Cit86CUMfE24zMWs1_NkF9zNZSO9cD0sc5QcuWy_9nIbL9EgCt4MpLFJJhMfSFL6ke9Ci7ZkuGWQwvvTynMmpk', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-12-03 21:49:39,015 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2024-12-03 21:49:39,881 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/search?q=super+mario+bros+%28tron+ftd%29+koji+kondo&limit=1&offset=0&type=track HTTP/11" 200 None[0m
+[34m2024-12-03 21:49:39,883 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=super%20mario%20bros%20%28tron%20ftd%29%20koji%20kondo&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=super%20mario%20bros%20%28tron%20ftd%29%20koji%20kondo&type=track', 'offset': 0, 'previous': None, 'total': 800, 'items': [{'album': {'album_type': 'compilation', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of'}, 'href': 'https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of', 'id': '0LyfQWJT6nXafLPZqxe9Of', 'name': 'Various Artists', 'type': 'artist', 'uri': 'spotify:artist:0LyfQWJT6nXafLPZqxe9Of'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'DJ', 'ZM', 'CG', 'TJ', 'VE', 'ET'], 'external_urls': {'spotify': 'https://open.spotify.com/album/0mbyuEyR2pBlVcJ9ce1Joz'}, 'href': 'https://api.spotify.com/v1/albums/0mbyuEyR2pBlVcJ9ce1Joz', 'id': '0mbyuEyR2pBlVcJ9ce1Joz', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273669d1a94f1c906ea09764589'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02669d1a94f1c906ea09764589'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851669d1a94f1c906ea09764589'}], 'is_playable': True, 'name': 'The Sound of SceneSat, Vol. 2', 'release_date': '2011-04-24', 'release_date_precision': 'day', 'total_tracks': 73, 'type': 'album', 'uri': 'spotify:album:0mbyuEyR2pBlVcJ9ce1Joz'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/1CRvJnCbPjgx0xmBdoex0c'}, 'href': 'https://api.spotify.com/v1/artists/1CRvJnCbPjgx0xmBdoex0c', 'id': '1CRvJnCbPjgx0xmBdoex0c', 'name': 'Koji Kondo', 'type': 'artist', 'uri': 'spotify:artist:1CRvJnCbPjgx0xmBdoex0c'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'DJ', 'ZM', 'CG', 'TJ', 'VE', 'ET'], 'disc_number': 1, 'duration_ms': 107000, 'explicit': False, 'external_ids': {'isrc': 'TCACQ1680452'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/2jHbDzuGUHJG7T9DFeUdHe'}, 'href': 'https://api.spotify.com/v1/tracks/2jHbDzuGUHJG7T9DFeUdHe', 'id': '2jHbDzuGUHJG7T9DFeUdHe', 'is_local': False, 'is_playable': True, 'name': 'Super Mario Bros (Tron Ftd Remix)', 'popularity': 11, 'preview_url': None, 'track_number': 71, 'type': 'track', 'uri': 'spotify:track:2jHbDzuGUHJG7T9DFeUdHe'}]}}[0m
+[33m2024-12-03 21:49:53,421 - discord.gateway - WARNING - Shard ID None voice heartbeat blocked for more than 10 seconds
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 72, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 192, in play
+    audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 162, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1613, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1780, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1909, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2056, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2088, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1859, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1613, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1759, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4441, in _real_extract
+    self._list_formats(video_id, microformats, video_details, player_responses, player_url, duration)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4344, in _list_formats
+    *formats, subtitles = self._extract_formats_and_subtitles(streaming_data, video_id, player_url, live_status, duration)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4078, in _extract_formats_and_subtitles
+    'n': decrypt_nsig(query['n'][0], video_id, player_url),
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3145, in inner
+    self._player_cache[cache_id] = func(*args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3172, in _decrypt_nsig
+    jsi, player_id, func_code = self._extract_n_function_code(video_id, player_url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3244, in _extract_n_function_code
+    jscode = func_code or self._load_player(video_id, player_url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3051, in _load_player
+    code = self._download_webpage(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1201, in _download_webpage
+    return self.__download_webpage(url_or_request, video_id, note, errnote, None, fatal, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1152, in download_content
+    res = getattr(self, download_handle.__name__)(url_or_request, video_id, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 968, in _download_webpage_handle
+    content = self._webpage_read_content(urlh, url_or_request, video_id, note, errnote, fatal,
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1048, in _webpage_read_content
+    webpage_bytes = urlh.read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/_requests.py", line 143, in read
+    return self.fp.read(amt, decode_content=True)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 949, in read
+    data = self._raw_read(amt)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 873, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 856, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/usr/lib/python3.10/http/client.py", line 482, in read
+    s = self._safe_read(self.length)
+  File "/usr/lib/python3.10/http/client.py", line 631, in _safe_read
+    data = self.fp.read(amt)
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.10/ssl.py", line 1303, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.10/ssl.py", line 1159, in read
+    return self._sslobj.read(len, buffer)
+[0m
+[32m2024-12-03 21:49:59,359 - cogs.music_play - INFO - Skipped to: Super Mario Bros (Tron Ftd Remix) by Koji Kondo[0m
+[34m2024-12-03 21:51:11,825 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'wacced out murals kendrick', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQDAtQkIChjGjdl4HSLmhu-MlQ7l1Cit86CUMfE24zMWs1_NkF9zNZSO9cD0sc5QcuWy_9nIbL9EgCt4MpLFJJhMfSFL6ke9Ci7ZkuGWQwvvTynMmpk', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-12-03 21:51:12,644 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=wacced%20out%20murals%20kendrick&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=wacced%20out%20murals%20kendrick&type=track', 'offset': 0, 'previous': None, 'total': 799, 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/0hvT3yIEysuuvkK73vgdcW'}, 'href': 'https://api.spotify.com/v1/albums/0hvT3yIEysuuvkK73vgdcW', 'id': '0hvT3yIEysuuvkK73vgdcW', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02d9985092cd88bffd97653b58'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851d9985092cd88bffd97653b58'}], 'is_playable': True, 'name': 'GNX', 'release_date': '2024-11-22', 'release_date_precision': 'day', 'total_tracks': 12, 'type': 'album', 'uri': 'spotify:album:0hvT3yIEysuuvkK73vgdcW'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'}, 'href': 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg', 'id': '2YZyLoL8N0Wb9xBt1NhZWg', 'name': 'Kendrick Lamar', 'type': 'artist', 'uri': 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 317092, 'explicit': True, 'external_ids': {'isrc': 'USUG12408495'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/5gOfC9UzZQzTyShqPMrpjT'}, 'href': 'https://api.spotify.com/v1/tracks/5gOfC9UzZQzTyShqPMrpjT', 'id': '5gOfC9UzZQzTyShqPMrpjT', 'is_local': False, 'is_playable': True, 'name': 'wacced out murals', 'popularity': 87, 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:5gOfC9UzZQzTyShqPMrpjT'}]}}[0m
+[33m2024-12-03 21:51:22,826 - discord.gateway - WARNING - Shard ID None voice heartbeat blocked for more than 10 seconds
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 72, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 192, in play
+    audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 162, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1613, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1780, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1909, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1986, in __process_playlist
+    entries = resolved_entries = list(entries)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 768, in _iter
+    for x in iterable:
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 2452, in get_requested_items
+    for i, entry in self[index]:
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 2514, in __getitem__
+    entry = self._getter(i)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 2487, in get_entry
+    return type(self.ydl)._handle_extraction_exceptions(lambda _, i: self._entries[i])(self.ydl, i)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 2487, in <lambda>
+    return type(self.ydl)._handle_extraction_exceptions(lambda _, i: self._entries[i])(self.ydl, i)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 2252, in __getitem__
+    self._cache.extend(itertools.islice(self._iterable, n))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 5714, in _search_results
+    ytcfg = self._download_ytcfg(default_client, display_id) if not self.skip_webpage else {}
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 788, in _download_ytcfg
+    webpage = self._download_webpage(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1201, in _download_webpage
+    return self.__download_webpage(url_or_request, video_id, note, errnote, None, fatal, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1152, in download_content
+    res = getattr(self, download_handle.__name__)(url_or_request, video_id, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 968, in _download_webpage_handle
+    content = self._webpage_read_content(urlh, url_or_request, video_id, note, errnote, fatal,
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1048, in _webpage_read_content
+    webpage_bytes = urlh.read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/_requests.py", line 143, in read
+    return self.fp.read(amt, decode_content=True)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 949, in read
+    data = self._raw_read(amt)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 873, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 856, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/usr/lib/python3.10/http/client.py", line 460, in read
+    return self._read_chunked(amt)
+  File "/usr/lib/python3.10/http/client.py", line 592, in _read_chunked
+    value.append(self._safe_read(chunk_left))
+  File "/usr/lib/python3.10/http/client.py", line 631, in _safe_read
+    data = self.fp.read(amt)
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.10/ssl.py", line 1303, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.10/ssl.py", line 1159, in read
+    return self._sslobj.read(len, buffer)
+[0m
+[33m2024-12-03 21:51:32,828 - discord.gateway - WARNING - Shard ID None voice heartbeat blocked for more than 20 seconds
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 72, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 192, in play
+    audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 162, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1613, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1780, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1909, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1986, in __process_playlist
+    entries = resolved_entries = list(entries)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 768, in _iter
+    for x in iterable:
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 2452, in get_requested_items
+    for i, entry in self[index]:
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 2514, in __getitem__
+    entry = self._getter(i)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 2487, in get_entry
+    return type(self.ydl)._handle_extraction_exceptions(lambda _, i: self._entries[i])(self.ydl, i)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 2487, in <lambda>
+    return type(self.ydl)._handle_extraction_exceptions(lambda _, i: self._entries[i])(self.ydl, i)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 2252, in __getitem__
+    self._cache.extend(itertools.islice(self._iterable, n))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 5714, in _search_results
+    ytcfg = self._download_ytcfg(default_client, display_id) if not self.skip_webpage else {}
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 788, in _download_ytcfg
+    webpage = self._download_webpage(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1201, in _download_webpage
+    return self.__download_webpage(url_or_request, video_id, note, errnote, None, fatal, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1152, in download_content
+    res = getattr(self, download_handle.__name__)(url_or_request, video_id, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 968, in _download_webpage_handle
+    content = self._webpage_read_content(urlh, url_or_request, video_id, note, errnote, fatal,
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1048, in _webpage_read_content
+    webpage_bytes = urlh.read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/_requests.py", line 143, in read
+    return self.fp.read(amt, decode_content=True)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 949, in read
+    data = self._raw_read(amt)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 873, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 856, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/usr/lib/python3.10/http/client.py", line 460, in read
+    return self._read_chunked(amt)
+  File "/usr/lib/python3.10/http/client.py", line 592, in _read_chunked
+    value.append(self._safe_read(chunk_left))
+  File "/usr/lib/python3.10/http/client.py", line 631, in _safe_read
+    data = self.fp.read(amt)
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.10/ssl.py", line 1303, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.10/ssl.py", line 1159, in read
+    return self._sslobj.read(len, buffer)
+[0m
+[33m2024-12-03 21:51:42,858 - discord.gateway - WARNING - Shard ID None voice heartbeat blocked for more than 30 seconds
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 72, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 192, in play
+    audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 162, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1613, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1780, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1909, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2056, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2088, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1859, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1613, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1759, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4359, in _real_extract
+    webpage, master_ytcfg, player_responses, player_url = self._download_player_responses(url, smuggled_data, video_id, webpage_url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4323, in _download_player_responses
+    player_responses, player_url = self._extract_player_responses(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3933, in _extract_player_responses
+    pr = pr or self._extract_player_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3816, in _extract_player_response
+    return self._extract_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 1034, in _extract_response
+    response = self._call_api(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 667, in _call_api
+    return self._download_json(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1152, in download_content
+    res = getattr(self, download_handle.__name__)(url_or_request, video_id, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1112, in download_handle
+    res = self._download_webpage_handle(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 962, in _download_webpage_handle
+    urlh = self._request_webpage(url_or_request, video_id, note, errnote, fatal, data=data,
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 898, in _request_webpage
+    return self._downloader.urlopen(self._create_request(url_or_request, data, headers, query, extensions))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 4161, in urlopen
+    return self._request_director.send(req)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/common.py", line 117, in send
+    response = handler.send(request)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/_helper.py", line 208, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/common.py", line 340, in send
+    return self._send(request)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/_requests.py", line 328, in _send
+    requests_res = session.request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 507, in getresponse
+    httplib_response = super().getresponse()
+  File "/usr/lib/python3.10/http/client.py", line 1375, in getresponse
+    response.begin()
+  File "/usr/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.10/http/client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.10/ssl.py", line 1303, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.10/ssl.py", line 1159, in read
+    return self._sslobj.read(len, buffer)
+[0m
+[33m2024-12-03 21:51:43,117 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 72, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 192, in play
+    audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 162, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1613, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1780, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1909, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2056, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2088, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1859, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1613, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1759, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4359, in _real_extract
+    webpage, master_ytcfg, player_responses, player_url = self._download_player_responses(url, smuggled_data, video_id, webpage_url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4323, in _download_player_responses
+    player_responses, player_url = self._extract_player_responses(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3933, in _extract_player_responses
+    pr = pr or self._extract_player_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3816, in _extract_player_response
+    return self._extract_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 1034, in _extract_response
+    response = self._call_api(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 667, in _call_api
+    return self._download_json(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1152, in download_content
+    res = getattr(self, download_handle.__name__)(url_or_request, video_id, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1112, in download_handle
+    res = self._download_webpage_handle(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 968, in _download_webpage_handle
+    content = self._webpage_read_content(urlh, url_or_request, video_id, note, errnote, fatal,
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 1048, in _webpage_read_content
+    webpage_bytes = urlh.read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/networking/_requests.py", line 143, in read
+    return self.fp.read(amt, decode_content=True)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 949, in read
+    data = self._raw_read(amt)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 873, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/urllib3/response.py", line 856, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/usr/lib/python3.10/http/client.py", line 460, in read
+    return self._read_chunked(amt)
+  File "/usr/lib/python3.10/http/client.py", line 592, in _read_chunked
+    value.append(self._safe_read(chunk_left))
+  File "/usr/lib/python3.10/http/client.py", line 631, in _safe_read
+    data = self.fp.read(amt)
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.10/ssl.py", line 1303, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.10/ssl.py", line 1159, in read
+    return self._sslobj.read(len, buffer)
+[0m
+[32m2024-12-03 21:51:43,924 - cogs.music_play - INFO - Finished playing: Super Mario Bros (Tron Ftd Remix)[0m
+[32m2024-12-03 21:51:43,924 - discord.player - INFO - ffmpeg process 29525 successfully terminated with return code of 0.[0m
+[33m2024-12-03 21:51:52,955 - discord.gateway - WARNING - Shard ID None voice heartbeat blocked for more than 40 seconds
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 72, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 192, in play
+    audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 162, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1613, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1780, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1909, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2056, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2088, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1859, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1613, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1759, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4441, in _real_extract
+    self._list_formats(video_id, microformats, video_details, player_responses, player_url, duration)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4344, in _list_formats
+    *formats, subtitles = self._extract_formats_and_subtitles(streaming_data, video_id, player_url, live_status, duration)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4078, in _extract_formats_and_subtitles
+    'n': decrypt_nsig(query['n'][0], video_id, player_url),
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3145, in inner
+    self._player_cache[cache_id] = func(*args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3180, in _decrypt_nsig
+    ret = extract_nsig(jsi, func_code)(s)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3262, in extract_nsig
+    ret = func([s])
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 440, in interpret_statement
+    ret, should_abort = self.interpret_statement(try_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 440, in interpret_statement
+    ret, should_abort = self.interpret_statement(try_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 532, in interpret_statement
+    ret, should_abort = self.interpret_statement(sub_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 621, in interpret_statement
+    return self._operator(op, left_val, right_expr, expr, local_vars, allow_recursion), should_return
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 302, in _operator
+    right_val = self.interpret_expression(right_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 402, in interpret_statement
+    inner, should_abort = self.interpret_statement(inner, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 621, in interpret_statement
+    return self._operator(op, left_val, right_expr, expr, local_vars, allow_recursion), should_return
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 302, in _operator
+    right_val = self.interpret_expression(right_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 621, in interpret_statement
+    return self._operator(op, left_val, right_expr, expr, local_vars, allow_recursion), should_return
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 302, in _operator
+    right_val = self.interpret_expression(right_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 778, in interpret_statement
+    argvals = [self.interpret_expression(v, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 778, in <listcomp>
+    argvals = [self.interpret_expression(v, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 781, in interpret_statement
+    return local_vars[fname](argvals, allow_recursion=allow_recursion), should_return
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 5045, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 769, in interpret_statement
+    ret, should_abort = self.interpret_statement(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 769, in interpret_statement
+    ret, should_abort = self.interpret_statement(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 774, in interpret_statement
+    return eval_method(), should_return
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 748, in eval_method
+    return [f((item, idx, obj), {'this': this}, allow_recursion) for idx, item in enumerate(obj)]
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 748, in <listcomp>
+    return [f((item, idx, obj), {'this': this}, allow_recursion) for idx, item in enumerate(obj)]
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/utils/_utils.py", line 5045, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 608, in interpret_statement
+    separated = list(self._separate(expr, op))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 268, in _separate
+    after_op = char if (not in_quote and char in OP_CHARS) else (char.isspace() and after_op)
+[0m
+[33m2024-12-03 21:51:53,145 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 20 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/main.py", line 72, in <module>
+    bot.run(DISCORD_TOKEN)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 192, in play
+    audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist)
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 162, in search_youtube_audio
+    info = ytdl.extract_info(f"ytsearch:{query}", download=False)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1613, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1780, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1909, in process_ie_result
+    return self.__process_playlist(ie_result, download)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2056, in __process_playlist
+    entry_result = self.__process_iterable_entry(entry, download, collections.ChainMap({
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 2088, in __process_iterable_entry
+    return self.process_ie_result(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1859, in process_ie_result
+    return self.extract_info(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1613, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1624, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/YoutubeDL.py", line 1759, in __extract_info
+    ie_result = ie.extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/common.py", line 742, in extract
+    ie_result = self._real_extract(url)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4441, in _real_extract
+    self._list_formats(video_id, microformats, video_details, player_responses, player_url, duration)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4344, in _list_formats
+    *formats, subtitles = self._extract_formats_and_subtitles(streaming_data, video_id, player_url, live_status, duration)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 4078, in _extract_formats_and_subtitles
+    'n': decrypt_nsig(query['n'][0], video_id, player_url),
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3145, in inner
+    self._player_cache[cache_id] = func(*args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3180, in _decrypt_nsig
+    ret = extract_nsig(jsi, func_code)(s)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/extractor/youtube.py", line 3262, in extract_nsig
+    ret = func([s])
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 868, in resf
+    ret, should_abort = self.interpret_statement(code.replace('\n', ' '), var_stack, allow_recursion - 1)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 440, in interpret_statement
+    ret, should_abort = self.interpret_statement(try_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 525, in interpret_statement
+    ret, should_abort = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 440, in interpret_statement
+    ret, should_abort = self.interpret_statement(try_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 532, in interpret_statement
+    ret, should_abort = self.interpret_statement(sub_expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 620, in interpret_statement
+    left_val = self.interpret_expression(op.join(separated), local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 790, in interpret_expression
+    ret, should_return = self.interpret_statement(expr, local_vars, allow_recursion)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 185, in interpret_statement
+    ret, should_ret = f(self, stmt, local_vars, allow_recursion, *args, **kwargs)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 529, in interpret_statement
+    sub_expressions = list(self._separate(expr))
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/yt_dlp/jsinterp.py", line 249, in _separate
+    counters = {k: 0 for k in _MATCHING_PARENS.values()}
+[0m
+[31m2024-12-03 21:51:54,598 - discord.voice_client - ERROR - Disconnected from voice... Reconnecting in 1.45s.[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/client_ws.py", line 229, in receive
+    msg = await self._reader.read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/streams.py", line 657, in read
+    return await super().read()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/aiohttp/streams.py", line 616, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 456, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/voice_client.py", line 456, in poll_voice_ws
+    await self.ws.poll_event()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/gateway.py", line 1003, in poll_event
+    msg = await asyncio.wait_for(self.ws.receive(), timeout=30.0)
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 458, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+[32m2024-12-03 21:51:56,063 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1264641612177473556 (Guild ID 1247773100888690732)[0m
+[32m2024-12-03 21:51:56,290 - cogs.music_play - INFO - Skipped to: wacced out murals by Kendrick Lamar[0m
+[32m2024-12-03 21:51:56,768 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 86f5761d9448b649bd65ecb8ae8931df.[0m
+[33m2024-12-03 21:52:09,601 - discord.gateway - WARNING - Shard ID None has stopped responding to the gateway. Closing and restarting.[0m
+[34m2024-12-03 21:55:26,151 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2024-12-03 21:55:26,151 - discord.client - INFO - logging in using static token[0m
+[32m2024-12-03 21:55:29,318 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: d922e98fe47ff53ae5c538b77bbbd183).[0m
+[32m2024-12-03 21:55:31,390 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-12-03 21:55:31,394 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-12-03 21:55:31,396 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-12-03 21:55:31,794 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-12-03 21:55:31,795 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-12-03 21:55:31,797 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-12-03 21:55:31,887 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-12-03 21:55:31,888 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-12-03 21:55:31,889 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-12-03 21:55:43,317 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-12-03 21:55:43,318 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-12-03 21:55:43,768 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid4790.discord.media[0m
+[34m2024-12-03 21:55:46,173 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'super mario bros (tron ftd) koji kondo', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQDAtQkIChjGjdl4HSLmhu-MlQ7l1Cit86CUMfE24zMWs1_NkF9zNZSO9cD0sc5QcuWy_9nIbL9EgCt4MpLFJJhMfSFL6ke9Ci7ZkuGWQwvvTynMmpk', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-12-03 21:55:46,177 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2024-12-03 21:55:47,433 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/search?q=super+mario+bros+%28tron+ftd%29+koji+kondo&limit=1&offset=0&type=track HTTP/11" 200 None[0m
+[34m2024-12-03 21:55:47,434 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=super%20mario%20bros%20%28tron%20ftd%29%20koji%20kondo&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=super%20mario%20bros%20%28tron%20ftd%29%20koji%20kondo&type=track', 'offset': 0, 'previous': None, 'total': 800, 'items': [{'album': {'album_type': 'compilation', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of'}, 'href': 'https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of', 'id': '0LyfQWJT6nXafLPZqxe9Of', 'name': 'Various Artists', 'type': 'artist', 'uri': 'spotify:artist:0LyfQWJT6nXafLPZqxe9Of'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'DJ', 'ZM', 'CG', 'TJ', 'VE', 'ET'], 'external_urls': {'spotify': 'https://open.spotify.com/album/0mbyuEyR2pBlVcJ9ce1Joz'}, 'href': 'https://api.spotify.com/v1/albums/0mbyuEyR2pBlVcJ9ce1Joz', 'id': '0mbyuEyR2pBlVcJ9ce1Joz', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273669d1a94f1c906ea09764589'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02669d1a94f1c906ea09764589'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851669d1a94f1c906ea09764589'}], 'is_playable': True, 'name': 'The Sound of SceneSat, Vol. 2', 'release_date': '2011-04-24', 'release_date_precision': 'day', 'total_tracks': 73, 'type': 'album', 'uri': 'spotify:album:0mbyuEyR2pBlVcJ9ce1Joz'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/1CRvJnCbPjgx0xmBdoex0c'}, 'href': 'https://api.spotify.com/v1/artists/1CRvJnCbPjgx0xmBdoex0c', 'id': '1CRvJnCbPjgx0xmBdoex0c', 'name': 'Koji Kondo', 'type': 'artist', 'uri': 'spotify:artist:1CRvJnCbPjgx0xmBdoex0c'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'KZ', 'MD', 'UA', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'DJ', 'ZM', 'CG', 'TJ', 'VE', 'ET'], 'disc_number': 1, 'duration_ms': 107000, 'explicit': False, 'external_ids': {'isrc': 'TCACQ1680452'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/2jHbDzuGUHJG7T9DFeUdHe'}, 'href': 'https://api.spotify.com/v1/tracks/2jHbDzuGUHJG7T9DFeUdHe', 'id': '2jHbDzuGUHJG7T9DFeUdHe', 'is_local': False, 'is_playable': True, 'name': 'Super Mario Bros (Tron Ftd Remix)', 'popularity': 11, 'preview_url': None, 'track_number': 71, 'type': 'track', 'uri': 'spotify:track:2jHbDzuGUHJG7T9DFeUdHe'}]}}[0m
+[32m2024-12-03 21:55:55,051 - cogs.music_play - INFO - Skipped to: Super Mario Bros (Tron Ftd Remix) by Koji Kondo[0m
+[34m2024-12-03 21:55:55,825 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'mr sunshine yxngxr1', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQDAtQkIChjGjdl4HSLmhu-MlQ7l1Cit86CUMfE24zMWs1_NkF9zNZSO9cD0sc5QcuWy_9nIbL9EgCt4MpLFJJhMfSFL6ke9Ci7ZkuGWQwvvTynMmpk', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-12-03 21:55:56,487 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=mr%20sunshine%20yxngxr1&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=mr%20sunshine%20yxngxr1&type=track', 'offset': 0, 'previous': None, 'total': 796, 'items': [{'album': {'album_type': 'single', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2jwRHcdgkRhelYEMqndDKe'}, 'href': 'https://api.spotify.com/v1/artists/2jwRHcdgkRhelYEMqndDKe', 'id': '2jwRHcdgkRhelYEMqndDKe', 'name': 'Yxngxr1', 'type': 'artist', 'uri': 'spotify:artist:2jwRHcdgkRhelYEMqndDKe'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/7rvW3uGdmXRYY14oldA2J9'}, 'href': 'https://api.spotify.com/v1/albums/7rvW3uGdmXRYY14oldA2J9', 'id': '7rvW3uGdmXRYY14oldA2J9', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b27306398891dc9d76e72a9e90e1'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e0206398891dc9d76e72a9e90e1'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d0000485106398891dc9d76e72a9e90e1'}], 'is_playable': True, 'name': 'mr. sunshine', 'release_date': '2022-10-28', 'release_date_precision': 'day', 'total_tracks': 1, 'type': 'album', 'uri': 'spotify:album:7rvW3uGdmXRYY14oldA2J9'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2jwRHcdgkRhelYEMqndDKe'}, 'href': 'https://api.spotify.com/v1/artists/2jwRHcdgkRhelYEMqndDKe', 'id': '2jwRHcdgkRhelYEMqndDKe', 'name': 'Yxngxr1', 'type': 'artist', 'uri': 'spotify:artist:2jwRHcdgkRhelYEMqndDKe'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 102000, 'explicit': True, 'external_ids': {'isrc': 'USUYG1448358'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/5vGUjhykZds2aqWFvfgnCh'}, 'href': 'https://api.spotify.com/v1/tracks/5vGUjhykZds2aqWFvfgnCh', 'id': '5vGUjhykZds2aqWFvfgnCh', 'is_local': False, 'is_playable': True, 'name': 'mr. sunshine', 'popularity': 42, 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:5vGUjhykZds2aqWFvfgnCh'}]}}[0m
+[32m2024-12-03 21:56:06,895 - cogs.music_play - INFO - Finished playing: Super Mario Bros (Tron Ftd Remix)[0m
+[32m2024-12-03 21:56:06,895 - discord.player - INFO - ffmpeg process 30337 has not terminated. Waiting to terminate...[0m
+[32m2024-12-03 21:56:06,901 - discord.player - INFO - ffmpeg process 30337 should have terminated with a return code of -9.[0m
+[32m2024-12-03 21:56:07,263 - cogs.music_next - INFO - Stopped current song for guild 1247773100888690732, skipping to next.[0m
+[32m2024-12-03 21:56:07,264 - cogs.music_next - INFO - /next command executed successfully for guild 1247773100888690732.[0m
+[32m2024-12-03 21:56:11,892 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 21:56:12,465 - cogs.music_play - INFO - Playing next song: mr. sunshine by Yxngxr1[0m
+[31m2024-12-03 21:56:49,918 - cogs.music_play - ERROR - Error during playback: [Errno 101] Network is unreachable[0m
+[32m2024-12-03 21:56:49,919 - discord.player - INFO - ffmpeg process 30463 has not terminated. Waiting to terminate...[0m
+[32m2024-12-03 21:56:49,927 - discord.player - INFO - ffmpeg process 30463 should have terminated with a return code of -9.[0m
+[32m2024-12-03 21:56:51,892 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 21:56:56,892 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 21:57:01,892 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 21:57:06,891 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 21:57:11,892 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 21:57:16,891 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[34m2024-12-03 21:57:21,701 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'toto africa', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQDAtQkIChjGjdl4HSLmhu-MlQ7l1Cit86CUMfE24zMWs1_NkF9zNZSO9cD0sc5QcuWy_9nIbL9EgCt4MpLFJJhMfSFL6ke9Ci7ZkuGWQwvvTynMmpk', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-12-03 21:57:22,144 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=toto%20africa&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=toto%20africa&type=track', 'offset': 0, 'previous': None, 'total': 899, 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF'}, 'href': 'https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF', 'id': '0PFtn5NtBbbUNbU9EAmIWF', 'name': 'TOTO', 'type': 'artist', 'uri': 'spotify:artist:0PFtn5NtBbbUNbU9EAmIWF'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/62U7xIHcID94o20Of5ea4D'}, 'href': 'https://api.spotify.com/v1/albums/62U7xIHcID94o20Of5ea4D', 'id': '62U7xIHcID94o20Of5ea4D', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b2734a052b99c042dc15f933145b'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e024a052b99c042dc15f933145b'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d000048514a052b99c042dc15f933145b'}], 'is_playable': True, 'name': 'Toto IV', 'release_date': '1982-04-08', 'release_date_precision': 'day', 'total_tracks': 10, 'type': 'album', 'uri': 'spotify:album:62U7xIHcID94o20Of5ea4D'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF'}, 'href': 'https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF', 'id': '0PFtn5NtBbbUNbU9EAmIWF', 'name': 'TOTO', 'type': 'artist', 'uri': 'spotify:artist:0PFtn5NtBbbUNbU9EAmIWF'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 295893, 'explicit': False, 'external_ids': {'isrc': 'USSM19801941'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/2374M0fQpWi3dLnB54qaLX'}, 'href': 'https://api.spotify.com/v1/tracks/2374M0fQpWi3dLnB54qaLX', 'id': '2374M0fQpWi3dLnB54qaLX', 'is_local': False, 'is_playable': True, 'name': 'Africa', 'popularity': 84, 'preview_url': None, 'track_number': 10, 'type': 'track', 'uri': 'spotify:track:2374M0fQpWi3dLnB54qaLX'}]}}[0m
+[32m2024-12-03 21:57:28,347 - cogs.music_play - INFO - Skipped to: Africa by TOTO[0m
+[34m2024-12-03 21:57:52,497 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'erika', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQDAtQkIChjGjdl4HSLmhu-MlQ7l1Cit86CUMfE24zMWs1_NkF9zNZSO9cD0sc5QcuWy_9nIbL9EgCt4MpLFJJhMfSFL6ke9Ci7ZkuGWQwvvTynMmpk', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-12-03 21:57:52,865 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=erika&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=erika&type=track', 'offset': 0, 'previous': None, 'total': 101, 'items': [{'album': {'album_type': 'compilation', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of'}, 'href': 'https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of', 'id': '0LyfQWJT6nXafLPZqxe9Of', 'name': 'Various Artists', 'type': 'artist', 'uri': 'spotify:artist:0LyfQWJT6nXafLPZqxe9Of'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'MK', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET'], 'external_urls': {'spotify': 'https://open.spotify.com/album/3xPwzv7qhjyzQh1NPoXgxm'}, 'href': 'https://api.spotify.com/v1/albums/3xPwzv7qhjyzQh1NPoXgxm', 'id': '3xPwzv7qhjyzQh1NPoXgxm', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b27387a4a8f494503a59f8630ab1'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e0287a4a8f494503a59f8630ab1'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d0000485187a4a8f494503a59f8630ab1'}], 'is_playable': True, 'name': "Chants traditionnels des soldats allemands - Traditional German Soldiers' Songs", 'release_date': '2010-06-15', 'release_date_precision': 'day', 'total_tracks': 12, 'type': 'album', 'uri': 'spotify:album:3xPwzv7qhjyzQh1NPoXgxm'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of'}, 'href': 'https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of', 'id': '0LyfQWJT6nXafLPZqxe9Of', 'name': 'Various Artists', 'type': 'artist', 'uri': 'spotify:artist:0LyfQWJT6nXafLPZqxe9Of'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'MK', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET'], 'disc_number': 1, 'duration_ms': 197825, 'explicit': False, 'external_ids': {'isrc': 'USA561004189'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/61NcooPUwSPSwSyzF8UfYv'}, 'href': 'https://api.spotify.com/v1/tracks/61NcooPUwSPSwSyzF8UfYv', 'id': '61NcooPUwSPSwSyzF8UfYv', 'is_local': False, 'is_playable': True, 'name': 'Erika', 'popularity': 50, 'preview_url': None, 'track_number': 8, 'type': 'track', 'uri': 'spotify:track:61NcooPUwSPSwSyzF8UfYv'}]}}[0m
+[32m2024-12-03 21:58:09,284 - cogs.music_play - INFO - Finished playing: Africa[0m
+[32m2024-12-03 21:58:09,284 - discord.player - INFO - ffmpeg process 30842 has not terminated. Waiting to terminate...[0m
+[32m2024-12-03 21:58:09,290 - discord.player - INFO - ffmpeg process 30842 should have terminated with a return code of -9.[0m
+[32m2024-12-03 21:58:09,941 - cogs.music_next - INFO - Stopped current song for guild 1247773100888690732, skipping to next.[0m
+[32m2024-12-03 21:58:09,942 - cogs.music_next - INFO - /next command executed successfully for guild 1247773100888690732.[0m
+[32m2024-12-03 21:58:11,892 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 21:58:13,821 - cogs.music_play - INFO - Playing next song: Erika by Various Artists[0m
+[31m2024-12-03 21:58:47,919 - discord.app_commands.tree - ERROR - Ignoring exception in command 'play'[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 182, in play
+    await interaction.response.defer()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 638, in defer
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 213, in play
+    await interaction.followup.send("An error occurred while trying to play the song.")
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 1800, in send
+    data = await adapter.execute_webhook(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10015): Unknown Webhook
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 860, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: NotFound: 404 Not Found (error code: 10015): Unknown Webhook
+[31m2024-12-03 21:58:56,448 - discord.app_commands.tree - ERROR - Ignoring exception in command 'play'[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 182, in play
+    await interaction.response.defer()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 638, in defer
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 213, in play
+    await interaction.followup.send("An error occurred while trying to play the song.")
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 1800, in send
+    data = await adapter.execute_webhook(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10015): Unknown Webhook
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 860, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: NotFound: 404 Not Found (error code: 10015): Unknown Webhook
+[34m2024-12-03 21:59:04,790 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'hello', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQDAtQkIChjGjdl4HSLmhu-MlQ7l1Cit86CUMfE24zMWs1_NkF9zNZSO9cD0sc5QcuWy_9nIbL9EgCt4MpLFJJhMfSFL6ke9Ci7ZkuGWQwvvTynMmpk', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-12-03 21:59:05,295 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=hello&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=hello&type=track', 'offset': 0, 'previous': None, 'total': 100, 'items': [{'album': {'album_type': 'single', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4ovtyvs7j1jSmwhkBGHqSr'}, 'href': 'https://api.spotify.com/v1/artists/4ovtyvs7j1jSmwhkBGHqSr', 'id': '4ovtyvs7j1jSmwhkBGHqSr', 'name': 'Olamide', 'type': 'artist', 'uri': 'spotify:artist:4ovtyvs7j1jSmwhkBGHqSr'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/1z7b1Pr1rSlvWRzsW3HOrS'}, 'href': 'https://api.spotify.com/v1/artists/1z7b1Pr1rSlvWRzsW3HOrS', 'id': '1z7b1Pr1rSlvWRzsW3HOrS', 'name': 'Russ', 'type': 'artist', 'uri': 'spotify:artist:1z7b1Pr1rSlvWRzsW3HOrS'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/43Xxk0OfHCuh0HSEJ3nK07'}, 'href': 'https://api.spotify.com/v1/albums/43Xxk0OfHCuh0HSEJ3nK07', 'id': '43Xxk0OfHCuh0HSEJ3nK07', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273514ec0b8195025f6eedfd973'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02514ec0b8195025f6eedfd973'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851514ec0b8195025f6eedfd973'}], 'is_playable': True, 'name': 'Hello Habibi', 'release_date': '2024-11-07', 'release_date_precision': 'day', 'total_tracks': 1, 'type': 'album', 'uri': 'spotify:album:43Xxk0OfHCuh0HSEJ3nK07'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4ovtyvs7j1jSmwhkBGHqSr'}, 'href': 'https://api.spotify.com/v1/artists/4ovtyvs7j1jSmwhkBGHqSr', 'id': '4ovtyvs7j1jSmwhkBGHqSr', 'name': 'Olamide', 'type': 'artist', 'uri': 'spotify:artist:4ovtyvs7j1jSmwhkBGHqSr'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/1z7b1Pr1rSlvWRzsW3HOrS'}, 'href': 'https://api.spotify.com/v1/artists/1z7b1Pr1rSlvWRzsW3HOrS', 'id': '1z7b1Pr1rSlvWRzsW3HOrS', 'name': 'Russ', 'type': 'artist', 'uri': 'spotify:artist:1z7b1Pr1rSlvWRzsW3HOrS'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 194661, 'explicit': True, 'external_ids': {'isrc': 'USUYG1582126'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/0CK6SBXMBAW2iTtlrdmutY'}, 'href': 'https://api.spotify.com/v1/tracks/0CK6SBXMBAW2iTtlrdmutY', 'id': '0CK6SBXMBAW2iTtlrdmutY', 'is_local': False, 'is_playable': True, 'name': 'Hello Habibi', 'popularity': 58, 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:0CK6SBXMBAW2iTtlrdmutY'}]}}[0m
+[32m2024-12-03 21:59:30,956 - cogs.music_play - INFO - Finished playing: Erika[0m
+[32m2024-12-03 21:59:30,956 - discord.player - INFO - ffmpeg process 31009 has not terminated. Waiting to terminate...[0m
+[32m2024-12-03 21:59:30,962 - discord.player - INFO - ffmpeg process 31009 should have terminated with a return code of -9.[0m
+[32m2024-12-03 21:59:31,828 - cogs.music_next - INFO - Stopped current song for guild 1247773100888690732, skipping to next.[0m
+[32m2024-12-03 21:59:31,828 - cogs.music_next - INFO - /next command executed successfully for guild 1247773100888690732.[0m
+[32m2024-12-03 21:59:31,891 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 21:59:32,378 - cogs.music_play - INFO - Playing next song: Hello Habibi by Olamide[0m
+[32m2024-12-03 21:59:46,633 - cogs.music_play - INFO - Finished playing: Hello Habibi[0m
+[32m2024-12-03 21:59:46,635 - discord.player - INFO - ffmpeg process 31294 has not terminated. Waiting to terminate...[0m
+[32m2024-12-03 21:59:46,642 - discord.player - INFO - ffmpeg process 31294 should have terminated with a return code of -9.[0m
+[32m2024-12-03 21:59:46,891 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[31m2024-12-03 21:59:50,475 - discord.ui.view - ERROR - Ignoring exception in view <MusicControlView timeout=600 children=3> for item <Button style=<ButtonStyle.secondary: 2> url=None disabled=False label=None emoji=<PartialEmoji animated=False name='⏹️' id=None> row=None>[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/ui/view.py", line 427, in _scheduled_task
+    await item.callback(interaction)
+  File "/home/pyguy/Documents/Apollo/modules/music_control_view.py", line 37, in stop_button
+    await interaction.response.send_message("Music stopped.", ephemeral=True)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 778, in send_message
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+[32m2024-12-03 21:59:51,891 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 21:59:56,891 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 22:00:01,893 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 22:00:06,893 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 22:00:11,892 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 22:00:16,894 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
