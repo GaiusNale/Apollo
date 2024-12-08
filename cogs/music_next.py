@@ -10,7 +10,7 @@ class NextCog(commands.Cog):
         self.bot = bot
         self.is_playing = {}
         self.queue_manager = bot.QueueManager
-        self.background_task.before_loop(self.before_background_task) #Corrected this line
+        self.background_task.before_loop(self.before_background_task)
         self.background_task.start()
 
     async def play_next(self, guild_id, voice_client):
@@ -27,6 +27,26 @@ class NextCog(commands.Cog):
                 discord.FFmpegPCMAudio(next_song['audio_url'], options="-vn"),
                 after=lambda e: self.bot.loop.create_task(self._on_song_end(guild_id, voice_client))
             )
+
+            # Generate and send embed
+            embed = discord.Embed(
+                title="Now Playing",
+                description=f"[{next_song['title']}]({next_song['audio_url']})",
+                color=discord.Color.green()
+            )
+            if next_song.get('thumbnail'):
+                embed.set_thumbnail(url=next_song['thumbnail'])
+            embed.add_field(name="Artist", value=next_song['artist'], inline=True)
+            embed.add_field(name="Duration", value=f"{next_song['duration'] // 60}:{next_song['duration'] % 60:02}", inline=True)
+
+            # Send embed with bot's `MusicControlView`
+            if hasattr(self.bot, "MusicControlView"):
+                view = self.bot.MusicControlView(self, voice_client)
+                await voice_client.channel.send(embed=embed, view=view)
+            else:
+                logger.warning("MusicControlView not set as a bot attribute. Embed sent without controls.")
+                await voice_client.channel.send(embed=embed)
+
         except Exception as e:
             logger.error(f"Error playing next song for guild {guild_id}: {e}")
             self.is_playing[guild_id] = False
@@ -87,4 +107,4 @@ class NextCog(commands.Cog):
         self.background_task.cancel()
 
 async def setup(bot): 
-    await bot.add_cog(NextCog(bot)) 
+    await bot.add_cog(NextCog(bot))

@@ -4,7 +4,8 @@ import logging  # Import logging
 from discord.ext import commands
 from decouple import config
 from logs.log_config import setup_logging  # Import the logging setup function
-from queue_manager import QueueManager
+from modules.queue_manager import QueueManager
+from modules.music_control_view import MusicControlView
 
 # Set up logging
 setup_logging()
@@ -15,10 +16,11 @@ intents = discord.Intents.default()
 intents.message_content = True  # Enable privileged intent for reading message content
 
 # Initialize the bot with command prefix and intents
-bot = commands.Bot(command_prefix='!', intents=intents)
+bot = commands.Bot(command_prefix='$$', intents=intents)
 
 queue_manager = QueueManager()
 bot.QueueManager = queue_manager
+bot.MusicControlView = MusicControlView
 
 
 # Settings
@@ -70,3 +72,4 @@ if __name__ == '__main__':
         bot.run(DISCORD_TOKEN)
     except Exception as e:
         logger.critical(f'Failed to start bot: {e}')
+

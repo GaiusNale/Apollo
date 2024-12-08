@@ -16,8 +16,9 @@ ytdl_format_options = {
     'postprocessors': [{
         'key': 'FFmpegExtractAudio',
         'preferredcodec': 'mp3',
-        'preferredquality': '320',
+        'preferredquality': '128',
     }],
+    'buffersize': 1024 * 1024 * 10,  # increase buffer size to help with pack loss and corruption 
 }
 ffmpeg_options = {
     'options': '-vn',
@@ -54,47 +55,6 @@ async def search_song_on_spotify(spotify, query):
     except Exception as e:
         logger.error(f"Error searching Spotify: {e}")
         return None
-
-class MusicControlView(discord.ui.View):
-    """UI view for controlling music playback with buttons."""
-    def __init__(self, cog, voice_client):
-        super().__init__(timeout=None)
-        self.cog = cog
-        self.voice_client = voice_client
-        self.is_paused = False
-
-    @discord.ui.button(style=discord.ButtonStyle.secondary, emoji="⏸️", custom_id="pause_resume")
-    async def pause_resume_button(self, interaction: discord.Interaction, button: discord.ui.Button):
-        """Toggle pause/resume of the current song."""
-        if not self.voice_client.is_playing() and not self.is_paused:
-            await interaction.response.send_message("No music is currently playing.", ephemeral=True)
-            return
-
-        if self.is_paused:
-            self.voice_client.resume()
-            self.is_paused = False
-            button.emoji = "⏸️"
-            await interaction.response.edit_message(content="Music resumed.", view=self)
-        else:
-            self.voice_client.pause()
-            self.is_paused = True
-            button.emoji = "▶️"
-            await interaction.response.edit_message(content="Music paused.", view=self)
-
-    @discord.ui.button(style=discord.ButtonStyle.secondary, emoji="⏹️", custom_id="stop")
-    async def stop_button(self, interaction: discord.Interaction, button: discord.ui.Button):
-        """Stop the currently playing or paused song."""
-        if self.voice_client.is_playing() or self.voice_client.is_paused():
-            self.voice_client.stop()
-            await interaction.response.send_message("Music stopped.", ephemeral=True)
-        else:
-            await interaction.response.send_message("No music is playing currently.", ephemeral=True)
-
-    @discord.ui.button(style=discord.ButtonStyle.secondary, emoji="⏭️", custom_id="skip")
-    async def skip_button(self, interaction: discord.Interaction, button: discord.ui.Button):
-        """Skip to the next song in the queue."""
-        await interaction.response.defer()
-        await self.cog.skip_song(interaction, self.voice_client)
 
 class PlayCog(commands.Cog):
     """Cog for handling music playback commands."""
@@ -134,8 +94,8 @@ class PlayCog(commands.Cog):
                         embed.add_field(name="Artist", value=next_song['artist'], inline=True)
                         embed.add_field(name="Duration", value=f"{next_song['duration'] // 60}:{next_song['duration'] % 60:02}", inline=True)
 
-                        # Send embed to the voice channel
-                        view = MusicControlView(self, voice_client)
+                        # Use MusicControlView from bot attribute
+                        view = self.bot.MusicControlView(self, voice_client)
                         await voice_client.channel.send(embed=embed, view=view)
 
                         logger.info(f"Playing next song: {next_song['title']} by {next_song['artist']}")
@@ -188,7 +148,8 @@ class PlayCog(commands.Cog):
             embed.add_field(name="Artist", value=next_song['artist'], inline=True)
             embed.add_field(name="Duration", value=f"{next_song['duration'] // 60}:{next_song['duration'] % 60:02}", inline=True)
 
-            view = MusicControlView(self, voice_client)
+            # Use MusicControlView from bot attribute
+            view = self.bot.MusicControlView(self, voice_client)
             await interaction.followup.send(embed=embed, view=view)
             logger.info(f"Skipped to: {next_song['title']} by {next_song['artist']}")
         except Exception as e:
@@ -255,4 +216,5 @@ class PlayCog(commands.Cog):
 async def setup(bot):
     """Set up the PlayCog for the bot."""
     await bot.add_cog(PlayCog(bot))
+
 
