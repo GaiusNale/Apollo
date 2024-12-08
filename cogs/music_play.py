@@ -1,6 +1,7 @@
 import discord
 from discord import app_commands
 from discord.ext import commands, tasks
+from urllib.parse import urlparse, parse_qs
 import yt_dlp as youtube_dl
 import logging
 from spotipy import Spotify
@@ -41,7 +42,9 @@ def get_spotify_client():
 async def search_song_on_spotify(spotify, query):
     """Search for a song on Spotify using the provided query."""
     try:
-        results = spotify.search(q=query, type="track", limit=1)
+        # Clean and sanitize the query
+        sanitized_query = query.strip().encode("ascii", "ignore").decode()
+        results = spotify.search(q=sanitized_query, type="track", limit=1)
         if results["tracks"]["items"]:
             track = results["tracks"]["items"][0]
             return {
@@ -50,11 +53,12 @@ async def search_song_on_spotify(spotify, query):
                 "album_cover": track["album"]["images"][0]["url"] if track["album"]["images"] else None
             }
         else:
+            logger.warning("No tracks found on Spotify for query: %s", sanitized_query)
             return None
     except Exception as e:
-        logger.error(f"Error searching Spotify: {e}")
+        logger.error(f"Error searching Spotify with query '{query}': {e}")
         return None
-
+    
 class MusicControlView(discord.ui.View):
     """UI view for controlling music playback with buttons."""
     def __init__(self, cog, voice_client):
@@ -198,59 +202,155 @@ class PlayCog(commands.Cog):
     async def search_youtube_audio(self, query):
         """Search for audio on YouTube using the provided query."""
         try:
-            info = ytdl.extract_info(f"ytsearch:{query}", download=False)
+            # Clean and sanitize the query
+            sanitized_query = query.strip().encode("ascii", "ignore").decode()
+            logger.info("Searching YouTube with sanitized query: %s", sanitized_query)
+
+            # Extract video information using yt_dlp
+            info = ytdl.extract_info(f"ytsearch:{sanitized_query}", download=False)
             if 'entries' in info and info['entries']:
-                video = info['entries'][0]
+                video = info['entries'][0]  # First result
+
+                # Extract metadata with fallback defaults
+                title = video.get('title', 'Unknown Title')
+                uploader = video.get('uploader', 'Unknown Artist')
+                duration = video.get('duration', 0)  # Duration in seconds
+                thumbnail = video.get('thumbnails', [{}])[-1].get('url', None)  # Last thumbnail URL
+                audio_url = video.get('url', '')
+
+                logger.info(f"Extracted YouTube metadata: title={title}, artist={uploader}, duration={duration}")
+
                 return {
-                    "audio_url": video['url'],
-                    "title": video['title'],
-                    "duration": video['duration'],
-                    "thumbnail": video.get('thumbnails', [{}])[-1].get('url', None)
+                    "audio_url": audio_url,
+                    "title": title,
+                    "artist": uploader,
+                    "duration": duration,
+                    "thumbnail": thumbnail,
                 }
             else:
-                logger.error("No results found for the query.")
+                logger.error("No results found for the query: %s", sanitized_query)
                 return None
         except Exception as e:
-            logger.error(f"Error extracting YouTube audio: {e}")
+            logger.error(f"Error extracting YouTube audio with query '{query}': {e}")
+            return None
+        
+    async def process_spotify_query(self, query):
+        """Process a Spotify link and return metadata for tracks."""
+        try:
+            parsed_url = urlparse(query)
+            path_parts = parsed_url.path.split("/")
+
+            if "track" in path_parts:
+                # Handle single track
+                spotify_track_id = path_parts[path_parts.index("track") + 1]
+                spotify_track = self.spotify.track(spotify_track_id)
+                return [{
+                    "song_title": spotify_track["name"],
+                    "artist_name": spotify_track["artists"][0]["name"],
+                    "album_cover": (
+                        spotify_track["album"]["images"][0]["url"]
+                        if spotify_track["album"]["images"]
+                        else None
+                    )
+                }]
+
+            elif "playlist" in path_parts:
+                # Handle playlist
+                spotify_playlist_id = path_parts[path_parts.index("playlist") + 1]
+                logger.info(f"Fetching playlist: {spotify_playlist_id}")
+                
+                try:
+                    playlist_tracks = self.spotify.playlist_tracks(
+                        spotify_playlist_id, 
+                        market="US"  # Specify a market to handle region restrictions
+                    )
+                except Exception as e:
+                    logger.error(f"Failed to fetch playlist tracks: {e}")
+                    return None
+
+                tracks = []
+                for item in playlist_tracks["items"]:
+                    track = item["track"]
+                    if track:  # Check if track is not None
+                        tracks.append({
+                            "song_title": track["name"],
+                            "artist_name": track["artists"][0]["name"],
+                            "album_cover": (
+                                track["album"]["images"][0]["url"]
+                                if track["album"]["images"]
+                                else None
+                            )
+                        })
+                return tracks
+            else:
+                logger.error("Unsupported Spotify URL: %s", query)
+                return None
+        except Exception as e:
+            logger.error(f"Error processing Spotify query '{query}': {e}")
             return None
 
-    @app_commands.command(name="play", description="Play music from a YouTube search query.")
+
+
+    @app_commands.command(name="play", description="Play music from a YouTube or Spotify query.")
     async def play(self, interaction: discord.Interaction, query: str):
-        """Play a song based on a query from YouTube or Spotify."""
+        """Play a song or a playlist based on a query from YouTube or Spotify."""
         try:
             await interaction.response.defer()
             voice_client = await self.join_voice_channel(interaction)
             if not voice_client:
                 return
 
-            spotify_data = await search_song_on_spotify(self.spotify, query)
-            spotify_title = spotify_data["song_title"] if spotify_data else query
-            spotify_artist = spotify_data["artist_name"] if spotify_data else "Unknown Artist"
-            spotify_thumbnail = spotify_data["album_cover"] if spotify_data else None
+            is_spotify_url = "open.spotify.com" in query
+            tracks_to_add = []
 
-            audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist)
-            if not audio_data:
-                await interaction.followup.send("Could not find the song.")
-                return
+            if is_spotify_url:
+                # Process Spotify link
+                spotify_data = await self.process_spotify_query(query)
+                if not spotify_data:
+                    await interaction.followup.send("Could not process the Spotify link.")
+                    return
+                tracks_to_add = spotify_data
+            else:
+                # Treat as a regular query
+                tracks_to_add.append({
+                    "song_title": query,
+                    "artist_name": "Unknown Artist",
+                    "album_cover": None
+                })
 
-            self.queue_manager.add_to_queue(
-                interaction.guild.id,
-                {
-                    "title": spotify_title,
-                    "artist": spotify_artist,
-                    "audio_url": audio_data["audio_url"],
-                    "thumbnail": spotify_thumbnail or audio_data["thumbnail"],
-                    "duration": audio_data["duration"]
-                }
-            )
+            for track in tracks_to_add:
+                # Combine title and artist for YouTube search
+                search_query = f"{track['song_title']} {track['artist_name']}".strip()
+                logger.info(f"Searching YouTube for: {search_query}")
 
-            if not voice_client.is_playing():
-                await self.skip_song(interaction, voice_client)
+                # Search for YouTube audio
+                audio_data = await self.search_youtube_audio(search_query)
+                if not audio_data:
+                    logger.warning(f"Could not find audio for: {track['song_title']}")
+                    continue
 
-            await interaction.followup.send("Song added to the queue.")
+                # Add track to queue
+                self.queue_manager.add_to_queue(
+                    interaction.guild.id,
+                    {
+                        "title": track["song_title"],
+                        "artist": track["artist_name"],
+                        "audio_url": audio_data["audio_url"],
+                        "thumbnail": track["album_cover"] or audio_data["thumbnail"],
+                        "duration": audio_data["duration"],
+                    },
+                )
+
+                # Play immediately if nothing is currently playing
+                if not voice_client.is_playing():
+                    await self.skip_song(interaction, voice_client)
+
+            await interaction.followup.send(f"Added {len(tracks_to_add)} track(s) to the queue.")
         except Exception as e:
             await interaction.followup.send("An error occurred while trying to play the song.")
             logger.error(f"Failed to play song: {e}")
+
+
 
 async def setup(bot):
     """Set up the PlayCog for the bot."""

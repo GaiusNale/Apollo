@@ -1,0 +1,216 @@
+[34m2024-12-03 15:23:17,823 - asyncio - DEBUG - Using proactor: IocpProactor[0m
+[32m2024-12-03 15:23:17,825 - discord.client - INFO - logging in using static token[0m
+[41m2024-12-03 15:23:17,826 - __main__ - CRITICAL - Failed to start bot: expected token to be a str, received NoneType instead[0m
+[34m2024-12-03 15:25:23,908 - asyncio - DEBUG - Using proactor: IocpProactor[0m
+[32m2024-12-03 15:25:23,910 - discord.client - INFO - logging in using static token[0m
+[32m2024-12-03 15:25:24,672 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: d47a1454f92dc84cba6b2e1199ad2872).[0m
+[32m2024-12-03 15:25:26,741 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-12-03 15:25:26,760 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-12-03 15:25:26,768 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-12-03 15:25:26,775 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-12-03 15:25:26,778 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-12-03 15:25:27,590 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-12-03 15:25:27,646 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-12-03 15:25:27,649 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-12-03 15:25:27,652 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-12-03 15:26:05,809 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-12-03 15:26:05,810 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-12-03 15:26:05,983 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid4790.discord.media[0m
+[34m2024-12-03 15:26:07,046 - spotipy.oauth2 - DEBUG - sending POST request to https://accounts.spotify.com/api/token with Headers: {'Authorization': 'Basic MTc4ZmY0NjE0NThiNDFhMzk4Y2IzODVjOWEwZDE0YWY6ZjViMmY1ZDljODczNDFjYWFiZjdkM2ZiMmJkODJkYTQ='} and Body: {'grant_type': 'client_credentials'}[0m
+[34m2024-12-03 15:26:07,051 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): accounts.spotify.com:443[0m
+[34m2024-12-03 15:26:07,194 - urllib3.connectionpool - DEBUG - https://accounts.spotify.com:443 "POST /api/token HTTP/11" 200 None[0m
+[34m2024-12-03 15:26:07,197 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'https://open.spotify.com/track/4SPBwOTXgku4QvmRtMEGfW?si=27db965618c84b1e', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQBVhxCFWgQXHPATZLqjDAgmx1h6eopLCbr4iSBFK52uDsXjtxhTrKDES6FWHrQg_osbq1jp0-Ch-lLmrP1nCxAOJqWJs1i7R4OjZoIR08HOwyg-fDg', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-12-03 15:26:07,201 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2024-12-03 15:26:07,556 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/search?q=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F4SPBwOTXgku4QvmRtMEGfW%3Fsi%3D27db965618c84b1e&limit=1&offset=0&type=track HTTP/11" 200 None[0m
+[34m2024-12-03 15:26:07,557 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F4SPBwOTXgku4QvmRtMEGfW%3Fsi%3D27db965618c84b1e&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F4SPBwOTXgku4QvmRtMEGfW%3Fsi%3D27db965618c84b1e&type=track', 'offset': 0, 'previous': None, 'total': 490, 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/6nxWCVXbOlEVRexSbLsTer'}, 'href': 'https://api.spotify.com/v1/artists/6nxWCVXbOlEVRexSbLsTer', 'id': '6nxWCVXbOlEVRexSbLsTer', 'name': 'Flume', 'type': 'artist', 'uri': 'spotify:artist:6nxWCVXbOlEVRexSbLsTer'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/0enl6lyotKB8LKlUo5m2oJ'}, 'href': 'https://api.spotify.com/v1/albums/0enl6lyotKB8LKlUo5m2oJ', 'id': '0enl6lyotKB8LKlUo5m2oJ', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273bba56b4ffa0442e798e0c477'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02bba56b4ffa0442e798e0c477'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851bba56b4ffa0442e798e0c477'}], 'is_playable': True, 'name': 'Hi This Is Flume (Mixtape)', 'release_date': '2019-03-22', 'release_date_precision': 'day', 'total_tracks': 17, 'type': 'album', 'uri': 'spotify:album:0enl6lyotKB8LKlUo5m2oJ'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/6nxWCVXbOlEVRexSbLsTer'}, 'href': 'https://api.spotify.com/v1/artists/6nxWCVXbOlEVRexSbLsTer', 'id': '6nxWCVXbOlEVRexSbLsTer', 'name': 'Flume', 'type': 'artist', 'uri': 'spotify:artist:6nxWCVXbOlEVRexSbLsTer'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 33567, 'explicit': False, 'external_ids': {'isrc': 'AUFF01900033'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/0kQOmSJb84p2f0sPnstZdR'}, 'href': 'https://api.spotify.com/v1/tracks/0kQOmSJb84p2f0sPnstZdR', 'id': '0kQOmSJb84p2f0sPnstZdR', 'is_local': False, 'is_playable': True, 'name': '╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌', 'popularity': 32, 'preview_url': None, 'track_number': 5, 'type': 'track', 'uri': 'spotify:track:0kQOmSJb84p2f0sPnstZdR'}]}}[0m
+[32m2024-12-03 15:26:07,561 - cogs.music_play - INFO - Searching YouTube with sanitized query:  Flume[0m
+[32m2024-12-03 15:26:14,456 - cogs.music_play - INFO - Skipped to: ╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌ by Flume[0m
+[34m2024-12-03 15:28:04,746 - asyncio - DEBUG - Using proactor: IocpProactor[0m
+[32m2024-12-03 15:28:04,747 - discord.client - INFO - logging in using static token[0m
+[32m2024-12-03 15:28:05,670 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 4507c3941379845a6edaf54bcaf4e6c8).[0m
+[32m2024-12-03 15:28:07,726 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-12-03 15:28:07,736 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-12-03 15:28:07,744 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-12-03 15:28:07,752 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-12-03 15:28:07,760 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-12-03 15:28:08,686 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-12-03 15:28:08,742 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-12-03 15:28:08,749 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-12-03 15:28:08,757 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[34m2024-12-03 15:28:17,060 - asyncio - DEBUG - Using proactor: IocpProactor[0m
+[32m2024-12-03 15:28:17,063 - discord.client - INFO - logging in using static token[0m
+[32m2024-12-03 15:28:17,792 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: fac71d5e741171cffd9c9bc74de2ed81).[0m
+[32m2024-12-03 15:28:19,843 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-12-03 15:28:19,852 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-12-03 15:28:19,856 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-12-03 15:28:19,862 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-12-03 15:28:19,865 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-12-03 15:28:20,698 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-12-03 15:28:20,746 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-12-03 15:28:20,749 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-12-03 15:28:20,751 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-12-03 15:28:31,577 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-12-03 15:28:31,577 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-12-03 15:28:31,747 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid4790.discord.media[0m
+[34m2024-12-03 15:28:32,807 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/tracks/4h5pNIuFxUYDwioQDbQ2kl with Params: {'market': None} Headers: {'Authorization': 'Bearer BQBVhxCFWgQXHPATZLqjDAgmx1h6eopLCbr4iSBFK52uDsXjtxhTrKDES6FWHrQg_osbq1jp0-Ch-lLmrP1nCxAOJqWJs1i7R4OjZoIR08HOwyg-fDg', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-12-03 15:28:32,811 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2024-12-03 15:28:33,012 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/tracks/4h5pNIuFxUYDwioQDbQ2kl HTTP/11" 200 None[0m
+[34m2024-12-03 15:28:33,013 - spotipy.client - DEBUG - RESULTS: {'album': {'album_type': 'compilation', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of'}, 'href': 'https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of', 'id': '0LyfQWJT6nXafLPZqxe9Of', 'name': 'Various Artists', 'type': 'artist', 'uri': 'spotify:artist:0LyfQWJT6nXafLPZqxe9Of'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/5YWmOqClt8OSgWNYjmFMHe'}, 'href': 'https://api.spotify.com/v1/albums/5YWmOqClt8OSgWNYjmFMHe', 'id': '5YWmOqClt8OSgWNYjmFMHe', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b27389961f231ed82f7c584fadb7', 'width': 640, 'height': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e0289961f231ed82f7c584fadb7', 'width': 300, 'height': 300}, {'url': 'https://i.scdn.co/image/ab67616d0000485189961f231ed82f7c584fadb7', 'width': 64, 'height': 64}], 'name': "It's Cold Outside", 'release_date': '2023-12-11', 'release_date_precision': 'day', 'total_tracks': 5, 'type': 'album', 'uri': 'spotify:album:5YWmOqClt8OSgWNYjmFMHe'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/062sVQSOvOr69kPms0aKDL'}, 'href': 'https://api.spotify.com/v1/artists/062sVQSOvOr69kPms0aKDL', 'id': '062sVQSOvOr69kPms0aKDL', 'name': 'SKG', 'type': 'artist', 'uri': 'spotify:artist:062sVQSOvOr69kPms0aKDL'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 70048, 'explicit': False, 'external_ids': {'isrc': 'CA5KR2411104'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/4h5pNIuFxUYDwioQDbQ2kl'}, 'href': 'https://api.spotify.com/v1/tracks/4h5pNIuFxUYDwioQDbQ2kl', 'id': '4h5pNIuFxUYDwioQDbQ2kl', 'is_local': False, 'name': 'Anthem Of the Bells', 'popularity': 17, 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:4h5pNIuFxUYDwioQDbQ2kl'}[0m
+[32m2024-12-03 15:28:33,015 - cogs.music_play - INFO - Searching YouTube for: Anthem Of the Bells SKG[0m
+[32m2024-12-03 15:28:33,016 - cogs.music_play - INFO - Searching YouTube with sanitized query: Anthem Of the Bells SKG[0m
+[32m2024-12-03 15:28:39,237 - cogs.music_play - INFO - Skipped to: Anthem Of the Bells by SKG[0m
+[32m2024-12-03 15:29:07,257 - cogs.music_play - INFO - Searching YouTube for: not like us kendrick Unknown Artist[0m
+[32m2024-12-03 15:29:07,257 - cogs.music_play - INFO - Searching YouTube with sanitized query: not like us kendrick Unknown Artist[0m
+[32m2024-12-03 15:29:20,264 - cogs.music_play - INFO - Searching YouTube for: https://www.youtube.com/watch?v=LDU_Txk06tM Unknown Artist[0m
+[32m2024-12-03 15:29:20,266 - cogs.music_play - INFO - Searching YouTube with sanitized query: https://www.youtube.com/watch?v=LDU_Txk06tM Unknown Artist[0m
+[32m2024-12-03 15:29:28,035 - cogs.music_queue - INFO - Displayed the current queue for guild 1247773100888690732[0m
+[32m2024-12-03 15:29:44,862 - cogs.music_play - INFO - Finished playing: Anthem Of the Bells[0m
+[32m2024-12-03 15:29:44,862 - discord.player - INFO - ffmpeg process 20432 has not terminated. Waiting to terminate...[0m
+[32m2024-12-03 15:29:44,866 - discord.player - INFO - ffmpeg process 20432 should have terminated with a return code of 1.[0m
+[32m2024-12-03 15:29:45,174 - cogs.music_play - INFO - Skipped to: not like us kendrick by Unknown Artist[0m
+[32m2024-12-03 15:29:55,028 - cogs.music_play - INFO - Finished playing: not like us kendrick[0m
+[32m2024-12-03 15:29:55,029 - discord.player - INFO - ffmpeg process 13948 has not terminated. Waiting to terminate...[0m
+[32m2024-12-03 15:29:55,033 - discord.player - INFO - ffmpeg process 13948 should have terminated with a return code of 1.[0m
+[32m2024-12-03 15:29:55,210 - cogs.music_next - INFO - Stopped current song for guild 1247773100888690732, skipping to next.[0m
+[32m2024-12-03 15:29:55,211 - cogs.music_next - INFO - /next command executed successfully for guild 1247773100888690732.[0m
+[32m2024-12-03 15:29:55,756 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:29:56,019 - cogs.music_play - INFO - Playing next song: https://www.youtube.com/watch?v=LDU_Txk06tM by Unknown Artist[0m
+[32m2024-12-03 15:31:35,955 - cogs.music_play - INFO - Searching YouTube for: euphoria kendrick lamat Unknown Artist[0m
+[32m2024-12-03 15:31:35,955 - cogs.music_play - INFO - Searching YouTube with sanitized query: euphoria kendrick lamat Unknown Artist[0m
+[32m2024-12-03 15:31:41,066 - cogs.music_play - INFO - Finished playing: https://www.youtube.com/watch?v=LDU_Txk06tM[0m
+[32m2024-12-03 15:31:41,066 - discord.player - INFO - ffmpeg process 15424 has not terminated. Waiting to terminate...[0m
+[32m2024-12-03 15:31:41,069 - discord.player - INFO - ffmpeg process 15424 should have terminated with a return code of 1.[0m
+[32m2024-12-03 15:31:41,369 - cogs.music_play - INFO - Skipped to: euphoria kendrick lamat by Unknown Artist[0m
+[34m2024-12-03 15:33:01,581 - asyncio - DEBUG - Using proactor: IocpProactor[0m
+[32m2024-12-03 15:33:01,584 - discord.client - INFO - logging in using static token[0m
+[32m2024-12-03 15:33:02,615 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 02aa7ee9acecc770fdd8892dbc3e1acb).[0m
+[32m2024-12-03 15:33:04,669 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-12-03 15:33:04,675 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-12-03 15:33:04,677 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-12-03 15:33:04,682 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-12-03 15:33:04,685 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-12-03 15:33:05,543 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-12-03 15:33:05,595 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-12-03 15:33:05,597 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-12-03 15:33:05,598 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[34m2024-12-03 15:33:52,844 - asyncio - DEBUG - Using proactor: IocpProactor[0m
+[32m2024-12-03 15:33:52,846 - discord.client - INFO - logging in using static token[0m
+[32m2024-12-03 15:33:53,805 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: b4a1ba4da677ed5aeccf72a68ebeaf96).[0m
+[32m2024-12-03 15:33:55,896 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-12-03 15:33:55,905 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-12-03 15:33:55,906 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-12-03 15:33:55,911 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-12-03 15:33:55,913 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-12-03 15:33:56,750 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-12-03 15:33:56,808 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-12-03 15:33:56,810 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-12-03 15:33:56,812 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-12-03 15:34:03,042 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-12-03 15:34:03,043 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-12-03 15:34:03,208 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid4790.discord.media[0m
+[32m2024-12-03 15:34:04,259 - cogs.music_play - INFO - Searching YouTube with sanitized query: insane clown posse homies[0m
+[32m2024-12-03 15:34:09,781 - cogs.music_play - INFO - Extracted YouTube metadata: title=Insane Clown Posse - Homies (Uncensored), artist=420madprofessor, duration=234[0m
+[32m2024-12-03 15:34:10,855 - cogs.music_play - INFO - Skipped to: Insane Clown Posse - Homies (Uncensored) by 420madprofessor[0m
+[32m2024-12-03 15:35:45,001 - cogs.music_play - INFO - Searching YouTube with sanitized query: https://www.youtube.com/watch?v=LDU_Txk06tM[0m
+[32m2024-12-03 15:35:50,927 - cogs.music_play - INFO - Extracted YouTube metadata: title=Noisestorm - Crab Rave [Monstercat Release], artist=Monstercat Instinct, duration=192[0m
+[32m2024-12-03 15:35:50,927 - cogs.music_play - INFO - Finished playing: Insane Clown Posse - Homies (Uncensored)[0m
+[32m2024-12-03 15:35:50,928 - discord.player - INFO - ffmpeg process 9240 has not terminated. Waiting to terminate...[0m
+[32m2024-12-03 15:35:50,931 - discord.player - INFO - ffmpeg process 9240 should have terminated with a return code of 1.[0m
+[32m2024-12-03 15:35:51,259 - cogs.music_play - INFO - Skipped to: Noisestorm - Crab Rave [Monstercat Release] by Monstercat Instinct[0m
+[31m2024-12-03 15:37:53,965 - cogs.music_play - ERROR - Failed to play song: 'PlayCog' object has no attribute 'process_spotify_query'[0m
+[32m2024-12-03 15:39:03,242 - cogs.music_play - INFO - Finished playing: Noisestorm - Crab Rave [Monstercat Release][0m
+[32m2024-12-03 15:39:03,242 - discord.player - INFO - ffmpeg process 13476 successfully terminated with return code of 0.[0m
+[32m2024-12-03 15:39:06,830 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:39:11,829 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:39:16,833 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:39:21,824 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:39:26,830 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:39:31,820 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:39:36,821 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:39:41,821 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:39:46,808 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:39:51,822 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:39:56,827 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:40:01,815 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:40:06,839 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:40:11,819 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:40:16,828 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:40:21,804 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:40:26,826 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:40:31,812 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:40:36,816 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[34m2024-12-03 15:40:41,958 - asyncio - DEBUG - Using proactor: IocpProactor[0m
+[32m2024-12-03 15:40:41,961 - discord.client - INFO - logging in using static token[0m
+[32m2024-12-03 15:40:42,741 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 78e916931bf9f897e1d6b3113e60bbed).[0m
+[32m2024-12-03 15:40:44,822 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-12-03 15:40:44,839 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-12-03 15:40:44,843 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-12-03 15:40:44,849 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-12-03 15:40:44,851 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-12-03 15:40:45,849 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-12-03 15:40:45,906 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-12-03 15:40:45,909 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-12-03 15:40:45,911 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-12-03 15:40:53,668 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-12-03 15:40:53,668 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-12-03 15:40:53,825 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid4790.discord.media[0m
+[34m2024-12-03 15:40:54,905 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/playlists/37i9dQZF1E3afsKAyccwz1/tracks with Params: {'limit': 100, 'offset': 0, 'fields': None, 'market': None, 'additional_types': 'track'} Headers: {'Authorization': 'Bearer BQBVhxCFWgQXHPATZLqjDAgmx1h6eopLCbr4iSBFK52uDsXjtxhTrKDES6FWHrQg_osbq1jp0-Ch-lLmrP1nCxAOJqWJs1i7R4OjZoIR08HOwyg-fDg', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-12-03 15:40:54,909 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2024-12-03 15:40:55,592 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/playlists/37i9dQZF1E3afsKAyccwz1/tracks?limit=100&offset=0&additional_types=track HTTP/11" 404 None[0m
+[31m2024-12-03 15:40:55,593 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/playlists/37i9dQZF1E3afsKAyccwz1/tracks with Params: {'limit': 100, 'offset': 0, 'fields': None, 'market': None, 'additional_types': 'track'} returned 404 due to Resource not found[0m
+[31m2024-12-03 15:40:55,594 - cogs.music_play - ERROR - Error processing Spotify query 'https://open.spotify.com/playlist/37i9dQZF1E3afsKAyccwz1?si=6230f43283e14ba5': http status: 404, code:-1 - https://api.spotify.com/v1/playlists/37i9dQZF1E3afsKAyccwz1/tracks?limit=100&offset=0&additional_types=track:
+ Resource not found, reason: None[0m
+[32m2024-12-03 15:40:55,922 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:41:00,918 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:41:05,919 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:41:10,915 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:41:15,925 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:41:20,917 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:41:25,921 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[34m2024-12-03 15:41:29,227 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/tracks/3oy3m2ppYCBQEB6ZQrdigZ with Params: {'market': None} Headers: {'Authorization': 'Bearer BQBVhxCFWgQXHPATZLqjDAgmx1h6eopLCbr4iSBFK52uDsXjtxhTrKDES6FWHrQg_osbq1jp0-Ch-lLmrP1nCxAOJqWJs1i7R4OjZoIR08HOwyg-fDg', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-12-03 15:41:29,315 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/tracks/3oy3m2ppYCBQEB6ZQrdigZ HTTP/11" 200 None[0m
+[34m2024-12-03 15:41:29,317 - spotipy.client - DEBUG - RESULTS: {'album': {'album_type': 'single', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4dHkDmvdWDXoycp4Caui8D'}, 'href': 'https://api.spotify.com/v1/artists/4dHkDmvdWDXoycp4Caui8D', 'id': '4dHkDmvdWDXoycp4Caui8D', 'name': 'MAXPVNK', 'type': 'artist', 'uri': 'spotify:artist:4dHkDmvdWDXoycp4Caui8D'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/3v1PSxYgbjp8MAglSecAgP'}, 'href': 'https://api.spotify.com/v1/artists/3v1PSxYgbjp8MAglSecAgP', 'id': '3v1PSxYgbjp8MAglSecAgP', 'name': 'Fatyzzz', 'type': 'artist', 'uri': 'spotify:artist:3v1PSxYgbjp8MAglSecAgP'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/2U4vSEenVcYsVTJIhhVpfV'}, 'href': 'https://api.spotify.com/v1/albums/2U4vSEenVcYsVTJIhhVpfV', 'id': '2U4vSEenVcYsVTJIhhVpfV', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b27331506302520c23fdb73d4c65', 'width': 640, 'height': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e0231506302520c23fdb73d4c65', 'width': 300, 'height': 300}, {'url': 'https://i.scdn.co/image/ab67616d0000485131506302520c23fdb73d4c65', 'width': 64, 'height': 64}], 'name': 'Jealous', 'release_date': '2023-09-29', 'release_date_precision': 'day', 'total_tracks': 1, 'type': 'album', 'uri': 'spotify:album:2U4vSEenVcYsVTJIhhVpfV'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4dHkDmvdWDXoycp4Caui8D'}, 'href': 'https://api.spotify.com/v1/artists/4dHkDmvdWDXoycp4Caui8D', 'id': '4dHkDmvdWDXoycp4Caui8D', 'name': 'MAXPVNK', 'type': 'artist', 'uri': 'spotify:artist:4dHkDmvdWDXoycp4Caui8D'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/3v1PSxYgbjp8MAglSecAgP'}, 'href': 'https://api.spotify.com/v1/artists/3v1PSxYgbjp8MAglSecAgP', 'id': '3v1PSxYgbjp8MAglSecAgP', 'name': 'Fatyzzz', 'type': 'artist', 'uri': 'spotify:artist:3v1PSxYgbjp8MAglSecAgP'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 123870, 'explicit': False, 'external_ids': {'isrc': 'DGA082377205'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/3oy3m2ppYCBQEB6ZQrdigZ'}, 'href': 'https://api.spotify.com/v1/tracks/3oy3m2ppYCBQEB6ZQrdigZ', 'id': '3oy3m2ppYCBQEB6ZQrdigZ', 'is_local': False, 'name': 'Jealous', 'popularity': 41, 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:3oy3m2ppYCBQEB6ZQrdigZ'}[0m
+[32m2024-12-03 15:41:29,320 - cogs.music_play - INFO - Searching YouTube for: Jealous MAXPVNK[0m
+[32m2024-12-03 15:41:29,321 - cogs.music_play - INFO - Searching YouTube with sanitized query: Jealous MAXPVNK[0m
+[32m2024-12-03 15:41:36,194 - cogs.music_play - INFO - Extracted YouTube metadata: title=MAXPVNK, Fatyzzz - Jealous (Official Video), artist=Fatyzzz, duration=124[0m
+[32m2024-12-03 15:41:36,485 - cogs.music_play - INFO - Skipped to: Jealous by MAXPVNK[0m
+[32m2024-12-03 15:43:40,210 - cogs.music_play - INFO - Finished playing: Jealous[0m
+[32m2024-12-03 15:43:40,210 - discord.player - INFO - ffmpeg process 22268 successfully terminated with return code of 0.[0m
+[32m2024-12-03 15:43:40,922 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[34m2024-12-03 15:43:46,557 - asyncio - DEBUG - Using proactor: IocpProactor[0m
+[32m2024-12-03 15:43:46,560 - discord.client - INFO - logging in using static token[0m
+[32m2024-12-03 15:43:47,378 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 05c8627806c68bc569d519bd811c50b6).[0m
+[32m2024-12-03 15:43:49,418 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2024-12-03 15:43:49,422 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2024-12-03 15:43:49,424 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2024-12-03 15:43:49,427 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2024-12-03 15:43:49,428 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2024-12-03 15:43:50,329 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2024-12-03 15:43:50,381 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2024-12-03 15:43:50,383 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2024-12-03 15:43:50,385 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2024-12-03 15:44:01,523 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2024-12-03 15:44:01,524 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2024-12-03 15:44:01,679 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid4790.discord.media[0m
+[32m2024-12-03 15:44:02,765 - cogs.music_play - INFO - Fetching playlist: 37i9dQZF1E8PCYVZ9076Gb[0m
+[34m2024-12-03 15:44:02,770 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/playlists/37i9dQZF1E8PCYVZ9076Gb/tracks with Params: {'limit': 100, 'offset': 0, 'fields': None, 'market': 'US', 'additional_types': 'track'} Headers: {'Authorization': 'Bearer BQBVhxCFWgQXHPATZLqjDAgmx1h6eopLCbr4iSBFK52uDsXjtxhTrKDES6FWHrQg_osbq1jp0-Ch-lLmrP1nCxAOJqWJs1i7R4OjZoIR08HOwyg-fDg', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2024-12-03 15:44:02,775 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2024-12-03 15:44:03,149 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/playlists/37i9dQZF1E8PCYVZ9076Gb/tracks?limit=100&offset=0&market=US&additional_types=track HTTP/11" 404 None[0m
+[31m2024-12-03 15:44:03,151 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/playlists/37i9dQZF1E8PCYVZ9076Gb/tracks with Params: {'limit': 100, 'offset': 0, 'fields': None, 'market': 'US', 'additional_types': 'track'} returned 404 due to Resource not found[0m
+[31m2024-12-03 15:44:03,152 - cogs.music_play - ERROR - Failed to fetch playlist tracks: http status: 404, code:-1 - https://api.spotify.com/v1/playlists/37i9dQZF1E8PCYVZ9076Gb/tracks?limit=100&offset=0&market=US&additional_types=track:
+ Resource not found, reason: None[0m
+[32m2024-12-03 15:44:05,389 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:44:10,380 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:44:15,406 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:44:20,390 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:44:25,392 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:44:30,398 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:44:35,388 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:44:40,386 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:44:45,395 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:44:50,402 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:44:55,390 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:45:00,386 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:45:05,400 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2024-12-03 15:45:07,073 - discord.voice_client - INFO - The voice handshake is being terminated for Channel ID 1264641612177473556 (Guild ID 1247773100888690732)[0m
+[32m2024-12-03 15:45:07,076 - discord.voice_client - INFO - Disconnecting from voice normally, close code 1000.[0m
