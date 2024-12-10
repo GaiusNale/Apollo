@@ -16,12 +16,22 @@ ytdl_format_options = {
     'postprocessors': [{
         'key': 'FFmpegExtractAudio',
         'preferredcodec': 'mp3',
-        'preferredquality': '128',
+        'preferredquality': '192',  # Increased from 128 for better audio quality
     }],
-    'buffersize': 1024 * 1024 * 10,  # increase buffer size to help with pack loss and corruption 
+    'buffersize': 1024 * 1024 * 10,  # 10MB buffer is good
+    'retries': 3,  # Add retry mechanism
+    'fragment_retries': 3,  # Retry fragmented downloads
+    'socket_timeout': 15,  # Increase socket timeout
+    'source_address': '0.0.0.0',  # Bind to all network interfaces
+    'no_color': True,
+    'ignoreerrors': False,  # Be strict about errors
+    'no_warnings': True,
+    'quiet': True,
 }
+
 ffmpeg_options = {
-    'options': '-vn',
+    'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',  # Added reconnection options
+    'options': '-vn -err_detect ignore_err',  # Added error detection ignore
 }
 
 ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
