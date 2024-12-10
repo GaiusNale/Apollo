@@ -131,5 +131,5 @@ class QueueCog(commands.Cog):
             logger.error(f"Failed to clear queue: {e}")
 
 
-async def setup(bot): #Corrected this line
-    await bot.add_cog(QueueCog(bot)) #Corrected this line
+async def setup(bot): 
+    await bot.add_cog(QueueCog(bot)) 
