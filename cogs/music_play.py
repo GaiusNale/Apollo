@@ -18,7 +18,7 @@ ytdl_format_options = {
         'preferredcodec': 'mp3',
         'preferredquality': '192',  # Increased from 128 for better audio quality
     }],
-    'buffersize': 1024 * 1024 * 10,  # 10MB buffer is good
+    'buffersize': 1024 * 1024 * 10,  # 10MB buffer
     'retries': 3,  # Add retry mechanism
     'fragment_retries': 3,  # Retry fragmented downloads
     'socket_timeout': 15,  # Increase socket timeout
