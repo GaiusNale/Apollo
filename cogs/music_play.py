@@ -150,9 +150,10 @@ class PlayCog(commands.Cog):
             # Prepare and send embed message
             embed = discord.Embed(
                 title="Now Playing",
-                description=f"[{next_song['title']}]({next_song['audio_url']})",
+                description=f"**[{next_song['title']}]({next_song['audio_url']})**",
                 color=discord.Color.green()
-            )
+            )  
+            
             if next_song['thumbnail']:
                 embed.set_thumbnail(url=next_song['thumbnail'])
             embed.add_field(name="Artist", value=next_song['artist'], inline=True)
