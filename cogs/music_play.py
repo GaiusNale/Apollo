@@ -78,7 +78,7 @@ class PlayCog(commands.Cog):
         """Cleanup when the cog is unloaded."""
         self.song_check_loop.cancel()
 
-    @tasks.loop(seconds=5)
+    @tasks.loop(seconds=10)
     async def song_check_loop(self):
         """Periodic task to check and play the next song in the queue."""
         for guild in self.bot.guilds:
@@ -199,7 +199,7 @@ class PlayCog(commands.Cog):
             spotify_artist = spotify_data["artist_name"] if spotify_data else "Unknown Artist"
             spotify_thumbnail = spotify_data["album_cover"] if spotify_data else None
 
-            audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist)
+            audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist + " official audio")
             if not audio_data:
                 await interaction.followup.send("Could not find the song.")
                 return
@@ -226,5 +226,6 @@ class PlayCog(commands.Cog):
 async def setup(bot):
     """Set up the PlayCog for the bot."""
     await bot.add_cog(PlayCog(bot))
+
 
 
