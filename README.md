@@ -81,7 +81,7 @@ To set up and run Apollo, ensure you have the following installed:
 | `/next`        | Skip to the next song in the queue.         |
 | `/queue`       | View the current music queue.               |
 
-Although most of these commands can be handled by the buttons 
+- Although most of these commands can be handled by the buttons 
 ---
 
 ## File Structure
