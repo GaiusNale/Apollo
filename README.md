@@ -42,6 +42,8 @@ To set up and run Apollo, ensure you have the following installed:
    - Add the following variables:
      ```
      DISCORD_TOKEN=<your-discord-bot-token>
+     SPOTIPY_CLIENT_ID=<your-spotify-client-id>
+     SPOTIPY_CLIENT_SECRET=<your-spotify-client-secret>
      ```
 
 4. **Install FFmpeg**:
@@ -56,9 +58,9 @@ To set up and run Apollo, ensure you have the following installed:
 5. **Run the Bot**:
    Start the bot using:
    ```bash
-   python main.py
+   python3 main.py
    ```
-
+   
 ---
 
 ## Command Overview
@@ -95,6 +97,8 @@ Apollo/
 │   ├── ping.py            # Handles `/ping`.
 ├── logs/                  # Stores bot activity logs.
 ├── modules/               # Optional additional modules.
+│   ├── queue_manager.py   # Manages the music queue.
+│   ├── music_control_view.py # UI view for music control buttons.
 ├── main.py                # Entry point of the bot.
 ├── requirements.txt       # Python dependencies.
 ├── README.md              # Project documentation (this file).
@@ -119,4 +123,3 @@ If you'd like to contribute to Apollo, feel free to fork the repository and subm
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-```
