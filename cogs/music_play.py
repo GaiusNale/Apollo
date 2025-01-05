@@ -6,6 +6,7 @@ import logging
 from spotipy import Spotify
 from spotipy.oauth2 import SpotifyClientCredentials
 from decouple import config
+import re
 
 # Set up logging
 logger = logging.getLogger(__name__)
@@ -36,6 +37,9 @@ ffmpeg_options = {
 
 ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
 
+SPOTIFY_TRACK_REGEX = re.compile(r"https?://open\.spotify\.com/track/([a-zA-Z0-9]+)")
+YOUTUBE_VIDEO_REGEX = re.compile(r"https?://(www\.)?(youtube\.com|youtu\.be)/(watch\?v=)?([a-zA-Z0-9_-]+)")
+
 # Spotify API setup
 def get_spotify_client():
     """Initialize and return the Spotify client using credentials."""
@@ -64,6 +68,33 @@ async def search_song_on_spotify(spotify, query):
             return None
     except Exception as e:
         logger.error(f"Error searching Spotify: {e}")
+        return None
+
+async def get_spotify_track_info(spotify, track_id):
+    """Get track information from Spotify using the track ID."""
+    try:
+        track = spotify.track(track_id)
+        return {
+            "song_title": track["name"],
+            "artist_name": track["artists"][0]["name"],
+            "album_cover": track["album"]["images"][0]["url"] if track["album"]["images"] else None
+        }
+    except Exception as e:
+        logger.error(f"Error fetching Spotify track info: {e}")
+        return None
+
+async def get_youtube_video_info(video_id):
+    """Get video information from YouTube using the video ID."""
+    try:
+        info = ytdl.extract_info(video_id, download=False)
+        return {
+            "audio_url": info['url'],
+            "title": info['title'],
+            "duration": info['duration'],
+            "thumbnail": info.get('thumbnails', [{}])[-1].get('url', None)
+        }
+    except Exception as e:
+        logger.error(f"Error fetching YouTube video info: {e}")
         return None
 
 class PlayCog(commands.Cog):
@@ -186,21 +217,43 @@ class PlayCog(commands.Cog):
             logger.error(f"Error extracting YouTube audio: {e}")
             return None
 
-    @app_commands.command(name="play", description="Play music from a YouTube search query.")
+    @app_commands.command(name="play", description="Play music from a YouTube search query or a Spotify/YouTube link.")
     async def play(self, interaction: discord.Interaction, query: str):
-        """Play a song based on a query from YouTube or Spotify."""
+        """Play a song based on a query from YouTube, Spotify, or a direct link."""
         try:
             await interaction.response.defer()
             voice_client = await self.join_voice_channel(interaction)
             if not voice_client:
                 return
 
-            spotify_data = await search_song_on_spotify(self.spotify, query)
-            spotify_title = spotify_data["song_title"] if spotify_data else query
-            spotify_artist = spotify_data["artist_name"] if spotify_data else "Unknown Artist"
-            spotify_thumbnail = spotify_data["album_cover"] if spotify_data else None
+            spotify_match = SPOTIFY_TRACK_REGEX.match(query)
+            youtube_match = YOUTUBE_VIDEO_REGEX.match(query)
 
-            audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist + " official audio")
+            if spotify_match:
+                track_id = spotify_match.group(1)
+                spotify_data = await get_spotify_track_info(self.spotify, track_id)
+                if not spotify_data:
+                    await interaction.followup.send("Could not find the Spotify track.")
+                    return
+                audio_data = await self.search_youtube_audio(spotify_data["song_title"] + " " + spotify_data["artist_name"] + " official audio")
+            elif youtube_match:
+                video_id = youtube_match.group(4)
+                audio_data = await get_youtube_video_info(video_id)
+                if not audio_data:
+                    await interaction.followup.send("Could not find the YouTube video.")
+                    return
+                spotify_data = {
+                    "song_title": audio_data["title"],
+                    "artist_name": "Unknown Artist",
+                    "album_cover": audio_data["thumbnail"]
+                }
+            else:
+                spotify_data = await search_song_on_spotify(self.spotify, query)
+                spotify_title = spotify_data["song_title"] if spotify_data else query
+                spotify_artist = spotify_data["artist_name"] if spotify_data else "Unknown Artist"
+                spotify_thumbnail = spotify_data["album_cover"] if spotify_data else None
+                audio_data = await self.search_youtube_audio(spotify_title + " " + spotify_artist + " official audio")
+
             if not audio_data:
                 await interaction.followup.send("Could not find the song.")
                 return
@@ -208,10 +261,10 @@ class PlayCog(commands.Cog):
             self.queue_manager.add_to_queue(
                 interaction.guild.id,
                 {
-                    "title": spotify_title,
-                    "artist": spotify_artist,
+                    "title": spotify_data["song_title"],
+                    "artist": spotify_data["artist_name"],
                     "audio_url": audio_data["audio_url"],
-                    "thumbnail": spotify_thumbnail or audio_data["thumbnail"],
+                    "thumbnail": spotify_data["album_cover"] or audio_data["thumbnail"],
                     "duration": audio_data["duration"]
                 }
             )
