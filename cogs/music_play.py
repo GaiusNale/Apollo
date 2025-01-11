@@ -7,6 +7,7 @@ from spotipy import Spotify
 from spotipy.oauth2 import SpotifyClientCredentials
 from decouple import config
 import re
+import asyncio
 
 # Set up logging
 logger = logging.getLogger(__name__)
@@ -39,6 +40,7 @@ ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
 
 SPOTIFY_TRACK_REGEX = re.compile(r"https?://open\.spotify\.com/track/([a-zA-Z0-9]+)")
 YOUTUBE_VIDEO_REGEX = re.compile(r"https?://(www\.)?(youtube\.com|youtu\.be)/(watch\?v=)?([a-zA-Z0-9_-]+)")
+SPOTIFY_PLAYLIST_REGEX = re.compile(r"https?://open\.spotify\.com/playlist/([a-zA-Z0-9]+)")
 
 # Spotify API setup
 def get_spotify_client():
@@ -82,6 +84,25 @@ async def get_spotify_track_info(spotify, track_id):
     except Exception as e:
         logger.error(f"Error fetching Spotify track info: {e}")
         return None
+
+# Parses through the playlist a song at a time
+async def get_spotify_playlist_tracks(spotify, playlist_id):
+    """Get tracks from a Spotify playlist using the playlist ID."""
+    # Inshallah this works
+    try:
+        results = spotify.playlist_tracks(playlist_id)
+        tracks = []
+        for item in results['items']:
+            track = item['track']
+            tracks.append({
+                "song_title": track["name"],
+                "artist_name": track["artists"][0]["name"],
+                "album_cover": track["album"]["images"][0]["url"] if track["album"]["images"] else None
+            })
+        return tracks
+    except Exception as e:
+        logger.error(f"Error fetching Spotify playlist tracks: {e}")
+        return []
 
 async def get_youtube_video_info(video_id):
     """Get video information from YouTube using the video ID."""
@@ -226,10 +247,46 @@ class PlayCog(commands.Cog):
             if not voice_client:
                 return
 
+            spotify_playlist_match = SPOTIFY_PLAYLIST_REGEX.match(query)
             spotify_match = SPOTIFY_TRACK_REGEX.match(query)
             youtube_match = YOUTUBE_VIDEO_REGEX.match(query)
 
-            if spotify_match:
+            spotify_data = None  # Initialize spotify_data to avoid referencing before assignment
+
+            if spotify_playlist_match:
+                playlist_id = spotify_playlist_match.group(1)
+                tracks = await get_spotify_playlist_tracks(self.spotify, playlist_id)
+                if not tracks:
+                    await interaction.followup.send("Could not find the Spotify playlist.")
+                    return
+
+                # Play the first song in the playlist
+                first_track = tracks.pop(0)
+                audio_data = await self.search_youtube_audio(first_track["song_title"] + " " + first_track["artist_name"] + " official audio")
+                if not audio_data:
+                    await interaction.followup.send("Could not find the first song in the playlist.")
+                    return
+
+                self.queue_manager.add_to_queue(
+                    interaction.guild.id,
+                    {
+                        "title": first_track["song_title"],
+                        "artist": first_track["artist_name"],
+                        "audio_url": audio_data["audio_url"],
+                        "thumbnail": first_track["album_cover"] or audio_data["thumbnail"],
+                        "duration": audio_data["duration"]
+                    }
+                )
+
+                if not voice_client.is_playing():
+                    await self.skip_song(interaction, voice_client)
+
+                await interaction.followup.send(f"Playing first song in the playlist: **{first_track['song_title']}** by **{first_track['artist_name']}**")
+
+                # Periodically add the remaining songs to the queue
+                for track in tracks:
+                    await self.add_song_to_queue(interaction.guild.id, track)
+            elif spotify_match:
                 track_id = spotify_match.group(1)
                 spotify_data = await get_spotify_track_info(self.spotify, track_id)
                 if not spotify_data:
@@ -276,6 +333,29 @@ class PlayCog(commands.Cog):
         except Exception as e:
             await interaction.followup.send("An error occurred while trying to play the song.")
             logger.error(f"Failed to play song: {e}")
+
+    async def add_song_to_queue(self, guild_id, track):
+        """Add a song to the queue periodically."""
+        try:
+            await asyncio.sleep(10)  # Adjust the delay as needed
+            audio_data = await self.search_youtube_audio(track["song_title"] + " " + track["artist_name"] + " official audio")
+            if not audio_data:
+                logger.error(f"Could not find the song: {track['song_title']} by {track['artist_name']}")
+                return
+
+            self.queue_manager.add_to_queue(
+                guild_id,
+                {
+                    "title": track["song_title"],
+                    "artist": track["artist_name"],
+                    "audio_url": audio_data["audio_url"],
+                    "thumbnail": track["album_cover"] or audio_data["thumbnail"],
+                    "duration": audio_data["duration"]
+                }
+            )
+            logger.info(f"Added to queue: {track['song_title']} by {track['artist_name']}")
+        except Exception as e:
+            logger.error(f"Failed to add song to queue: {e}")
 
 async def setup(bot):
     """Set up the PlayCog for the bot."""
