@@ -1,0 +1,187 @@
+[34m2025-02-03 20:03:12,467 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2025-02-03 20:03:12,468 - discord.client - INFO - logging in using static token[0m
+[32m2025-02-03 20:03:14,761 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: c163953dac658887df71487f1f7881f4).[0m
+[32m2025-02-03 20:03:16,828 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2025-02-03 20:03:16,832 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2025-02-03 20:03:16,835 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2025-02-03 20:03:17,761 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2025-02-03 20:03:17,768 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2025-02-03 20:03:17,777 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2025-02-03 20:03:17,946 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2025-02-03 20:03:17,948 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2025-02-03 20:03:17,956 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2025-02-03 20:03:25,226 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2025-02-03 20:03:25,227 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2025-02-03 20:03:25,593 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid10000.discord.media[0m
+[34m2025-02-03 20:03:27,259 - spotipy.oauth2 - DEBUG - sending POST request to https://accounts.spotify.com/api/token with Headers: {'Authorization': 'Basic MTc4ZmY0NjE0NThiNDFhMzk4Y2IzODVjOWEwZDE0YWY6ZjViMmY1ZDljODczNDFjYWFiZjdkM2ZiMmJkODJkYTQ='} and Body: {'grant_type': 'client_credentials'}[0m
+[34m2025-02-03 20:03:27,262 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): accounts.spotify.com:443[0m
+[34m2025-02-03 20:03:27,836 - urllib3.connectionpool - DEBUG - https://accounts.spotify.com:443 "POST /api/token HTTP/11" 200 None[0m
+[34m2025-02-03 20:03:27,838 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'hello adele', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQAUksfNfmdgXdD1p1ZFdgts-u4q9FfNFyzwO85w_6L5zdv9rnpIatIxtNPPbTTCrMDNS6yzZWFCmnrNnF_ZdxU4ZanMkBffEGV1fhPtP8AGqzyHHx1CWmwxVnfVEpWXuVEZ1FsEIVY', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2025-02-03 20:03:27,840 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2025-02-03 20:03:28,644 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/search?q=hello+adele&limit=1&offset=0&type=track HTTP/11" 200 None[0m
+[34m2025-02-03 20:03:28,646 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=hello%20adele&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=hello%20adele&type=track', 'offset': 0, 'previous': None, 'total': 900, 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4dpARuHxo51G3z768sgnrY'}, 'href': 'https://api.spotify.com/v1/artists/4dpARuHxo51G3z768sgnrY', 'id': '4dpARuHxo51G3z768sgnrY', 'name': 'Adele', 'type': 'artist', 'uri': 'spotify:artist:4dpARuHxo51G3z768sgnrY'}], 'available_markets': ['AU', 'AT', 'BE', 'BG', 'CA', 'CY', 'CZ', 'DK', 'DE', 'EE', 'FI', 'FR', 'GR', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'NL', 'NZ', 'NO', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/6TVfiWmo8KtflUAmkK9gGF'}, 'href': 'https://api.spotify.com/v1/albums/6TVfiWmo8KtflUAmkK9gGF', 'id': '6TVfiWmo8KtflUAmkK9gGF', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b2737b9888dc365b8f957c63df14'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e027b9888dc365b8f957c63df14'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d000048517b9888dc365b8f957c63df14'}], 'is_playable': True, 'name': '25', 'release_date': '2015-11-20', 'release_date_precision': 'day', 'total_tracks': 11, 'type': 'album', 'uri': 'spotify:album:6TVfiWmo8KtflUAmkK9gGF'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4dpARuHxo51G3z768sgnrY'}, 'href': 'https://api.spotify.com/v1/artists/4dpARuHxo51G3z768sgnrY', 'id': '4dpARuHxo51G3z768sgnrY', 'name': 'Adele', 'type': 'artist', 'uri': 'spotify:artist:4dpARuHxo51G3z768sgnrY'}], 'available_markets': ['AU', 'AT', 'BE', 'BG', 'CA', 'CY', 'CZ', 'DK', 'DE', 'EE', 'FI', 'FR', 'GR', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'NL', 'NZ', 'NO', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 295502, 'explicit': False, 'external_ids': {'isrc': 'GBBKS1500214'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/1Yk0cQdMLx5RzzFTYwmuld'}, 'href': 'https://api.spotify.com/v1/tracks/1Yk0cQdMLx5RzzFTYwmuld', 'id': '1Yk0cQdMLx5RzzFTYwmuld', 'is_local': False, 'is_playable': True, 'name': 'Hello', 'popularity': 73, 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:1Yk0cQdMLx5RzzFTYwmuld'}]}}[0m
+[32m2025-02-03 20:03:40,116 - cogs.music_play - INFO - Skipped to: Hello by Adele[0m
+[32m2025-02-03 20:03:40,838 - cogs.music_play - INFO - Finished playing: Hello[0m
+[32m2025-02-03 20:03:40,839 - discord.player - INFO - ffmpeg process 22239 successfully terminated with return code of 1.[0m
+[32m2025-02-03 20:03:47,958 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-03 20:03:57,959 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-03 20:04:07,958 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-03 20:04:17,958 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[34m2025-02-03 20:04:24,816 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'in love with my hands', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQAUksfNfmdgXdD1p1ZFdgts-u4q9FfNFyzwO85w_6L5zdv9rnpIatIxtNPPbTTCrMDNS6yzZWFCmnrNnF_ZdxU4ZanMkBffEGV1fhPtP8AGqzyHHx1CWmwxVnfVEpWXuVEZ1FsEIVY', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2025-02-03 20:04:25,270 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=in%20love%20with%20my%20hands&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=in%20love%20with%20my%20hands&type=track', 'offset': 0, 'previous': None, 'total': 1000, 'items': [{'album': {'album_type': 'single', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/3OJLdtepTNzjUmCBkHVAoG'}, 'href': 'https://api.spotify.com/v1/artists/3OJLdtepTNzjUmCBkHVAoG', 'id': '3OJLdtepTNzjUmCBkHVAoG', 'name': 'Speed Darlington', 'type': 'artist', 'uri': 'spotify:artist:3OJLdtepTNzjUmCBkHVAoG'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/6Szcg4a2lLIv3OD4xCi20w'}, 'href': 'https://api.spotify.com/v1/albums/6Szcg4a2lLIv3OD4xCi20w', 'id': '6Szcg4a2lLIv3OD4xCi20w', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273aa8ccc136cfa34f486519b68'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02aa8ccc136cfa34f486519b68'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851aa8ccc136cfa34f486519b68'}], 'is_playable': True, 'name': 'In Love with My Hand', 'release_date': '2019-11-13', 'release_date_precision': 'day', 'total_tracks': 1, 'type': 'album', 'uri': 'spotify:album:6Szcg4a2lLIv3OD4xCi20w'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/3OJLdtepTNzjUmCBkHVAoG'}, 'href': 'https://api.spotify.com/v1/artists/3OJLdtepTNzjUmCBkHVAoG', 'id': '3OJLdtepTNzjUmCBkHVAoG', 'name': 'Speed Darlington', 'type': 'artist', 'uri': 'spotify:artist:3OJLdtepTNzjUmCBkHVAoG'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/6xGK6fmhB49DeLxo2mQLoS'}, 'href': 'https://api.spotify.com/v1/artists/6xGK6fmhB49DeLxo2mQLoS', 'id': '6xGK6fmhB49DeLxo2mQLoS', 'name': 'Zlatan', 'type': 'artist', 'uri': 'spotify:artist:6xGK6fmhB49DeLxo2mQLoS'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 227527, 'explicit': True, 'external_ids': {'isrc': 'usl4q1952232'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/7t8xNV2VRh68TdpLXPabaY'}, 'href': 'https://api.spotify.com/v1/tracks/7t8xNV2VRh68TdpLXPabaY', 'id': '7t8xNV2VRh68TdpLXPabaY', 'is_local': False, 'is_playable': True, 'name': 'In Love with My Hand', 'popularity': 51, 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:7t8xNV2VRh68TdpLXPabaY'}]}}[0m
+[32m2025-02-03 20:04:33,146 - cogs.music_play - INFO - Finished playing: In Love with My Hand[0m
+[32m2025-02-03 20:04:33,146 - discord.player - INFO - ffmpeg process 22679 successfully terminated with return code of 1.[0m
+[32m2025-02-03 20:04:33,560 - cogs.music_play - INFO - Skipped to: In Love with My Hand by Speed Darlington[0m
+[32m2025-02-03 20:04:37,958 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-03 20:04:47,958 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-03 20:04:57,958 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-03 20:05:07,958 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[34m2025-02-05 12:04:41,389 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2025-02-05 12:04:41,389 - discord.client - INFO - logging in using static token[0m
+[32m2025-02-05 12:04:49,077 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: cb6a6e241bfdb7fa578d1ba4251b2d43).[0m
+[32m2025-02-05 12:04:51,150 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2025-02-05 12:04:51,156 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2025-02-05 12:04:51,160 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2025-02-05 12:04:51,637 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2025-02-05 12:04:51,640 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2025-02-05 12:04:51,642 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2025-02-05 12:04:51,727 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2025-02-05 12:04:51,728 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2025-02-05 12:04:51,729 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[31m2025-02-05 12:11:10,461 - discord.app_commands.tree - ERROR - Ignoring exception in command 'play'[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 245, in play
+    await interaction.response.defer()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 638, in defer
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 334, in play
+    await interaction.followup.send("An error occurred while trying to play the song.")
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 1800, in send
+    data = await adapter.execute_webhook(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10015): Unknown Webhook
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 860, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: NotFound: 404 Not Found (error code: 10015): Unknown Webhook
+[34m2025-02-05 12:11:19,203 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2025-02-05 12:11:19,203 - discord.client - INFO - logging in using static token[0m
+[32m2025-02-05 12:11:26,531 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 4bb269862940a1608a5b6e85e3ef1740).[0m
+[32m2025-02-05 12:11:28,694 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2025-02-05 12:11:28,696 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2025-02-05 12:11:28,698 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2025-02-05 12:11:29,297 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2025-02-05 12:11:29,300 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2025-02-05 12:11:29,302 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2025-02-05 12:11:29,429 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2025-02-05 12:11:29,431 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2025-02-05 12:11:29,432 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[32m2025-02-05 12:11:31,839 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2025-02-05 12:11:31,839 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2025-02-05 12:11:32,189 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid10043.discord.media[0m
+[34m2025-02-05 12:11:38,523 - spotipy.oauth2 - DEBUG - sending POST request to https://accounts.spotify.com/api/token with Headers: {'Authorization': 'Basic MTc4ZmY0NjE0NThiNDFhMzk4Y2IzODVjOWEwZDE0YWY6ZjViMmY1ZDljODczNDFjYWFiZjdkM2ZiMmJkODJkYTQ='} and Body: {'grant_type': 'client_credentials'}[0m
+[34m2025-02-05 12:11:38,529 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): accounts.spotify.com:443[0m
+[34m2025-02-05 12:11:39,069 - urllib3.connectionpool - DEBUG - https://accounts.spotify.com:443 "POST /api/token HTTP/11" 200 None[0m
+[34m2025-02-05 12:11:39,071 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'in love with my hand', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQASF5-cTu_jxXSt1GSqZwvfJ0F4VPshIz6lG3UalszPPCGY_EJoFx9euU08kj3R43xfT43mK5qlMlob6VQ-_WbzX4skPeV9EcfdfQJrGK76Q4JnZ1O9oEm-JYDRLQTm2--XyPyfCrs', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2025-02-05 12:11:39,073 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2025-02-05 12:11:39,695 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/search?q=in+love+with+my+hand&limit=1&offset=0&type=track HTTP/11" 200 None[0m
+[34m2025-02-05 12:11:39,696 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=in%20love%20with%20my%20hand&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=in%20love%20with%20my%20hand&type=track', 'offset': 0, 'previous': None, 'total': 1000, 'items': [{'album': {'album_type': 'single', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/3OJLdtepTNzjUmCBkHVAoG'}, 'href': 'https://api.spotify.com/v1/artists/3OJLdtepTNzjUmCBkHVAoG', 'id': '3OJLdtepTNzjUmCBkHVAoG', 'name': 'Speed Darlington', 'type': 'artist', 'uri': 'spotify:artist:3OJLdtepTNzjUmCBkHVAoG'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/6Szcg4a2lLIv3OD4xCi20w'}, 'href': 'https://api.spotify.com/v1/albums/6Szcg4a2lLIv3OD4xCi20w', 'id': '6Szcg4a2lLIv3OD4xCi20w', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273aa8ccc136cfa34f486519b68'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02aa8ccc136cfa34f486519b68'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851aa8ccc136cfa34f486519b68'}], 'is_playable': True, 'name': 'In Love with My Hand', 'release_date': '2019-11-13', 'release_date_precision': 'day', 'total_tracks': 1, 'type': 'album', 'uri': 'spotify:album:6Szcg4a2lLIv3OD4xCi20w'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/3OJLdtepTNzjUmCBkHVAoG'}, 'href': 'https://api.spotify.com/v1/artists/3OJLdtepTNzjUmCBkHVAoG', 'id': '3OJLdtepTNzjUmCBkHVAoG', 'name': 'Speed Darlington', 'type': 'artist', 'uri': 'spotify:artist:3OJLdtepTNzjUmCBkHVAoG'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/6xGK6fmhB49DeLxo2mQLoS'}, 'href': 'https://api.spotify.com/v1/artists/6xGK6fmhB49DeLxo2mQLoS', 'id': '6xGK6fmhB49DeLxo2mQLoS', 'name': 'Zlatan', 'type': 'artist', 'uri': 'spotify:artist:6xGK6fmhB49DeLxo2mQLoS'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 227527, 'explicit': True, 'external_ids': {'isrc': 'usl4q1952232'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/7t8xNV2VRh68TdpLXPabaY'}, 'href': 'https://api.spotify.com/v1/tracks/7t8xNV2VRh68TdpLXPabaY', 'id': '7t8xNV2VRh68TdpLXPabaY', 'is_local': False, 'is_playable': True, 'name': 'In Love with My Hand', 'popularity': 50, 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:7t8xNV2VRh68TdpLXPabaY'}]}}[0m
+[32m2025-02-05 12:11:50,768 - cogs.music_play - INFO - Finished playing: In Love with My Hand[0m
+[32m2025-02-05 12:11:50,769 - discord.player - INFO - ffmpeg process 4617 successfully terminated with return code of 1.[0m
+[32m2025-02-05 12:11:55,210 - cogs.music_play - INFO - Skipped to: In Love with My Hand by Speed Darlington[0m
+[32m2025-02-05 12:11:59,434 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:12:09,435 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:12:19,434 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:12:29,434 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:12:39,434 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:12:49,436 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:12:59,435 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:13:09,435 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:13:19,434 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:13:29,434 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:13:39,434 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:13:49,435 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:13:59,434 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:14:09,435 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:14:19,435 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:14:29,434 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:14:39,435 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:14:49,434 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:14:59,435 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:15:09,435 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:15:19,435 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:15:29,434 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:15:39,436 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:15:49,435 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[32m2025-02-05 12:15:59,435 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[34m2025-02-05 12:17:09,828 - asyncio - DEBUG - Using selector: EpollSelector[0m
+[32m2025-02-05 12:17:09,828 - discord.client - INFO - logging in using static token[0m
+[32m2025-02-05 12:17:22,413 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: f6bc0a164e3ce095c300627c22a515da).[0m
+[32m2025-02-05 12:17:24,577 - __main__ - INFO - Logged in as Apollo (1306689830629146644)[0m
+[32m2025-02-05 12:17:24,579 - __main__ - INFO - Loaded cog: ping.py[0m
+[32m2025-02-05 12:17:24,580 - __main__ - INFO - Loaded cog: music_join.py[0m
+[32m2025-02-05 12:17:25,010 - __main__ - INFO - Loaded cog: music_queue.py[0m
+[32m2025-02-05 12:17:25,011 - __main__ - INFO - Loaded cog: music_pause.py[0m
+[32m2025-02-05 12:17:25,014 - __main__ - INFO - Loaded cog: music_next.py[0m
+[32m2025-02-05 12:17:25,099 - __main__ - INFO - Loaded cog: music_play.py[0m
+[32m2025-02-05 12:17:25,100 - __main__ - INFO - Loaded cog: sayhi.py[0m
+[32m2025-02-05 12:17:25,101 - __main__ - INFO - Loaded cog: muisc_leave.py[0m
+[31m2025-02-05 12:17:54,210 - discord.app_commands.tree - ERROR - Ignoring exception in command 'play'[0m
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 245, in play
+    await interaction.response.defer()
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/interactions.py", line 638, in defer
+    await adapter.create_interaction_response(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 841, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/pyguy/Documents/Apollo/cogs/music_play.py", line 334, in play
+    await interaction.followup.send("An error occurred while trying to play the song.")
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 1800, in send
+    data = await adapter.execute_webhook(
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10015): Unknown Webhook
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 867, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/pyguy/Documents/Apollo/.venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 860, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: NotFound: 404 Not Found (error code: 10015): Unknown Webhook
+[32m2025-02-05 12:17:55,888 - discord.voice_client - INFO - Connecting to voice...[0m
+[32m2025-02-05 12:17:55,888 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)[0m
+[32m2025-02-05 12:17:56,326 - discord.voice_client - INFO - Voice handshake complete. Endpoint found madrid10043.discord.media[0m
+[32m2025-02-05 12:18:05,103 - cogs.music_play - INFO - No song is currently playing. Checking queue.[0m
+[34m2025-02-05 12:18:07,758 - spotipy.client - DEBUG - Sending GET to https://api.spotify.com/v1/search with Params: {'q': 'boy in blue yxngxr1', 'limit': 1, 'offset': 0, 'type': 'track', 'market': None} Headers: {'Authorization': 'Bearer BQASF5-cTu_jxXSt1GSqZwvfJ0F4VPshIz6lG3UalszPPCGY_EJoFx9euU08kj3R43xfT43mK5qlMlob6VQ-_WbzX4skPeV9EcfdfQJrGK76Q4JnZ1O9oEm-JYDRLQTm2--XyPyfCrs', 'Content-Type': 'application/json'} and Body: None [0m
+[34m2025-02-05 12:18:07,761 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443[0m
+[34m2025-02-05 12:18:08,427 - urllib3.connectionpool - DEBUG - https://api.spotify.com:443 "GET /v1/search?q=boy+in+blue+yxngxr1&limit=1&offset=0&type=track HTTP/11" 200 None[0m
+[34m2025-02-05 12:18:08,428 - spotipy.client - DEBUG - RESULTS: {'tracks': {'href': 'https://api.spotify.com/v1/search?offset=0&limit=1&query=boy%20in%20blue%20yxngxr1&type=track', 'limit': 1, 'next': 'https://api.spotify.com/v1/search?offset=1&limit=1&query=boy%20in%20blue%20yxngxr1&type=track', 'offset': 0, 'previous': None, 'total': 1000, 'items': [{'album': {'album_type': 'single', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2jwRHcdgkRhelYEMqndDKe'}, 'href': 'https://api.spotify.com/v1/artists/2jwRHcdgkRhelYEMqndDKe', 'id': '2jwRHcdgkRhelYEMqndDKe', 'name': 'Yxngxr1', 'type': 'artist', 'uri': 'spotify:artist:2jwRHcdgkRhelYEMqndDKe'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'external_urls': {'spotify': 'https://open.spotify.com/album/3gZfMRe0LxR4lNvnZqJXne'}, 'href': 'https://api.spotify.com/v1/albums/3gZfMRe0LxR4lNvnZqJXne', 'id': '3gZfMRe0LxR4lNvnZqJXne', 'images': [{'height': 640, 'width': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273cb94bdc244a92fb92240b923'}, {'height': 300, 'width': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02cb94bdc244a92fb92240b923'}, {'height': 64, 'width': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851cb94bdc244a92fb92240b923'}], 'is_playable': True, 'name': 'BOY IN BLUE', 'release_date': '2020-08-23', 'release_date_precision': 'day', 'total_tracks': 1, 'type': 'album', 'uri': 'spotify:album:3gZfMRe0LxR4lNvnZqJXne'}, 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/2jwRHcdgkRhelYEMqndDKe'}, 'href': 'https://api.spotify.com/v1/artists/2jwRHcdgkRhelYEMqndDKe', 'id': '2jwRHcdgkRhelYEMqndDKe', 'name': 'Yxngxr1', 'type': 'artist', 'uri': 'spotify:artist:2jwRHcdgkRhelYEMqndDKe'}], 'available_markets': ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DK', 'DO', 'DE', 'EC', 'EE', 'SV', 'FI', 'FR', 'GR', 'GT', 'HN', 'HK', 'HU', 'IS', 'IE', 'IT', 'LV', 'LT', 'LU', 'MY', 'MT', 'MX', 'NL', 'NZ', 'NI', 'NO', 'PA', 'PY', 'PE', 'PH', 'PL', 'PT', 'SG', 'SK', 'ES', 'SE', 'CH', 'TW', 'TR', 'UY', 'US', 'GB', 'AD', 'LI', 'MC', 'ID', 'JP', 'TH', 'VN', 'RO', 'IL', 'ZA', 'SA', 'AE', 'BH', 'QA', 'OM', 'KW', 'EG', 'MA', 'DZ', 'TN', 'LB', 'JO', 'PS', 'IN', 'BY', 'KZ', 'MD', 'UA', 'AL', 'BA', 'HR', 'ME', 'MK', 'RS', 'SI', 'KR', 'BD', 'PK', 'LK', 'GH', 'KE', 'NG', 'TZ', 'UG', 'AG', 'AM', 'BS', 'BB', 'BZ', 'BT', 'BW', 'BF', 'CV', 'CW', 'DM', 'FJ', 'GM', 'GE', 'GD', 'GW', 'GY', 'HT', 'JM', 'KI', 'LS', 'LR', 'MW', 'MV', 'ML', 'MH', 'FM', 'NA', 'NR', 'NE', 'PW', 'PG', 'PR', 'WS', 'SM', 'ST', 'SN', 'SC', 'SL', 'SB', 'KN', 'LC', 'VC', 'SR', 'TL', 'TO', 'TT', 'TV', 'VU', 'AZ', 'BN', 'BI', 'KH', 'CM', 'TD', 'KM', 'GQ', 'SZ', 'GA', 'GN', 'KG', 'LA', 'MO', 'MR', 'MN', 'NP', 'RW', 'TG', 'UZ', 'ZW', 'BJ', 'MG', 'MU', 'MZ', 'AO', 'CI', 'DJ', 'ZM', 'CD', 'CG', 'IQ', 'LY', 'TJ', 'VE', 'ET', 'XK'], 'disc_number': 1, 'duration_ms': 206315, 'explicit': True, 'external_ids': {'isrc': 'USUYG1329566'}, 'external_urls': {'spotify': 'https://open.spotify.com/track/4YryEvPbPX8FLHml5fRnsF'}, 'href': 'https://api.spotify.com/v1/tracks/4YryEvPbPX8FLHml5fRnsF', 'id': '4YryEvPbPX8FLHml5fRnsF', 'is_local': False, 'is_playable': True, 'name': 'BOY IN BLUE', 'popularity': 38, 'preview_url': None, 'track_number': 1, 'type': 'track', 'uri': 'spotify:track:4YryEvPbPX8FLHml5fRnsF'}]}}[0m
+[32m2025-02-05 12:18:17,793 - cogs.music_play - INFO - Skipped to: BOY IN BLUE by Yxngxr1[0m
